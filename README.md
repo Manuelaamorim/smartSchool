@@ -15,7 +15,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 
-Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.
+*Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
 
 Membros da equipe: 
 Beatriz Carla Bandeira da Silva Pereira, Lisa Matubara, Luziane Pires dos Santos, Manuela Cavalcanti Amorim, Matheus Velame Pessoa, Ygor Luiz Rosa.
