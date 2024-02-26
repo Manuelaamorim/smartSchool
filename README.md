@@ -4,7 +4,7 @@ Nosso propósito é utilizar a tecnologia com o escopo de automatizar e otimizar
 
 Com o objetivo de garantir eficiência, produtividade e otimização de tempo, recursos e colaboradores diante das demandas de um sistema educacional, nosso projeto visa criar um ambiente acessível, intuitivo e dinâmico para os integrantes da comunidade escolar em geral.
 
-Nesse sentido, a SmartSchool é uma aplicação web desenvolvida para facilitar a gestão em escolas públicas, alinhando suas funcionalidades com os conceitos dos Objetivos de Desenvolvimento Sustentável (ODS).
+Nesse sentido, a SmartSchool é uma aplicação web desenvolvida para facilitar a gestão em escolas públicas, alinhando suas funcionalidades com os conceitos dos **Objetivos de Desenvolvimento Sustentável (ODS)**.
 
 Em vista disso, a aplicabilidade do sistema inclui funções que auxiliam no desenvolvimento da saúde psicológica e nutricional do aluno, com intuito de promover uma vivência sadia do estudante no ambiente escolar e domiciliar, conforme prevê as ODS 2 e 3.
 
