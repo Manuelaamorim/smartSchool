@@ -13,6 +13,8 @@ Ademais, a expectativa é que o acesso à educação de qualidade, com foco no d
 Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jovens, mas também acompanhar a saúde física e psicológica destes, atendendo, por consequência, ao disposto nas ODS 1, 3 e 4, promovendo um crescimento mais digno para os estudantes da RMR.
 
 
+
+
 Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.
 
 Membros da equipe: 
