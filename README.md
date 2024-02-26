@@ -1,7 +1,5 @@
 # SmartSchool
 
-*Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
-
 Nosso propósito é utilizar a tecnologia com o escopo de automatizar e otimizar tarefas administrativas e gerenciais de escolas públicas na Região Metropolitana do Recife (RMR), a exemplo das atividades de planejamento e organização, as quais são comumente realizadas de forma manual pela equipe pedagógica.
 
 Com o objetivo de garantir eficiência, produtividade e otimização de tempo, recursos e colaboradores diante das demandas de um sistema educacional, nosso projeto visa criar um ambiente acessível, intuitivo e dinâmico para os integrantes da comunidade escolar em geral.
@@ -23,4 +21,6 @@ Membros da equipe:
 Beatriz Carla Bandeira da Silva Pereira, Lisa Matubara, Luziane Pires dos Santos, Manuela Cavalcanti Amorim, Matheus Velame Pessoa, Ygor Luiz Rosa.
 
 Link do projeto no Jira: https://cesar-mvp2.atlassian.net/jira/software/projects/PF/boards/2
+
+*Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
 
