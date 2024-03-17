@@ -17,11 +17,11 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 ## Links Relevantes
 <ul>
   <li>
-    <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/PF/boards/2"
+    <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/VNC/boards/2"
       >Link para o Projeto no Jira</a>
   </li>
     <li>
-    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/Entrega-1?type=design&node-id=56-604&mode=design&t=abcoEbOK30sOfii8-0"
+    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/Entrega-1?type=design&node-id=0-1&mode=design&t=YN8mjSFUMofbKbE1-0"
       >Link do Protótipo de Lo-Fi no Figma</a>
   </li>
 </ul>
