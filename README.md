@@ -21,7 +21,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
       >Link para o Projeto no Jira</a>
   </li>
     <li>
-    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/Entrega-1?type=design&node-id=0-1&mode=design&t=YN8mjSFUMofbKbE1-0"
+    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/SmartSchool?type=design&node-id=0-1&mode=design&t=V3uiesp8LFjSo9ET-0"
       >Link do Protótipo de Lo-Fi no Figma</a>
   </li>
 </ul>
