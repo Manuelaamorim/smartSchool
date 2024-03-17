@@ -14,13 +14,28 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 
+# # Links Relevantes
+<ul>
+  <li>
+    <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/PF/boards/2"
+      >Link para o Projeto no Jira</a>
+  </li>
+    <li>
+    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/Entrega-1?type=design&node-id=56-604&mode=design&t=abcoEbOK30sOfii8-0"
+      >Link do Protótipo de Lo-Fi no Figma</a>
+  </li>
+</ul>
 
 
 
-Membros da equipe: 
-Beatriz Carla Bandeira da Silva Pereira, Lisa Matubara, Luziane Pires dos Santos, Manuela Cavalcanti Amorim, Matheus Velame Pessoa, Ygor Luiz Rosa.
+# # Membros da equipe
+Beatriz Carla Bandeira da Silva Pereira
+Lisa Matubara
+Luziane Pires dos Santos
+Manuela Cavalcanti Amorim
+Matheus Velame Pessoa
+Ygor Luiz Rosa.
 
-Link do projeto no Jira: https://cesar-mvp2.atlassian.net/jira/software/projects/PF/boards/2
 
 *Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
 
