@@ -14,7 +14,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 
-# # Links Relevantes
+## Links Relevantes
 <ul>
   <li>
     <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/PF/boards/2"
@@ -28,7 +28,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 
-# # Membros da equipe
+## Membros da equipe
 Beatriz Carla Bandeira da Silva Pereira
 Lisa Matubara
 Luziane Pires dos Santos
