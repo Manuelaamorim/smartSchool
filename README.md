@@ -29,6 +29,16 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 ## Quadro e Backlog do Jira - Entrega 1
+<ul>
+  <li>
+    <a  href="https://drive.google.com/file/d/1FwVw_dKO9Eei_jMjeD_cgbHysA-gxsD6/view?usp=sharing"
+    >Quadro Backlog Entrega 1</a>
+  </li>
+    <li>
+    <a  href="https://drive.google.com/file/d/1wkm-4FlQD_UuH6U51T5kdEKMQhHdXOGc/view?usp=sharing"
+      >Quadro Sprint Entrega 1</a>
+  </li>
+</ul>
 
 
 
