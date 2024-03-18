@@ -13,35 +13,6 @@ Ademais, a expectativa é que o acesso à educação de qualidade, com foco no d
 Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jovens, mas também acompanhar a saúde física e psicológica destes, atendendo, por consequência, ao disposto nas ODS 1, 3 e 4, promovendo um crescimento mais digno para os estudantes da RMR.
 
 
-
-## Links Relevantes
-<ul>
-  <li>
-    <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/VNC/boards/2"
-      >Link para o Projeto no Jira</a>
-  </li>
-    <li>
-    <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/SmartSchool?type=design&node-id=0-1&mode=design&t=V3uiesp8LFjSo9ET-0"
-      >Link do Protótipo de Lo-Fi no Figma</a>
-  </li>
-</ul>
-
-
-
-## Quadro e Backlog do Jira - Entrega 1
-<ul>
-  <li>
-    <a  href="https://drive.google.com/file/d/1hI28sxcNA9r8nZ4F8GJye6Fxru7Z07Os/view?usp=sharing"
-    >Quadro Backlog Entrega 1</a>
-  </li>
-    <li>
-    <a  href="https://drive.google.com/file/d/1wkm-4FlQD_UuH6U51T5kdEKMQhHdXOGc/view?usp=sharing"
-      >Quadro Sprint Entrega 1</a>
-  </li>
-</ul>
-
-
-
 ## Membros da equipe
 Beatriz Carla Bandeira da Silva Pereira,
 Lisa Matubara,
