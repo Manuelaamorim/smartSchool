@@ -41,5 +41,5 @@ Matheus Velame Pessoa,
 Ygor Luiz Rosa.
 
 
-*Temas: Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
+*Temas: Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil; Educação de qualidade.*
 
