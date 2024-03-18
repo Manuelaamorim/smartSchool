@@ -37,5 +37,5 @@ Matheus Velame Pessoa,
 Ygor Luiz Rosa.
 
 
-*Temas: Fenômenos da educação; Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
+*Temas: Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil.*
 
