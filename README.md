@@ -28,6 +28,8 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 
+##Quadro e Backlog do Jira - Entrega 1
+
 ## Membros da equipe
 Beatriz Carla Bandeira da Silva Pereira,
 Lisa Matubara,
