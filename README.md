@@ -1,4 +1,4 @@
-# SmartSchool
+# SmartSchool 
 
 Nosso propósito é utilizar a tecnologia com o escopo de automatizar e otimizar tarefas administrativas e gerenciais de escolas públicas na Região Metropolitana do Recife (RMR), a exemplo das atividades de planejamento e organização, as quais são comumente realizadas de forma manual pela equipe pedagógica.
 
