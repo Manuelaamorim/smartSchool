@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import UserAluno
+from .models import Dados_saude
 
 def login(request):
     if request.method == 'POST':
@@ -16,3 +17,13 @@ def login(request):
             # Se o usuário não existe ou a matrícula está incorreta, exibe uma mensagem de erro
             messages.error(request, 'CPF ou matrícula incorretos.')
     return render(request, 'appsmartschool/login.html')
+
+def dados_saude_visualizar(request):
+
+    try:
+        dados = Dados_saude.objects.all()
+    except Dados_saude.DoesNotExist:
+        messages.error(request, 'Dados de saúde não cadastrados.')
+
+    return render(request, 'appsmartschool/dados_saude.html', {"dados":dados})
+        #precisa criar um novo html?
