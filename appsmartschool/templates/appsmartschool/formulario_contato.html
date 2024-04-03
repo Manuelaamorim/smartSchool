@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="{% static 'css/style_formulario_contato.css' %}">
 </head>
 <body>
-    <h1>Formulário de Contato</h1>
-    <form method="post" action="{% url 'appsmartschool:formulario_contato' %}">
-        {% csrf_token %}
+    <div class="container">
+        <h1>Formulário de Contato</h1>
+        <form method="post" action="{% url 'appsmartschool:formulario_contato' %}">
+            {% csrf_token %}
         <label for="id_nome">Nome:</label><br>
         <input type="text" id="id_nome" name="nome" required><br>
         <label for="id_email">Email:</label><br>
@@ -20,5 +21,6 @@
         <textarea id="id_mensagem" name="mensagem" maxlength="500" required></textarea><br>
         <input type="submit" value="Enviar">
     </form>
+</div>
 </body>
 </html>

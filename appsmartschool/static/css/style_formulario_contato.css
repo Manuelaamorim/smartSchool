@@ -3,15 +3,28 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-image: url('/static/images/fomulario_contato_backgound.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Isso organiza os filhos verticalmente */
+    align-items: center; /* Isso centraliza os filhos horizontalmente */
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
