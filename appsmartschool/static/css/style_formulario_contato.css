@@ -1,45 +1,56 @@
-/* Estilização geral do corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/static/images/fomulario_contato_backgound.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info, .form-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* Isso organiza os filhos verticalmente */
-    align-items: center; /* Isso centraliza os filhos horizontalmente */
-    width: 100%;
-    max-width: 400px;
-}
-
-h1 {
-    color: #ffffff;
-    text-align: center;
-}
-
-form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 600px; /* Largura aumentada para o formulário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #000;
+    text-align: center;
+}
+
+/* Estilo específico para h1 e h2 dentro de contact-info para remover negrito */
+.contact-info h1, .contact-info h2 {
+    font-weight: normal;
 }
 
 label {
     color: #666;
-    font-size: 14px;
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
 }
 
 input[type="text"],
@@ -47,11 +58,11 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    margin: 8px 0 16px 0;
+    margin: 8px 0 6px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -78,5 +89,5 @@ textarea:focus {
 
 textarea {
     height: 150px;
-    resize: vertical; /* Permite ao usuário redimensionar verticalmente */
+    resize: vertical;
 }
