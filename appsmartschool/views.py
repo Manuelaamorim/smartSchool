@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import UserAluno
 from .models import Dados_saude
+from .models import MensagemContato
+from django.http import HttpResponseRedirect
 
 def login(request):
     if request.method == 'POST':
@@ -27,3 +29,19 @@ def dados_saude_visualizar(request):
 
     return render(request, 'appsmartschool/dados_saude.html', {"dados":dados})
         #precisa criar um novo html?
+
+
+
+def formulario_contato(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        email = request.POST.get('email')
+        telefone = request.POST.get('telefone')
+        mensagem = request.POST.get('mensagem')
+
+        MensagemContato.objects.create(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
+
+        # Após salvar os dados, redirecione para uma página de sucesso
+        return HttpResponseRedirect('/contato/sucesso/')
+
+    return render(request, 'appsmartschool/formulario_contato.html')
