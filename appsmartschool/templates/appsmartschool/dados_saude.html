@@ -1,41 +1,66 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados de saúde</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-
-<body class="body">
-    <header class="navbar">
-        <div class="cabecalho">
-            <ul>
-                <li><a href="#smartschool">SmartSchool</a></li>
-                <li><a href="#dados-saude">Dados de saúde</a></li>
-                <li><a href="#boletim">Boletim</a></li>
-                <li><a href="#horarios">Horários</a></li>
-                <li><a href="#frequencia">Frequência</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#logout">Log out</a></li>
-            </ul>
-        </div>
+    <link rel="stylesheet" href="{% static 'css/style_dados_saude.css' %}"> 
+  </head>
+  
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+              <a class="navbar-brand" href="#">SmartSchool</a>
+              <div class="div-nav">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Dados de saúde</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Boletim</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Horários</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Frequência</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="div-nav-direita">
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Log out</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
-    <section class="section-dados-saude">
-        <div class="div-dados">
-            {% for dado in dados %}
-            <h1 class="titulo">Dados de saúde </h1>
-            <p class="dados">Peso: {{dado.peso}}</p>
-            <p class="dados">Altura: {{dado.altura}}</p>
+    <section class="">
+      <div class="blockquote text-center">
+        {% for dado in dados %}
+        <h1 class="display-3">Dados de saúde </h1>
+        <p class="dados">Peso: {{dado.peso}}</p>
+        <p class="dados">Altura: {{dado.altura}}</p>
             <p class="dados">Restrição alimentar: {{dado.restricao_alimentar}}</p>
             <p class="dados">PCD: {{dado.pcd}}</p>
             <p class="dados">TDAH/TEA: {{dado.tdah}}</p>
             {% endfor %}
         </div>
-        <button>Voltar</button> 
+        <div class="blockquote text-center">    
+            <button type="button" class="btn btn-outline-primary">Voltar</button>
+        </div>
         <!-- adicionar a url -->
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
