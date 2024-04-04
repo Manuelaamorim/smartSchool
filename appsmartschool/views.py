@@ -3,6 +3,7 @@ from django.contrib import messages
 from .models import UserAluno
 from .models import Dados_saude
 from .models import MensagemContato
+from .models import Frequencia_Aluno
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -32,6 +33,15 @@ def dados_saude_visualizar(request):
     return render(request, 'appsmartschool/dados_saude.html', {"dados":dados})
         #precisa criar um novo html?
 
+
+def frequencia_alunos_visualizar(request):
+
+    try:
+        frequencia = Frequencia_Aluno.objects.all()
+    except Frequencia_Aluno.DoesNotExist:
+        messages.error(request, 'Frequência não cadastrada.')
+
+    return render(request, 'appsmartschool/frequencia.html', {"frequencia": frequencia})
 
 
 def formulario_contato(request):

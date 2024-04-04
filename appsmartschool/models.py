@@ -36,3 +36,24 @@ class MensagemContato(models.Model):
 
     class Meta:
         app_label = 'appsmartschool'
+
+class Frequencia_Aluno(models.Model):
+    colegio = models.CharField(max_length=200)
+    nome = models.CharField(max_length=200)
+    serie = models.PositiveSmallIntegerField()
+    matricula = models.PositiveIntegerField()
+    materia_1 = models.CharField(max_length=200, null=False)
+    faltas_m1 =  models.PositiveSmallIntegerField(null=False)
+    porcentagem_m1 = models.DecimalField(max_digits=2, decimal_places=2, null=False)
+    materia_2 = models.CharField(max_length=200, null=False)
+    faltas_m2 =  models.PositiveSmallIntegerField(null=False)
+    porcentagem_m2 = models.DecimalField(max_digits=2, decimal_places=2, null=False)
+    materia_3 = models.CharField(max_length=200, null=False)
+    faltas_m3 =  models.PositiveSmallIntegerField(null=False)
+    porcentagem_m3 = models.DecimalField(max_digits=2, decimal_places=2, null=False)
+    materia_4 = models.CharField(max_length=200, null=False)
+    faltas_m4 =  models.PositiveSmallIntegerField(null=False)
+    porcentagem_m4 = models.DecimalField(max_digits=2, decimal_places=2, null=False)
+
+    class Meta:
+        app_label = 'appsmartschool'
