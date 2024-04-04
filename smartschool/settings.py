@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     #Adicionar whitenoise na lista de aplicativos instalados
     "whitenoise.runserver_nostatic",
+    "appsmartschool",
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,21 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = '/auth/'
 
 LOGIN_REDIRECT_URL = '/'  # Altere conforme necessário
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],  # Diretório onde estão seus templates
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+ROOT_URLCONF = 'appsmartschool.urls'
