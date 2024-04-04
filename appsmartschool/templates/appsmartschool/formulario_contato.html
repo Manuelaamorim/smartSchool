@@ -18,7 +18,7 @@
         <div class="form-area">
             <div class="container">
                 <h2>Ou se preferir, envie-nos um e-mail preenchendo os campos abaixo, e logo retornaremos o seu contato</h2>
-                <form method="post" action="{% url 'formulario_contato' %}">
+                <form method="post" action="{% url 'appsmartschool:formulario_contato' %}">
                     {% csrf_token %}
                     <label for="id_nome">Nome:</label><br>
                     <input type="text" id="id_nome" name="nome" required><br>
