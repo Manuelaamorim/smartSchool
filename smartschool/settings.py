@@ -143,7 +143,7 @@ LOGIN_REDIRECT_URL = '/'  # Altere conforme necessário
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # Diretório onde estão seus templates
+        'DIRS': [os.path.join(BASE_DIR, 'appsmartschool', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
