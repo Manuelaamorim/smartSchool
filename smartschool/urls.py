@@ -1,7 +1,9 @@
+# urls.py do Projeto Principal
+
 from django.contrib import admin
-from django.urls import path, include  # Adicionando "include" aos imports
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('appsmartschool.urls'))
+    path('admin/', admin.site.urls),  # Isso permite acessar a área de administração com /admin/
+    path('', include('appsmartschool.urls')),  # Isso inclui as URLs do app appsmartschool no projeto
 ]
