@@ -4,6 +4,8 @@ from .models import UserAluno
 from .models import Dados_saude
 from .models import MensagemContato
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
+from django.shortcuts import render
 
 def login(request):
     if request.method == 'POST':
@@ -45,3 +47,6 @@ def formulario_contato(request):
         return HttpResponseRedirect('/contato/sucesso/')
 
     return render(request, 'appsmartschool/formulario_contato.html')
+
+def home(request):
+    return render(request, 'appsmartschool/home.html')

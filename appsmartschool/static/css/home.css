@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --cor-principal:#171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100vw;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #8bd8ed;
+    background: -webkit-linear-gradient(
+        to right,
+        #171a4a,
+        #99a6f2
+    );
+    background: linear-gradient(
+        to right,
+        #60e1ed,
+        #5bfacd
+    );
+}
+
+header {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--cor-branca);
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-family: 'Poppins';
+}
+
+a:hover {
+
+    color: var(--cor-azul-clara);
+}
+
+.nav-menu-texto {
+
+    padding: 2em;
+}
+
+.nav-menu-perfil {
+
+    padding: 0.5em;
+}
+.div-logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-menu {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div-logout {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cabecalho {
+    height: 7vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+
+    margin-bottom: 2em;
+}
+
