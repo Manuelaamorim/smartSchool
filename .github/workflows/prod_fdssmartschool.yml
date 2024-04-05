@@ -32,7 +32,6 @@ jobs:
         
       - name: Cleaning testing files
         run: |
-          cd smartschool/
           rm db.sqlite3
           rm .env
           cd ..
