@@ -37,11 +37,11 @@ def dados_saude_visualizar(request):
 def frequencia_alunos_visualizar(request):
 
     try:
-        frequencia = Frequencia_Aluno.objects.all()
+        frequencias = Frequencia_Aluno.objects.all()
     except Frequencia_Aluno.DoesNotExist:
         messages.error(request, 'Frequência não cadastrada.')
 
-    return render(request, 'appsmartschool/frequencia.html', {"frequencia": frequencia})
+    return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
 
 
 def formulario_contato(request):
