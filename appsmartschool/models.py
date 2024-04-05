@@ -44,16 +44,16 @@ class Frequencia_Aluno(models.Model):
     matricula = models.CharField(max_length=4)
     materia_1 = models.CharField(max_length=200, null=False)
     faltas_da_materia_1 =  models.PositiveSmallIntegerField(null=False)
-    porcentagem_da_materia_1 = models.IntegerField(max_length=4, null=False)
+    porcentagem_da_materia_1 = models.CharField(max_length=4, null=False)
     materia_2 = models.CharField(max_length=200, null=False)
     faltas_da_materia_2 =  models.PositiveSmallIntegerField(null=False)
-    porcentagem_da_materia_2 = models.IntegerField(max_length=4, null=False)
+    porcentagem_da_materia_2 = models.CharField(max_length=4, null=False)
     materia_3 = models.CharField(max_length=200, null=False)
     faltas_da_materia_3 =  models.PositiveSmallIntegerField(null=False)
-    porcentagem_da_materia_3 = models.IntegerField(max_length=4, null=False)
+    porcentagem_da_materia_3 = models.CharField(max_length=4, null=False)
     materia_4 = models.CharField(max_length=200, null=False)
     faltas_da_materia_4 =  models.PositiveSmallIntegerField(null=False)
-    porcentagem_da_materia_4 = models.IntegerField(max_length=4, null=False)
+    porcentagem_da_materia_4 = models.CharField(max_length=4, null=False)
 
     class Meta:
         app_label = 'appsmartschool'
