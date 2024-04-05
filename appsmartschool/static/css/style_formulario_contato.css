@@ -1,93 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
+/* Importação das fontes utilizadas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --cor-principal: #171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+}
+
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-}
-
-.content-wrapper {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.contact-info, .form-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px; /* Largura aumentada para o formulário */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1, h2 {
-    color: #000;
-    text-align: center;
-}
-
-/* Estilo específico para h1 e h2 dentro de contact-info para remover negrito */
-.contact-info h1, .contact-info h2 {
-    font-weight: normal;
-}
-
-label {
-    color: #666;
-    font-size: 20px;
-    text-align: left;
-    width: 100%;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0 6px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #60e1ed, #5bfacd); /* Mesmo gradiente da home */
+}
+
+header {
+    background-color: var(--cor-branca); /* Cor de fundo do cabeçalho igual da home */
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2); /* Mesma sombra da home */
+}
+
+.cabecalho {
+    height: 7vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr; /* Mesma estrutura de grid da home */
+    align-items: center;
+    justify-content: center;
+}
+
+.div-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal); /* Cor do texto igual da home */
+    font-family: 'Poppins', sans-serif; /* Mesma família de fontes */
+}
+
+a:hover {
+    color: var(--cor-azul-clara); /* Cor do hover igual da home */
+}
+
+.nav-menu-texto {
+    padding: 2em; /* Mesmo padding da home */
+}
+
+.nav-menu-perfil {
+    padding: 0.5em; /* Mesmo padding da home */
+}
+
+/* Estilos específicos para a página de contato */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adiciona um espaço entre o cabeçalho e o conteúdo */
+    width: 100%; /* Garante que o wrapper preencha a largura */
+}
+
+.contact-info, .form-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Largura máxima do formulário */
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, textarea {
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 10px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
+    background-color: var(--cor-azul-clara);
 }
