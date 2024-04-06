@@ -13,31 +13,22 @@
 
 **Atividades:**
 <br/>
-<br/>
 - Diagrama de atividades do sistema
-<br/>
-<br/>
-- Issue/bug tracker do GitHub
-<br/>
-<br/>
--  Deployment das histórias em produção
-  <br/>
-  1. Link:
-<br/>
-<br/>
-  2. Instruções de Acesso:
-<br/>
-<br/>
-  3. Screencast
-<br/>
-<br/>
-- Programação em Par experimentada
-<br/>
-<br/>
-- Quadro da Sprint 01 atualizado refletindo a entrega
-- <br/>
-  1. Print do quadro da sprint
- <br>
- <br/>
-  2. Print do backlog 
 
+- Issue/bug tracker do GitHub
+
+-  Deployment das histórias em produção
+  1. Link:
+
+  2. Instruções de Acesso:
+
+  3. Screencast
+
+- Programação em Par experimentada
+
+  <strong>Print do backlog do projeto :</strong>
+  ![backlog_entrega2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/ece4a331-0ba9-4456-b3a8-12b9a3c5054b)
+  
+ 
+<strong>Print do quadro da Sprint: </strong>
+![quadrojira_entrega02](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/79bc2892-6e0d-4933-a7d4-881941490c33)
