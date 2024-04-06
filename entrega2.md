@@ -22,7 +22,7 @@
   ![ISSUE](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/2bef7418-2254-4d6e-85c9-eaca1edc8723)
 
 -  Deployment das histórias em produção
-  1. Link:
+  1. Link: https://fdssmartschool.azurewebsites.net/
 
   2. Instruções de Acesso:
 
