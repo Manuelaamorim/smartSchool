@@ -26,11 +26,13 @@
 
 <strong>Relato da Programação em Par experimentada: </strong>
 
-  <strong>Print do backlog do projeto :</strong>
+  <strong>Print do backlog do projeto: </strong>
+  
   
   ![backlog_entrega2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/ece4a331-0ba9-4456-b3a8-12b9a3c5054b)
   
  
 <strong>Print do quadro da Sprint: </strong>
+
 
 ![quadrojira_entrega02](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/79bc2892-6e0d-4933-a7d4-881941490c33)
