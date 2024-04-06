@@ -19,7 +19,7 @@
 
 <strong>Print do backlog do projeto: </strong>    
       
-![Captura de tela 2024-04-06 151916](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/0397a7e6-6403-465e-a91d-ce8e4755c39d)
+![backlog](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/3a03eb70-3396-4687-b4a4-985df01254cc)
 
 
 <br/>
