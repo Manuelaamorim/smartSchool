@@ -1,93 +1,183 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --cor-principal: #171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+}
+
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: -webkit-linear-gradient(to right, #60e1ed, #5bfacd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #60e1ed, #5bfacd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 14px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--cor-branca);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-family: 'Poppins';
+}
+
+a:hover {
+
+    color: var(--cor-azul-clara);
+}
+
+.nav-menu-texto {
+    font-size: 16px;
+    padding: 2em;
+}
+
+.nav-menu-perfil {
+    font-size: 16px;
+    padding: 0.5em;
+}
+
+.div-logo {
+    font-size: 16px;
+    display: flex;
     align-items: center;
-    background-color: #f5f5f5;
+    justify-content: center;
+}
+
+.div-menu {
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div-logout {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cabecalho {
+    height: 7vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-menu-texto:hover, .nav-menu-perfil:hover {
+    color: var(--cor-azul-clara);
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
 }
 
 .content-wrapper {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
     width: 100%;
     max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 25px;
+    flex-grow: 1;
 }
 
-.contact-info, .form-area {
+.contact-info {
     flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparente para melhor visualização do texto sobre a imagem de fundo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    line-height: 1.8;
+    text-align: center;
+    min-height: 500px; /* Ajuste conforme necessário para alinhar com o formulário */
+}
+
+.form-area {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparente */
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px; /* Assegura que a altura mínima seja a mesma da contact-info */
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px; /* Largura aumentada para o formulário */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-h1, h2 {
-    color: #000;
-    text-align: center;
-}
-
-/* Estilo específico para h1 e h2 dentro de contact-info para remover negrito */
-.contact-info h1, .contact-info h2 {
-    font-weight: normal;
-}
-
-label {
-    color: #666;
-    font-size: 20px;
-    text-align: left;
     width: 100%;
 }
 
-input[type="text"],
-input[type="email"],
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label, input, textarea {
+    width: 100%;
+    margin-top: 4px; /* Reduzido para diminuir o espaço */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 4px;
+}
+
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0 6px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    resize: none;
+    height: 120px;
 }
 
 input[type="submit"] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 10px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    margin-top: 2px;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
+    background-color: var(--cor-azul-clara);
 }

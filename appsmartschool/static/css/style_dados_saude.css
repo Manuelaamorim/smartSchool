@@ -5,7 +5,6 @@
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
-
 }
 
 * {
@@ -58,15 +57,17 @@ a:hover {
 }
 
 .nav-menu-texto {
-
+    font-size: 16px;
     padding: 2em;
 }
 
 .nav-menu-perfil {
+    font-size: 16px;
 
     padding: 0.5em;
 }
 .div-logo {
+    font-size: 16px;
 
     display: flex;
     align-items: center;
@@ -74,7 +75,7 @@ a:hover {
 }
 
 .div-menu {
-
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +83,7 @@ a:hover {
 }
 
 div-logout {
-
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
