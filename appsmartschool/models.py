@@ -14,7 +14,7 @@ class UserAluno (models.Model):
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
     telefone = models.CharField(max_length=11, null=False)
-    email_responsavel = models.EmailField();
+    email_responsavel = models.EmailField()
 
 
     class Meta:
@@ -22,6 +22,7 @@ class UserAluno (models.Model):
 
 
 class Dados_saude(models.Model):
+    user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
     peso = models.FloatField(max_length=4, null=False)
     altura = models.FloatField(max_length = 4, null=False)
     restricao_alimentar = models.TextField(max_length = 100)
@@ -46,6 +47,7 @@ class MensagemContato(models.Model):
 
 
 class Frequencia_Aluno(models.Model):
+    user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
     colegio = models.CharField(max_length=200)
     nome = models.CharField(max_length=200)
     serie = models.PositiveSmallIntegerField()
