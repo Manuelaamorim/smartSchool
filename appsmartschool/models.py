@@ -1,7 +1,6 @@
 from django.db import models
 
 class UserAluno (models.Model):
-    
     matricula = models.CharField(max_length=4)
     nome = models.CharField(max_length=200, null=False)
     cpf = models.CharField(max_length=11)
@@ -30,7 +29,7 @@ class Dados_saude(models.Model):
 class MensagemContato(models.Model):
     nome = models.CharField(max_length=200)
     email = models.EmailField()
-    telefone = models.CharField(max_length=20)
+    telefone = models.PositiveBigIntegerField()
     mensagem = models.TextField(max_length=500)
     data_envio = models.DateTimeField(auto_now_add=True)
 

@@ -54,9 +54,12 @@ def formulario_contato(request):
         MensagemContato.objects.create(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
 
         # Após salvar os dados, redirecione para uma página de sucesso
-        return HttpResponseRedirect('/contato/sucesso/')
+        return redirect('appsmartschool:contato_sucesso')
 
     return render(request, 'appsmartschool/formulario_contato.html')
+
+def contato_sucesso(request):
+    return render(request, 'appsmartschool/contato_sucesso.html')
 
 def home(request):
     return render(request, 'appsmartschool/home.html')
