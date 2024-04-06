@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
 
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    
+    --font-color: whitesmoke;
+    
+    --btn-color: rgb(49, 53, 90);
+    --btn-pressed: rgb(31, 34, 57);
+    --cor-principal:#171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 #frequencia {
     text-align: left;
     font-size: 90px;
     margin-left: 50px;
     margin-top: 50px;
+    font-weight: bold;
 }
 
 #negrito {
@@ -55,25 +78,6 @@ h2 {
 
 tr {
     margin: 8980px 0; 
-}
-
-
-
-
-
-
-:root {
-    --cor-principal:#171a4a;
-    --cor-preta: #000000;
-    --cor-branca: #eae2e6;
-    --cor-azul-clara: #99a6f2;
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 section{
