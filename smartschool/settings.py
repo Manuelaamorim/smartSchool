@@ -137,9 +137,9 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-LOGIN_URL = '/auth/'
+LOGIN_URL = 'login'
 
-LOGIN_REDIRECT_URL = '/'  # Altere conforme necessário
+LOGIN_REDIRECT_URL = 'pagina_home'
 
 TEMPLATES = [
     {

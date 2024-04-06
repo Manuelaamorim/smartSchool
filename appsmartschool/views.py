@@ -7,22 +7,23 @@ from .models import Frequencia_Aluno
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
-def login(request):
-    if request.method == 'POST':
-        cpf = request.POST.get('cpf')
-        matricula = request.POST.get('matricula')
-
-        try:
-            # Verifica se o usuário existe com base no CPF e na matrícula
-            user = UserAluno.objects.get(cpf=cpf, matricula=matricula)
-            # Se o usuário existe, redireciona para a página de sucesso
-            return redirect('pagina_de_sucesso')  # Altere 'pagina_de_sucesso' para a sua página de sucesso
-        except UserAluno.DoesNotExist:
-            # Se o usuário não existe ou a matrícula está incorreta, exibe uma mensagem de erro
-            messages.error(request, 'CPF ou matrícula incorretos.')
+def login_view(request):
+    if request.method == "POST":
+        cpf = request.POST.get('username')
+        senha = request.POST.get('password')
+        user = authenticate(request, username=cpf, password=senha)
+        if user is not None:
+            login(request, user)
+            return redirect('appsmartschool:pagina_home')  # Substitua pelo nome da URL para redirecionar após o login
+        else:
+            messages.error(request, 'CPF ou senha inválidos.')
     return render(request, 'appsmartschool/login.html')
 
+@login_required
 def dados_saude_visualizar(request):
 
     try:
@@ -33,7 +34,7 @@ def dados_saude_visualizar(request):
     return render(request, 'appsmartschool/dados_saude.html', {"dados":dados})
         #precisa criar um novo html?
 
-
+@login_required
 def frequencia_alunos_visualizar(request):
 
     try:
@@ -43,7 +44,7 @@ def frequencia_alunos_visualizar(request):
 
     return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
 
-
+@login_required
 def formulario_contato(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')
@@ -58,8 +59,16 @@ def formulario_contato(request):
 
     return render(request, 'appsmartschool/formulario_contato.html')
 
+@login_required
 def contato_sucesso(request):
     return render(request, 'appsmartschool/contato_sucesso.html')
 
+@login_required
 def home(request):
     return render(request, 'appsmartschool/home.html')
+
+@login_required
+def logout_view(request):
+    logout(request)
+    # Redireciona para a página de login, ou outra página que desejar
+    return redirect('appsmartschool:login')
