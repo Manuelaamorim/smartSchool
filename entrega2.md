@@ -14,22 +14,24 @@
 **Atividades:**
 <br/>
 - Diagrama de atividades do sistema
-<br/><br/>
-<br/><br/>
+<br/>
+<br/>
 - Issue/bug tracker do GitHub
-<br/><br/>
-<br/><br/>
+<br/>
+<br/>
 -  Deployment das histórias em produção
   1. Link:
 <br/>
   2. Instruções de Acesso:
 <br/>
   3. Screencast
-<br/><br/>
+<br/>
+<br/>
 - Programação em Par experimentada
-<br/><br/>
+<br/>
+<br/>
 - Quadro da Sprint 01 atualizado refletindo a entrega
   1. Print do quadro da sprint
  <br/>
   2. Print do backlog 
-<br/><br/>
+
