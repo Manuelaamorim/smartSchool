@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style_login_aluno.css' %}">
+    <title>Login Aluno</title>
 </head>
 <body>
-    <h1 class="titulo-login">Bem vindo, aluno!</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="cpf">Digite o seu CPF:</label><br>
-        <input type="text" id="cpf" name="cpf"><br>
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha"><br><br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <h1 class="titulo-login">Bem vindo, aluno!</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <label for="cpf">Digite o seu CPF:</label>
+                <input placeholder="000.000.000-00" type="text" id="cpf" name="cpf"><br>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input placeholder="your password" type="password" id="senha" name="senha">
+            </div>
+            <input class="btn-submit" type="submit" value="Login">
+        </form>
+    </div>
 </body>
 </html>
