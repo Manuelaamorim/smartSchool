@@ -27,22 +27,31 @@ def login_view(request):
 def dados_saude_visualizar(request):
 
     try:
-        dados = Dados_saude.objects.all()
-    except Dados_saude.DoesNotExist:
-        messages.error(request, 'Dados de saúde não cadastrados.')
+        # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
+        user_aluno = UserAluno.objects.get(user=request.user)
+        dados = Dados_saude.objects.filter(user_aluno=user_aluno)
+        if not dados:
+            messages.error(request, 'Dados de saúde não cadastrados.')
+    except UserAluno.DoesNotExist:
+        messages.error(request, 'Aluno não cadastrado.')
+        dados = []
 
-    return render(request, 'appsmartschool/dados_saude.html', {"dados":dados})
-        #precisa criar um novo html?
+    return render(request, 'appsmartschool/dados_saude.html', {"dados": dados})
 
 @login_required
 def frequencia_alunos_visualizar(request):
-
     try:
-        frequencias = Frequencia_Aluno.objects.all()
-    except Frequencia_Aluno.DoesNotExist:
-        messages.error(request, 'Frequência não cadastrada.')
+        # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
+        user_aluno = UserAluno.objects.get(user=request.user)
+        frequencias = Frequencia_Aluno.objects.filter(user_aluno=user_aluno)
+        if not frequencias:
+            messages.error(request, 'Frequência não cadastrada.')
+    except UserAluno.DoesNotExist:
+        messages.error(request, 'Aluno não cadastrado.')
+        frequencias = []
 
     return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
+
 
 @login_required
 def formulario_contato(request):

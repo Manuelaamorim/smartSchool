@@ -19,12 +19,15 @@
 
 <strong>Print do backlog do projeto: </strong>    
       
-![backlog2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/9aa947b0-d9a9-4810-961a-ad4b67875ccb)
+![BACKLOG](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/091d760b-02a9-49ca-b596-a297a30ccf89)
+
+
 
 <br/>
 
 <strong>Print do quadro da Sprint 01:</strong>
 
-![sprint2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/552d996d-05ef-482d-b280-b21dad64625e)
+![Captura de tela 2024-04-06 151916](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/0397a7e6-6403-465e-a91d-ce8e4755c39d)
+
 
 

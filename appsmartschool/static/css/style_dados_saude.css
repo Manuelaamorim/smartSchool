@@ -1,16 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 :root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    
+    --font-color: whitesmoke;
+    
+    --btn-color: rgb(49, 53, 90);
+    --btn-pressed: rgb(31, 34, 57);
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 section{
@@ -20,17 +29,7 @@ body{
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    background: #8bd8ed;
-    background: -webkit-linear-gradient(
-        to right,
-        #171a4a,
-        #99a6f2
-    );
-    background: linear-gradient(
-        to right,
-        #60e1ed,
-        #5bfacd
-    );
+    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
 }
 
 header {
@@ -53,7 +52,7 @@ a {
 
 a:hover {
 
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-menu-texto {
@@ -107,17 +106,6 @@ div-logout {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: #8bd8ed;
-    background: -webkit-linear-gradient(
-        to right,
-        #60eddf,
-        #4ff3c4
-    );
-    background: linear-gradient(
-        to right,
-        #60e1ed,
-        #5bfacd
-    );
 }
 
 .glass {
@@ -141,10 +129,9 @@ div-logout {
 }
 
 .dados-titulo {
-
-    font-family: 'Montserrat';
     font-size: 45px;
-    color: var(--cor-principal);
+    color: var(--font-color);
+    font-weight: bold;
 }
 
 h1 {
@@ -155,20 +142,18 @@ h1 {
 .dados-margin {
 
     margin-bottom: 2em;
-    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;
-    color: var(--cor-preta);
+    color: var(--font-color);
     list-style-type: disc;
 }
 
 .dados {
 
     margin-bottom: 10px;
-    font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;
-    color: var(--cor-preta);
+    color: var(--font-color);
     list-style-type: disc;
 }
 

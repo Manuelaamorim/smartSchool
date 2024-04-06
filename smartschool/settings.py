@@ -139,7 +139,7 @@ AUTHENTICATION_BACKENDS = [
 
 LOGIN_URL = 'login'
 
-LOGIN_REDIRECT_URL = 'pagina_home'
+LOGIN_REDIRECT_URL = '/home/'
 
 TEMPLATES = [
     {
