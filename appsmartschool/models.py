@@ -9,9 +9,9 @@ class UserAluno (models.Model):
     serie = models.PositiveSmallIntegerField()
     email = models.EmailField()
     nome_responsavel= models.CharField(max_length=200, null=False)
-    cpf_responsavel = models.PositiveIntegerField()
-    telefone = models.PositiveIntegerField()
-    email_responsavel = models.EmailField()
+    cpf_responsavel = models.CharField(max_length=11, null=False)
+    telefone = models.CharField(max_length=11, null=False)
+    email_responsavel = models.EmailField();
 
     class Meta:
         app_label = 'appsmartschool'
