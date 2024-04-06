@@ -30,10 +30,9 @@
   </li>
 </ul>
 <br/>
+  2. Instruções de Acesso:
 
-  3. Instruções de Acesso:
-
-  4. Screencast
+  3. Screencast
 
 **Relato da Programação em Par experimentada:**
 
