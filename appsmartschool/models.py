@@ -69,28 +69,28 @@ class Frequencia_Aluno(models.Model):
     def porcentagem_da_materia_1(self):
         """Calcula a porcentagem de presença."""
         if self.aulas_da_materia_1 > 0:
-            return ((self.aulas_da_materia_1 - self.faltas_da_materia_1) / self.aulas_da_materia_1) * 100
+             return round(((self.aulas_da_materia_1 - self.faltas_da_materia_1) / self.aulas_da_materia_1) * 100, 2)
         return 0
 
 
     def porcentagem_da_materia_2(self):
         """Calcula a porcentagem de presença."""
         if self.aulas_da_materia_2 > 0:
-            return ((self.aulas_da_materia_2 - self.faltas_da_materia_2) / self.aulas_da_materia_2) * 100
+             return round(((self.aulas_da_materia_2 - self.faltas_da_materia_2) / self.aulas_da_materia_2) * 100, 2)
         return 0
 
 
     def porcentagem_da_materia_3(self):
         """Calcula a porcentagem de presença."""
         if self.aulas_da_materia_3 > 0:
-            return ((self.aulas_da_materia_3 - self.faltas_da_materia_3) / self.aulas_da_materia_3) * 100
+             return round(((self.aulas_da_materia_3 - self.faltas_da_materia_3) / self.aulas_da_materia_3) * 100, 2)
         return 0
 
 
     def porcentagem_da_materia_4(self):
         """Calcula a porcentagem de presença."""
         if self.aulas_da_materia_4 > 0:
-            return ((self.aulas_da_materia_4 - self.faltas_da_materia_4) / self.aulas_da_materia_4) * 100
+             return round(((self.aulas_da_materia_4 - self.faltas_da_materia_4) / self.aulas_da_materia_4) * 100, 2)
         return 0
 
 
