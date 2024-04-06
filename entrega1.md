@@ -22,6 +22,7 @@
 ![backlog](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/3a03eb70-3396-4687-b4a4-985df01254cc)
 
 
+
 <br/>
 
 <strong>Print do quadro da Sprint 01:</strong>
