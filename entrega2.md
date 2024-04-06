@@ -22,11 +22,18 @@
   ![ISSUE](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/2bef7418-2254-4d6e-85c9-eaca1edc8723)
 
 -  Deployment das histórias em produção
-  1. Link: https://fdssmartschool.azurewebsites.net/
+  1. Link no Azure:
+<ul>
+  <li>
+    <a  href="https://fdssmartschool.azurewebsites.net/"
+      >FDS Smart School</a>
+  </li>
+</ul>
+<br/>
 
-  2. Instruções de Acesso:
+  3. Instruções de Acesso:
 
-  3. Screencast
+  4. Screencast
 
 **Relato da Programação em Par experimentada:**
 
