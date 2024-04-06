@@ -9,29 +9,35 @@
       >Protótipo de Lo-Fi no Figma</a>
   </li>
 </ul>
-<br>
+<br/>
 
 **Atividades:**
-<br>
+<br/>
+<br/>
 - Diagrama de atividades do sistema
-<br>
-<br>
+<br/>
+<br/>
 - Issue/bug tracker do GitHub
-<br>
-<br>
+<br/>
+<br/>
 -  Deployment das histórias em produção
+  <br/>
   1. Link:
-<br>
+<br/>
+<br/>
   2. Instruções de Acesso:
-<br>
+<br/>
+<br/>
   3. Screencast
-<br>
-<br>
+<br/>
+<br/>
 - Programação em Par experimentada
-<br>
-<br>
+<br/>
+<br/>
 - Quadro da Sprint 01 atualizado refletindo a entrega
+- <br/>
   1. Print do quadro da sprint
  <br>
+ <br/>
   2. Print do backlog 
 
