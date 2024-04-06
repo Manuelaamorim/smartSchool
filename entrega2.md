@@ -15,9 +15,9 @@
 <br/>
 - Diagrama de atividades do sistema
 
-  <strong>Issues/bug tracker: </strong>
+  <strong> - Issues/bug tracker: </strong>
 
-- Issues fechadas:
+  Issues fechadas:
   
   ![ISSUE](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/2bef7418-2254-4d6e-85c9-eaca1edc8723)
 
@@ -28,15 +28,15 @@
 
   3. Screencast
 
-<strong>Relato da Programação em Par experimentada: </strong>
+<strong>- Relato da Programação em Par experimentada: </strong>
 
-  <strong>Print do backlog do projeto: </strong>
+  <strong>- Print do backlog do projeto: </strong>
   
   
   ![backlog_entrega2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/ece4a331-0ba9-4456-b3a8-12b9a3c5054b)
   
  
-<strong>Print do quadro da Sprint: </strong>
+<strong>- Print do quadro da Sprint: </strong>
 
 
 ![quadrojira_entrega02](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/79bc2892-6e0d-4933-a7d4-881941490c33)
