@@ -26,6 +26,7 @@
 
 <strong>Print do quadro da Sprint 01:</strong>
 
-![sprint2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/552d996d-05ef-482d-b280-b21dad64625e)
+![Captura de tela 2024-04-06 151916](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/0397a7e6-6403-465e-a91d-ce8e4755c39d)
+
 
 
