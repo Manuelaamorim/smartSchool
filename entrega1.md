@@ -19,7 +19,7 @@
 
 <strong>Print do backlog do projeto: </strong>    
       
-![backlog](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/3a03eb70-3396-4687-b4a4-985df01254cc)
+![BACKLOG](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/091d760b-02a9-49ca-b596-a297a30ccf89)
 
 
 
