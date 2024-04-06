@@ -7,7 +7,7 @@ class UserAluno (models.Model):
     matricula = models.CharField(max_length=200)
     nome = models.CharField(max_length=200, null=False)
     cpf = models.CharField(max_length=11)
-    data_de_nascimento = models.DateField("Created on")
+    data_de_nascimento = models.DateField("Data de Nascimento")
     endereco = models.TextField()
     serie = models.PositiveSmallIntegerField()
     email = models.EmailField()
