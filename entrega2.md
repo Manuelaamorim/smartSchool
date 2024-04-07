@@ -18,17 +18,21 @@
 ***Diagrama de atividades do sistema***
 
 ***Issues/bug tracker:***
+  
+  - Issues em abertas:
+    
+    ![issues_abertas](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/7205f4c1-a9c6-4420-8d26-46f6e4018929)
+    
 
   - Issues fechadas:
   
-  ![ISSUE](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/2bef7418-2254-4d6e-85c9-eaca1edc8723)
+  ![issues_fechadas](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/6662efa1-417c-458d-8679-633b19771772)
 
 ***Deployment das histórias em produção***
-  1. Link no Azure:
 <ul>
   <li>
     <a  href="https://fdssmartschool.azurewebsites.net/"
-      >FDS Smart School</a>
+      >Projeto no Azure</a>
   </li>
 </ul>
 <br/>
