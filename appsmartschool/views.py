@@ -11,17 +11,30 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
+
 def login_view(request):
+    context = {}  # Inicializa o contexto vazio
     if request.method == "POST":
         cpf = request.POST.get('username')
         senha = request.POST.get('password')
-        user = authenticate(request, username=cpf, password=senha)
-        if user is not None:
-            login(request, user)
-            return redirect('appsmartschool:pagina_home')  # Substitua pelo nome da URL para redirecionar após o login
-        else:
-            messages.error(request, 'CPF ou senha inválidos.')
-    return render(request, 'appsmartschool/login.html')
+        
+        # Verifica se um usuário com esse CPF existe em UserAluno
+        try:
+            user_aluno = UserAluno.objects.get(cpf=cpf)
+            # Se o CPF existe, tenta autenticar com o usuário relacionado
+            user = authenticate(request, username=user_aluno.user.username, password=senha)
+            if user is not None:
+                login(request, user)
+                return redirect('appsmartschool:pagina_home')  # Certifique-se que a URL está correta
+            else:
+                # CPF existe, mas a senha está errada
+                context['senha_error'] = True
+        except UserAluno.DoesNotExist:
+            # Nenhum UserAluno com este CPF
+            context['cpf_error'] = True
+
+    return render(request, 'appsmartschool/login.html', context)
+
 
 @login_required
 def dados_saude_visualizar(request):
