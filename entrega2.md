@@ -1,6 +1,6 @@
 # Entrega 02
 
-**Links relevantes:**
+***Links relevantes:***
 <ul>
   <li>
     <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/VNC/boards/2"
