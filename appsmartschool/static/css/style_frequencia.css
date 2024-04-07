@@ -15,6 +15,10 @@
     --cor-azul-clara: #99a6f2;
 }
 
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +32,7 @@
     margin-left: 50px;
     margin-top: 50px;
     font-weight: bold;
+    color: white;
 }
 
 #negrito {
@@ -41,9 +46,10 @@ h2 {
     margin-top: 50px;
     font-size: 30px;
     margin-right: 100px;
-    margin-left: 300px;
+    margin-left: 200px;
     text-align: center;
     font-weight: normal;
+    color: white;
 }
 
 #div {
@@ -55,6 +61,7 @@ h2 {
     font-size: 25px;
     margin-left: 70px;
     margin-bottom: 15px;
+    color: white;
 }
 
 #frequencia {
@@ -64,29 +71,32 @@ h2 {
 }
 
 #tabela {
-    display: flex;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    display: table;
     justify-content: center;
     text-align: center;
     font-size: 30px;
     margin-top: 0px;
     border-collapse: separate;
     border-spacing: 40px;
+    border-radius: 10px;
     margin-right: 100px;
     font-family: 'Montserrat';
-}
-
-
-tr {
-    margin: 8980px 0; 
+    margin: auto;
+    
 }
 
 section{
     width: 100vw;
 }
+
 body{
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));   
+    display: flex;
+    flex-direction: column; 
     
 }
 
@@ -136,6 +146,7 @@ a:hover {
     justify-content: center;
 
 }
+
 
 div-logout {
     font-size: 16px;
