@@ -17,6 +17,7 @@
 </ul>
 
 <br/>
+<br/>
 
 ***Deployment das histórias produzidas:***
 <ul>
@@ -130,9 +131,15 @@ João Antônio Lira Correia - Segundo User:
 &nbsp;
 **Faltas da matéria 4 (história):** 3
 
+<br/>
+<br/>
+
 ***Diagrama de atividades do sistema:***
 
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/bfa2aef8-232c-410d-a952-ddd8cabbad18)
+
+<br/>
+<br/>
 
 ***Issues/bug tracker:***
   
@@ -159,7 +166,8 @@ João Antônio Lira Correia - Segundo User:
 
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/46b45761-f7f3-4543-9bc0-73cc61404c22)
 
-
+<br/>
+<br/>
 
 ***Relato da Programação em Par experimentada:***
 
