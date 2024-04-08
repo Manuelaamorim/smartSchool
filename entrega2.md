@@ -106,7 +106,7 @@ Faltas da matéria 4 (história): 3
  ***Print do backlog do projeto:***
   
   
-  ![backlog_entrega2](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/ece4a331-0ba9-4456-b3a8-12b9a3c5054b)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/1b4d6741-b0b8-4543-ad5b-1e2e0737626a)
   
  
 ***Print do quadro da Sprint:***
