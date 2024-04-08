@@ -123,7 +123,7 @@ a {
 
 a:hover {
 
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-menu-texto {

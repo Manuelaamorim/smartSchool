@@ -16,6 +16,7 @@
 }
 
 #id_nome{
+<<<<<<< HEAD
     color: rgb(6, 6, 6);
 }
 
@@ -29,6 +30,21 @@
 
 #id_mensagem{
     color: rgb(6, 6, 6);
+=======
+    color: rgb(0, 0, 0);
+}
+
+#id_email{
+    color: rgb(0, 0, 0);
+}
+
+#id_telefone{
+    color: rgb(0, 0, 0);
+}
+
+#id_mensagem{
+    color: rgb(0, 0, 0);
+>>>>>>> main
 }
 * {
     border: 0;
@@ -77,7 +93,7 @@ a {
 
 a:hover {
 
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-menu-texto {
@@ -126,7 +142,7 @@ div-logout {
 }
 
 .nav-menu-texto:hover, .nav-menu-perfil:hover {
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-item {
@@ -202,7 +218,7 @@ form {
 
 label, input, textarea {
     width: 100%;
-    margin-top: 4px; /* Reduzido para diminuir o espaço */
+    margin-top: 4px; 
     font-size: 16px;
     padding: 4px;
     color: var(--font-color);
