@@ -54,13 +54,10 @@ Por fim, na opção “Contato”, o aluno pode acessar informações de contato
 &nbsp;
 **Dúvida, pergunta ou solicitação (máximo 500 caracteres):** Gostaria de reclamar sobre a cantina da escola... (possui formatação livre, mas é  limitada a 500 caracteres).
 
-&nbsp;
 Por fim, ao realizar o logout, o usuário será redirecionado ao menu principal.
 
-&nbsp;
 Além de Ana Luiza Eugênio, há mais um aluno cadastrado para fins de teste, seguem abaixo seus dados fictícios.
 
-&nbsp;
 João Antônio Lira Correia - Segundo User:
 
 **Cadastro do User:**
