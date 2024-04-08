@@ -15,6 +15,21 @@
     --cor-azul-clara: #99a6f2;
 }
 
+#id_nome{
+    color: rgb(0, 0, 0);
+}
+
+#id_email{
+    color: rgb(0, 0, 0);
+}
+
+#id_telefone{
+    color: rgb(0, 0, 0);
+}
+
+#id_mensagem{
+    color: rgb(0, 0, 0);
+}
 * {
     margin: 0;
     padding: 0;
