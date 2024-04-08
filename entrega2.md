@@ -127,13 +127,11 @@ João Antônio Lira Correia - Segundo User:
 **Faltas da matéria 4 (história):** 3
 
 <br/>
-<br/>
 
 ***Diagrama de atividades do sistema:***
 
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/48662b13-7ce6-4c82-b896-b438b5d837a7)
 
-<br/>
 <br/>
 
 ***Issues/bug tracker:***
@@ -148,20 +146,18 @@ João Antônio Lira Correia - Segundo User:
   ![issues_fechadas](https://github.com/Manuelaamorim/SmartSchool/assets/142419447/16e25777-8937-4524-96ac-cd8bc6e08335)
 
 <br/>
-<br/>
 
  ***Print do backlog do projeto:***
   
   
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/1b4d6741-b0b8-4543-ad5b-1e2e0737626a)
-  
+<br/>  
  
 ***Print do quadro da Sprint:***
 
 
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/46b45761-f7f3-4543-9bc0-73cc61404c22)
 
-<br/>
 <br/>
 
 ***Relato da Programação em Par experimentada:***
