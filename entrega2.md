@@ -112,7 +112,8 @@ Faltas da matéria 4 (história): 3
 ***Print do quadro da Sprint:***
 
 
-![quadrojira_entrega02](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/79bc2892-6e0d-4933-a7d4-881941490c33)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/46b45761-f7f3-4543-9bc0-73cc61404c22)
+
 
 
 ***Relato da Programação em Par experimentada:***
