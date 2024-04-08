@@ -132,6 +132,8 @@ João Antônio Lira Correia - Segundo User:
 
 ***Diagrama de atividades do sistema:***
 
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/bfa2aef8-232c-410d-a952-ddd8cabbad18)
+
 ***Issues/bug tracker:***
   
   - Issues em abertas:
