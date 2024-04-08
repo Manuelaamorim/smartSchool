@@ -10,9 +10,7 @@
     --btn-color: rgb(49, 53, 90);
     --btn-pressed: rgb(31, 34, 57);
     --cor-principal:#171a4a;
-    --cor-preta: #000000;
     --cor-branca: #eae2e6;
-    --cor-azul-clara: #99a6f2;
 }
 
 * {
@@ -23,7 +21,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #60e1ed, #5bfacd);
+    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -50,6 +48,11 @@ a {
     text-decoration: none;
     color: var(--cor-principal);
     font-family: 'Poppins';
+}
+
+a:hover {
+
+    color: var(--primary);
 }
 
 .nav-menu-texto {

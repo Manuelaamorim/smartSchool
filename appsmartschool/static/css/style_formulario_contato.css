@@ -61,7 +61,7 @@ a {
 
 a:hover {
 
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-menu-texto {
@@ -110,7 +110,7 @@ div-logout {
 }
 
 .nav-menu-texto:hover, .nav-menu-perfil:hover {
-    color: var(--cor-azul-clara);
+    color: var(--primary);
 }
 
 .nav-item {
@@ -186,7 +186,7 @@ form {
 
 label, input, textarea {
     width: 100%;
-    margin-top: 4px; /* Reduzido para diminuir o espaço */
+    margin-top: 4px; 
     font-size: 16px;
     padding: 4px;
     color: var(--font-color);
