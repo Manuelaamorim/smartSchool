@@ -10,8 +10,12 @@
     <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/SmartSchool?type=design&node-id=0-1&mode=design&t=V3uiesp8LFjSo9ET-0"
       >Protótipo de Lo-Fi no Figma</a>
   </li>
+   <li>
+    <a  href="https://www.youtube.com/watch?v=JNPZFxvesNU&ab_channel=YgorRosa"
+      >Screencast - Entrega 02</a>
+  </li>
 </ul>
- adicionar Screencast
+
 <br/>
 
 ***Deployment das histórias produzidas:***
@@ -21,8 +25,67 @@
       >Projeto na Azure</a>
   </li>
 </ul>
-<br/>
-  adicionar instruções de Acesso
+
+***Instruções de acesso ao projeto:***
+
+Nesta seção, iremos detalhar o passo a passo de como navegar pelo nosso site “fdssmartschool” na Azure Websites.
+Primeiramente, criamos um menu principal temporário para esta entrega. A página inicial utilizada nesta aplicação web é o login do aluno, uma vez que todas as histórias implementadas até então são funcionalidades disponíveis após o login deste. Salienta-se que as demais páginas relativas ao aluno (afora o login), apenas são possíveis de serem acessadas após este passo. Caso as informações do aluno estejam cadastradas no banco de dados, é possível ter acesso ao menu do aluno, caso contrário, será apresentada uma mensagem de erro. Por fim, o login é o número do CPF do aluno (sem pontos e sem hífen) e sua senha é seu código de matrícula (composta de números e letras).
+Ao entrar na página principal da Azure (https://fdssmartschool.azurewebsites.net/), deve-se digitar “60356365433”, como login (CPF da aluna cadastrada Ana Luiza Eugênio) e como senha “ale12345” (sua matrícula), ambas informações sem as aspas duplas.
+
+Ao realizar o login com sucesso, o site redirecionará ao menu do aluno, onde é possível ver todas suas funcionalidades no menu principal. O nome “SmartSchool”, localizado no canto superior esquerdo redireciona a página sempre ao seu menu inicial, bem como a seção “Logout” (canto superior direito), sempre retorna à página de login. Entre essas opções, há outras funcionalidades: “Dados de saúde”, “Boletim”, “Horários”, Frequência”, “Contato” e “Perfil”. Destas, três foram implementadas: “Dados de saúde”, “Frequência” e “Contato”.
+
+Ao clicar em “Dados de saúde”, aparecerão as informações de dados de saúde apenas da aluna vinculada ao CPF (que é um dado personalíssimo, ou seja, não existe CPFs iguais, cada um é vinculado a uma pessoa) em que fora realizado o login. Nesta seção, pode-se encontrar o peso, altura, restrições alimentares do aluno, bem como se ele possui TDAH/TEA ou é PCD. No caso da aluna em questão, ela pesa 22,0 kg, mede 1,25 m, não possui restrição alimentar, possui TDAH e não é PCD.
+
+No menu da “Frequência”, também apenas aparecerá dados vinculados ao CPF da aluna em questão. No referido caso, a aluna é do colégio “Júlio Mesquita”, teve 15 aulas de cada matéria matriculada (matemática, português, geografia e história) e ela faltou 0 aulas de matemática, 2 de português, 1 de geografia, 4 de história. Vale ressaltar que o próprio sistema calcula a frequência porcentual da aluna em cada disciplina.
+
+
+Por fim, na opção “Contato”, o aluno pode acessar informações de contato da SmartSchool ou enviar mensagens para tirar dúvidas, realizar perguntas ou enviar solicitações. A mensagem ficará salva no banco de dados e em caso de sucesso ao enviá-la, o usuário será redirecionado a uma página de sucesso. O formato que deverá ser enviada a mensagem deve ser, por exemplo:
+
+Nome: Rosália
+Endereço de e-mail: rosalia@gmail.com (precisa possuir @)
+Telefone de Contato: 81999998888 (apenas números)
+Dúvida, pergunta ou solicitação (máximo 500 caracteres): Gostaria de reclamar sobre a cantina da escola... (em que possui formatação livre, mas é limitada a 500 caracteres).
+
+Por fim, ao realizar o logout, o usuário será redirecionado ao menu principal.
+
+Além de Ana Luiza Eugênio, há mais um aluno cadastrado para fins de teste, seguem abaixo seus dados fictícios.
+
+João Antônio Lira Correia - Segundo User:
+
+
+**Cadastro do User:**
+
+
+CPF: 03049815400
+Matrícula: jalc1234
+Data de nascimento: 09/02/2015
+Série do usuário: 5 ano do fundamental
+Email do usuário: joaolcorreia@gmail.com
+Endereço da residência: Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
+Nome do responsável: Maria Alice Correia Gomes
+Cpf do responsável: 98362769475
+Telefone do responsável: 81912270736
+Email do responsável: mlicecg@gmail.com
+
+
+**Dados de Saúde do User:**
+	
+Peso do usuário: 3,38 kg
+Altura do usuário: 1,37 m
+Restrição alimentar: Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
+Possui TDAH: Não
+É PCD: Não
+
+
+**Frequência das aulas do User (15 aulas ministradas de cada matéria):**
+
+
+Colégio do usuário: Fronte Nogueira
+Faltas da matéria 1 (matemática): 5
+Faltas da matéria 2 (português): 2
+Faltas da matéria 3 (geografia): 7
+Faltas da matéria 4 (história): 3
+
 
 
 ***Diagrama de atividades do sistema:***
