@@ -15,9 +15,9 @@
       >Screencast - Entrega 02</a>
   </li>
 </ul>
+<br/>
+<br/>
 
-<br/>
-<br/>
 ***Deployment das histórias produzidas:***
 <ul>
   <li>
