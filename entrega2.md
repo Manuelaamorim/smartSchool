@@ -113,7 +113,6 @@ João Antônio Lira Correia - Segundo User:
 &nbsp;
 **É PCD:** Não
 
-&nbsp; 
 **Frequência das aulas do User (15 aulas ministradas de cada matéria):**
 
 &nbsp;
