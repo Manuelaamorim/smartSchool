@@ -41,52 +41,94 @@ No menu da “Frequência”, também apenas aparecerá dados vinculados ao CPF 
 
 Por fim, na opção “Contato”, o aluno pode acessar informações de contato da SmartSchool ou enviar mensagens para tirar dúvidas, realizar perguntas ou enviar solicitações. A mensagem ficará salva no banco de dados e em caso de sucesso ao enviá-la, o usuário será redirecionado a uma página de sucesso. O formato que deverá ser enviada a mensagem deve ser, por exemplo:
 
-Nome: Rosália
-Endereço de e-mail: rosalia@gmail.com (precisa possuir @)
-Telefone de Contato: 81999998888 (apenas números)
-Dúvida, pergunta ou solicitação (máximo 500 caracteres): Gostaria de reclamar sobre a cantina da escola... (em que possui formatação livre, mas é limitada a 500 caracteres).
+&nbsp;
+**Nome:** Rosália
 
+&nbsp;
+**Endereço de e-mail:** rosalia@gmail.com (precisa possuir @)
+
+&nbsp;
+**Telefone de Contato:** 81999998888 (apenas números)
+
+&nbsp;
+Dúvida, pergunta ou solicitação (máximo 500 caracteres): Gostaria de reclamar sobre a cantina da escola... (possui formatação livre, mas é  limitada a 500 caracteres).
+
+&nbsp;
 Por fim, ao realizar o logout, o usuário será redirecionado ao menu principal.
 
+&nbsp;
 Além de Ana Luiza Eugênio, há mais um aluno cadastrado para fins de teste, seguem abaixo seus dados fictícios.
 
+&nbsp;
 João Antônio Lira Correia - Segundo User:
-
 
 **Cadastro do User:**
 
+&nbsp;
+ **CPF:** 03049815400
 
-CPF: 03049815400
-Matrícula: jalc1234
-Data de nascimento: 09/02/2015
-Série do usuário: 5 ano do fundamental
-Email do usuário: joaolcorreia@gmail.com
-Endereço da residência: Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
-Nome do responsável: Maria Alice Correia Gomes
-Cpf do responsável: 98362769475
-Telefone do responsável: 81912270736
-Email do responsável: mlicecg@gmail.com
+&nbsp;
+**Matrícula:** jalc1234
+
+&nbsp;
+**Data de nascimento:** 09/02/2015
+
+&nbsp;
+**Série do usuário:** 5 ano do fundamental
+
+&nbsp;
+**Email do usuário:** joaolcorreia@gmail.com
+
+&nbsp;
+**Endereço da residência:** Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
+
+&nbsp;
+**Nome do responsável:** Maria Alice Correia Gomes
+
+&nbsp;
+**CPF do responsável:** 98362769475
+
+&nbsp;
+**Telefone do responsável:** 81912270736
+
+&nbsp;
+**Email do responsável:** mlicecg@gmail.com
 
 
 **Dados de Saúde do User:**
-	
-Peso do usuário: 3,38 kg
-Altura do usuário: 1,37 m
-Restrição alimentar: Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
-Possui TDAH: Não
-É PCD: Não
 
+&nbsp;
+**Peso do usuário:** 3,38 kg
 
+&nbsp;
+**Altura do usuário:** 1,37 m
+
+&nbsp;
+**Restrição alimentar:** Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
+
+&nbsp;
+**Possui TDAH:** Não
+
+&nbsp;
+**É PCD:** Não
+
+&nbsp; 
 **Frequência das aulas do User (15 aulas ministradas de cada matéria):**
 
+&nbsp;
+**Colégio do usuário:** Fronte Nogueira
 
-Colégio do usuário: Fronte Nogueira
-Faltas da matéria 1 (matemática): 5
-Faltas da matéria 2 (português): 2
-Faltas da matéria 3 (geografia): 7
-Faltas da matéria 4 (história): 3
+&nbsp;
+**Faltas da matéria 1 (matemática):** 5
 
+&nbsp;
+**Faltas da matéria 2 (português):** 2
 
+&nbsp;
+**Faltas da matéria 3 (geografia):** 7
+
+&nbsp;
+**Faltas da matéria 4 (história):** 3
 
 ***Diagrama de atividades do sistema:***
 
@@ -94,12 +136,13 @@ Faltas da matéria 4 (história): 3
   
   - Issues em abertas:
     
-    ![issues_abertas](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/7205f4c1-a9c6-4420-8d26-46f6e4018929)
+    ![issues_abertas](https://github.com/Manuelaamorim/SmartSchool/assets/142419447/8607770d-7e77-45ec-8b9c-f7e7b2e43bc8)
     
 
   - Issues fechadas:
   
-  ![issues_fechadas](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/6662efa1-417c-458d-8679-633b19771772)
+  ![issues_fechadas](https://github.com/Manuelaamorim/SmartSchool/assets/142419447/16e25777-8937-4524-96ac-cd8bc6e08335)
+
 <br/>
 <br/>
 
