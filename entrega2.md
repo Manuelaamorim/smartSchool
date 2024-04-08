@@ -18,7 +18,6 @@
 
 <br/>
 <br/>
-
 ***Deployment das histórias produzidas:***
 <ul>
   <li>
