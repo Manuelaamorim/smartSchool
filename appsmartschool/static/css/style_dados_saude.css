@@ -160,6 +160,5 @@ div-logout {
     justify-content: space-between;
     gap: 20px;   
     padding: 0.5em;
-    max-width: 100%;
+    max-width: 85%;
 }
-
