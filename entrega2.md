@@ -138,7 +138,8 @@ João Antônio Lira Correia - Segundo User:
   
   - Issues em abertas:
     
-    ![issues_abertas](https://github.com/Manuelaamorim/SmartSchool/assets/142419447/8607770d-7e77-45ec-8b9c-f7e7b2e43bc8)
+    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/cd30abad-39f5-45e3-8f17-b13fc61dd33b)
+
     
 
   - Issues fechadas:
