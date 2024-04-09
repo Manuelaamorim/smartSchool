@@ -16,7 +16,6 @@
 }
 
 #id_nome{
-<<<<<<< HEAD
     color: rgb(6, 6, 6);
 }
 
@@ -30,7 +29,6 @@
 
 #id_mensagem{
     color: rgb(6, 6, 6);
-=======
     color: rgb(0, 0, 0);
 }
 
@@ -44,7 +42,6 @@
 
 #id_mensagem{
     color: rgb(0, 0, 0);
->>>>>>> main
 }
 * {
     border: 0;
