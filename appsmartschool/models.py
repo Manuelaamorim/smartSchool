@@ -16,8 +16,13 @@ class UserAluno (models.Model):
     telefone = models.CharField(max_length=11, null=False)
     email_responsavel = models.EmailField()
 
+    def __str__(self):
+        return "Aluno " + self.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Dados aluno"
+        verbose_name_plural = "Dados aluno"
 
 class UserProfessor (models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -28,8 +33,13 @@ class UserProfessor (models.Model):
     telefone = models.CharField(max_length=11, null=False)
     email = models.EmailField()
 
+    def __str__(self):
+        return "Dados do professor " + self.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Dados do professor"
+        verbose_name_plural = "Dados do professor"
 
 class UserFuncionario (models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -40,8 +50,13 @@ class UserFuncionario (models.Model):
     telefone = models.CharField(max_length=11, null=False)
     email = models.EmailField()
 
+    def __str__(self):
+        return "Dados do funcionário " + self.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Dados do funcionário"
+        verbose_name_plural = "Dados do funcionário"
 
 class Dados_saude(models.Model):
     user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
@@ -51,8 +66,13 @@ class Dados_saude(models.Model):
     tdah = models.CharField(max_length = 4)
     pcd = models.CharField(max_length = 4)
 
+    def __str__(self):
+        return "Dados de saúde de " + self.user_aluno.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Dados de saúde"
+        verbose_name_plural = "Dados de saúde"
 
 
 class MensagemContato(models.Model):
@@ -62,8 +82,13 @@ class MensagemContato(models.Model):
     mensagem = models.TextField(max_length=500)
     data_envio = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return "Dados de contato de " + self.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Dados de contato"
+        verbose_name_plural = "Dados de contato"
 
 
 class Frequencia_Aluno(models.Model):
@@ -109,5 +134,10 @@ class Frequencia_Aluno(models.Model):
              return round(((self.aulas_da_materia_4 - self.faltas_da_materia_4) / self.aulas_da_materia_4) * 100, 2)
         return 0
 
+    def __str__(self):
+        return "Frequência de " + self.user_aluno.nome
+
     class Meta:
         app_label = 'appsmartschool'
+        verbose_name = "Frequência"
+        verbose_name_plural = "Frequência"
