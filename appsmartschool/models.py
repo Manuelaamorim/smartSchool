@@ -31,6 +31,18 @@ class UserProfessor (models.Model):
     class Meta:
         app_label = 'appsmartschool'
 
+class UserFuncionario (models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    nome = models.CharField(max_length=200, null=False)
+    matricula = models.CharField(max_length=200)
+    cpf = models.CharField(max_length=11)
+    data_de_nascimento = models.DateField("Data de Nascimento")
+    telefone = models.CharField(max_length=11, null=False)
+    email = models.EmailField()
+
+    class Meta:
+        app_label = 'appsmartschool'
+
 class Dados_saude(models.Model):
     user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
     peso = models.FloatField(max_length=4, null=False)

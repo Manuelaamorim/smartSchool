@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import UserAluno
+from .models import UserProfessor
+from .models import UserFuncionario
 from .models import Dados_saude
 from .models import MensagemContato
 from .models import Frequencia_Aluno
@@ -48,20 +50,20 @@ def login_funcionario(request):
         
         # Verifica se um usuário com esse CPF existe em UserAluno
         try:
-            user_professor = user_professor.objects.get(cpf=cpf)
+            user_funcionario = UserFuncionario.objects.get(cpf=cpf)
             # Se o CPF existe, tenta autenticar com o usuário relacionado
-            user = authenticate(request, username=user_professor.user.username, password=senha)
+            user = authenticate(request, username=user_funcionario.user.username, password=senha)
             if user is not None:
                 login(request, user)
                 return redirect('appsmartschool:menu_funcionario')  # Certifique-se que a URL está correta
             else:
                 # CPF existe, mas a senha está errada
                 context['senha_error'] = True
-        except UserAluno.DoesNotExist:
+        except UserFuncionario.DoesNotExist:
             # Nenhum UserAluno com este CPF
             context['cpf_error'] = True
 
-    return render(request, 'appsmartschool/login_funcionario.html')
+    return render(request, 'appsmartschool/login_funcionario.html', context)
 
 
 @login_required
@@ -116,6 +118,14 @@ def contato_sucesso(request):
 @login_required
 def menu_aluno(request):
     return render(request, 'appsmartschool/menu_aluno.html')
+
+@login_required
+def menu_professor(request):
+    return render(request, 'appsmartschool/menu_professor.html')
+
+@login_required
+def menu_funcionario(request):
+    return render(request, 'appsmartschool/menu_funcionario.html')
 
 @login_required
 def logout_view(request):
