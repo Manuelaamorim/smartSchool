@@ -11,8 +11,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
+def tela_inicial(request):
+    return render(request, 'appsmartschool/tela_inicial.html')
 
-def login_view(request):
+def login_aluno(request):
     context = {}  # Inicializa o contexto vazio
     if request.method == "POST":
         cpf = request.POST.get('username')
@@ -25,7 +27,7 @@ def login_view(request):
             user = authenticate(request, username=user_aluno.user.username, password=senha)
             if user is not None:
                 login(request, user)
-                return redirect('appsmartschool:pagina_home')  # Certifique-se que a URL está correta
+                return redirect('appsmartschool:menu_aluno')  # Certifique-se que a URL está correta
             else:
                 # CPF existe, mas a senha está errada
                 context['senha_error'] = True
@@ -33,7 +35,33 @@ def login_view(request):
             # Nenhum UserAluno com este CPF
             context['cpf_error'] = True
 
-    return render(request, 'appsmartschool/login.html', context)
+    return render(request, 'appsmartschool/login_aluno.html', context)
+
+def login_professor(request):
+    return render(request, 'appsmartschool/login_professor.html')
+
+def login_funcionario(request):
+    context = {}  # Inicializa o contexto vazio
+    if request.method == "POST":
+        cpf = request.POST.get('username')
+        senha = request.POST.get('password')
+        
+        # Verifica se um usuário com esse CPF existe em UserAluno
+        try:
+            user_professor = user_professor.objects.get(cpf=cpf)
+            # Se o CPF existe, tenta autenticar com o usuário relacionado
+            user = authenticate(request, username=user_professor.user.username, password=senha)
+            if user is not None:
+                login(request, user)
+                return redirect('appsmartschool:menu_funcionario')  # Certifique-se que a URL está correta
+            else:
+                # CPF existe, mas a senha está errada
+                context['senha_error'] = True
+        except UserAluno.DoesNotExist:
+            # Nenhum UserAluno com este CPF
+            context['cpf_error'] = True
+
+    return render(request, 'appsmartschool/login_funcionario.html')
 
 
 @login_required
@@ -86,11 +114,11 @@ def contato_sucesso(request):
     return render(request, 'appsmartschool/contato_sucesso.html')
 
 @login_required
-def home(request):
-    return render(request, 'appsmartschool/home.html')
+def menu_aluno(request):
+    return render(request, 'appsmartschool/menu_aluno.html')
 
 @login_required
 def logout_view(request):
     logout(request)
     # Redireciona para a página de login, ou outra página que desejar
-    return redirect('appsmartschool:login')
+    return redirect('appsmartschool:tela_inicial')
