@@ -6,6 +6,7 @@ from .models import UserFuncionario
 from .models import Dados_saude
 from .models import MensagemContato
 from .models import Frequencia_Aluno
+from .models import consultar_horario
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -94,6 +95,20 @@ def frequencia_alunos_visualizar(request):
         frequencias = []
 
     return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
+
+@login_required
+def horario_visualizar(request):
+    try:
+        
+        user_aluno = UserAluno.objects.get(user=request.user)
+        horarios = consultar_horario.objects.filter(user_aluno=user_aluno)
+        if not horarios:
+            messages.error(request, 'Horário não cadastrado.')
+    except UserAluno.DoesNotExist:
+        messages.error(request, 'Aluno não cadastrado.')
+        horarios = []
+
+    return render(request, 'appsmartschool/horario.html', {"horarios": horarios})
 
 
 @login_required
