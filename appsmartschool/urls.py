@@ -10,7 +10,6 @@ from .views import menu_funcionario
 from .views import contato_sucesso
 from . import views
 from .views import logout_view
-from .views import horario_visualizar
 
 app_name= 'appsmartschool'
 urlpatterns = [
@@ -25,5 +24,4 @@ urlpatterns = [
     path('menu_aluno/', menu_aluno, name = 'menu_aluno'),
     path('menu_funcionario/', menu_funcionario, name = 'menu_funcionario'),
     path('logout/', logout_view, name='logout'),
-    path('horario/', horario_visualizar, name='consultar_horario'),
 ]

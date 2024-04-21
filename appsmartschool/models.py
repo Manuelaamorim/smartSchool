@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class UserAluno (models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     matricula = models.CharField(max_length=200)
@@ -140,34 +141,3 @@ class Frequencia_Aluno(models.Model):
         app_label = 'appsmartschool'
         verbose_name = "Frequência"
         verbose_name_plural = "Frequência"
-
-
-class consultar_horario(models.Model):
-    user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
-    colegio = models.CharField(max_length=200)
-    nome = models.CharField(max_length=200)
-    serie = models.PositiveSmallIntegerField()
-    matricula = models.CharField(max_length=200)
-
-    inicio_horario_1 = models.TimeField()
-    final_horario_1 = models.TimeField()
-    inicio_horario_2 = models.TimeField()
-    final_horario_2 = models.TimeField()
-    inicio_horario_3 = models.TimeField()
-    final_horario_3 = models.TimeField()
-    inicio_horario_4 = models.TimeField()
-    final_horario_4 = models.TimeField()
-
-    materia_1 = models.CharField(max_length=200, null=False)
-    materia_2 = models.CharField(max_length=200, null=False)
-    materia_3 = models.CharField(max_length=200, null=False)
-    materia_4 = models.CharField(max_length=200, null=False)
-
-    def __str__(self):
-        return "Horário de " + self.user_aluno.nome
-
-    class Meta:
-        app_label = 'appsmartschool'
-        verbose_name = "Horário da Turma"
-        verbose_name_plural = "Horário da Turma"
-
