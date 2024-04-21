@@ -6,6 +6,7 @@ from .models import UserFuncionario
 from .models import Dados_saude
 from .models import MensagemContato
 from .models import Frequencia_Aluno
+from .models import HorarioAula
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -132,3 +133,16 @@ def logout_view(request):
     logout(request)
     # Redireciona para a página de login, ou outra página que desejar
     return redirect('appsmartschool:tela_inicial')
+
+@login_required
+def visualizar_horario(request):
+    try:
+        aluno = UserAluno.objects.get(user=request.user)
+        horarios = HorarioAula.objects.filter(serie=aluno.serie).order_by('dia_semana', 'horario_inicio')
+        if not horarios:
+            messages.error(request, "Não há horários cadastrados para sua série e turma.")
+            return redirect('appsmartschool:menu_aluno')
+        return render(request, 'appsmartschool/horarios.html', {'horarios': horarios})
+    except UserAluno.DoesNotExist:
+        messages.error(request, "Perfil de aluno não encontrado.")
+        return redirect('appsmartschool:tela_inicial')

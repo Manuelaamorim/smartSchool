@@ -141,3 +141,20 @@ class Frequencia_Aluno(models.Model):
         app_label = 'appsmartschool'
         verbose_name = "Frequência"
         verbose_name_plural = "Frequência"
+
+class HorarioAula(models.Model):
+    serie = models.PositiveSmallIntegerField()
+    dia_semana = models.CharField(max_length=20)
+    horario_inicio = models.TimeField()
+    horario_fim = models.TimeField()
+    materia = models.CharField(max_length=200)
+
+
+    def __str__(self):
+        return f"{self.materia} - {self.dia_semana} {self.horario_inicio} - {self.horario_fim} (Série: {self.serie}"
+
+
+    class Meta:
+        app_label = 'appsmartschool'
+        verbose_name = "Horário de Aula"
+        verbose_name_plural = "Horários de Aulas"

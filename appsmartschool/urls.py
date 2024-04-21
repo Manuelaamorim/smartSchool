@@ -8,6 +8,7 @@ from django.contrib import admin
 from .views import menu_aluno
 from .views import menu_funcionario
 from .views import contato_sucesso
+from .views import visualizar_horario
 from . import views
 from .views import logout_view
 
@@ -24,4 +25,5 @@ urlpatterns = [
     path('menu_aluno/', menu_aluno, name = 'menu_aluno'),
     path('menu_funcionario/', menu_funcionario, name = 'menu_funcionario'),
     path('logout/', logout_view, name='logout'),
+    path('horario/', visualizar_horario, name='HorarioAula'),
 ]
