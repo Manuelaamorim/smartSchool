@@ -151,7 +151,7 @@ class HorarioAula(models.Model):
 
 
     def __str__(self):
-        return f"{self.materia} - {self.dia_semana} {self.horario_inicio} - {self.horario_fim} (Série: {self.serie}"
+        return f"{self.materia} - {self.dia_semana} {self.horario_inicio} - {self.horario_fim} (Série: {self.serie})"
 
 
     class Meta:
