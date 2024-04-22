@@ -144,14 +144,28 @@ class Frequencia_Aluno(models.Model):
 
 class HorarioAula(models.Model):
     serie = models.PositiveSmallIntegerField()
-    dia_semana = models.CharField(max_length=20)
-    horario_inicio = models.TimeField()
-    horario_fim = models.TimeField()
-    materia = models.CharField(max_length=200)
+    dia_semana_1 = models.CharField(max_length=20)
+    dia_semana_2 = models.CharField(max_length=20, null=True)
+    dia_semana_3 = models.CharField(max_length=20, null=True)
+    dia_semana_4 = models.CharField(max_length=20, null=True)
+    dia_semana_5 = models.CharField(max_length=20, null=True)
+    horario_inicio_1 = models.TimeField()
+    horario_fim_1 = models.TimeField()
+    materia_1 = models.CharField(max_length=200, null=False)
+    horario_inicio_2 = models.TimeField(null=True)
+    horario_fim_2 = models.TimeField(null=True)
+    materia_2 = models.CharField(max_length=200, null=True)
+    horario_inicio_3 = models.TimeField(null=True)
+    horario_fim_3 = models.TimeField(null=True)
+    materia_3 = models.CharField(max_length=200, null=True)
+    horario_inicio_4 = models.TimeField(null=True)
+    horario_fim_4 = models.TimeField(null=True)
+    materia_4 = models.CharField(max_length=200, null=True)
+    
 
 
     def __str__(self):
-        return f"{self.materia} - {self.dia_semana} {self.horario_inicio} - {self.horario_fim} (Série: {self.serie})"
+        return "Horário da série "
 
 
     class Meta:

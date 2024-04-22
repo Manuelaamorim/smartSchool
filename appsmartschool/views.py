@@ -138,7 +138,7 @@ def logout_view(request):
 def visualizar_horario(request):
     try:
         aluno = UserAluno.objects.get(user=request.user)
-        horarios = HorarioAula.objects.filter(serie=aluno.serie).order_by('dia_semana', 'horario_inicio')
+        horarios = HorarioAula.objects.filter(serie=aluno.serie)
         if not horarios:
             messages.error(request, "Não há horários cadastrados para sua série e turma.")
             return redirect('appsmartschool:menu_aluno')
