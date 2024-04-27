@@ -182,33 +182,33 @@ class Notas(models.Model):
 
     nota1_materia1 = models.FloatField(max_length=4, null = False)
     nota2_materia1 = models.FloatField(max_length=4, null = False)
-    nota3_materia1 = models.FloatField(max_length=4, null = False)
-    media_materia1 = models.FloatField(max_length=4, null = False)
+    nota3_materia1 = models.FloatField(max_length=4, null = False)  
 
     nota1_materia2 = models.FloatField(max_length=4, null = False)
     nota2_materia2 = models.FloatField(max_length=4, null = False)
     nota3_materia2 = models.FloatField(max_length=4, null = False)
-    media_materia2 = models.FloatField(max_length=4, null = False)
 
     nota1_materia3 = models.FloatField(max_length=4, null = False)
     nota2_materia3 = models.FloatField(max_length=4, null = False)
     nota3_materia3 = models.FloatField(max_length=4, null = False)
-    media_materia3 = models.FloatField(max_length=4, null = False)
 
     nota1_materia4 = models.FloatField(max_length=4, null = False)
     nota2_materia4 = models.FloatField(max_length=4, null = False)
     nota3_materia4 = models.FloatField(max_length=4, null = False)
-    media_materia4 = models.FloatField(max_length=4, null = False)
     
+    @property
     def media_materia1(self):
         return (self.nota1_materia1 + self.nota2_materia1 + self.nota3_materia1) / 3
 
+    @property
     def media_materia2(self):
         return (self.nota1_materia2 + self.nota2_materia2 + self.nota3_materia2) / 3
 
+    @property
     def media_materia3(self):
         return (self.nota1_materia3 + self.nota2_materia3 + self.nota3_materia3) / 3
 
+    @property
     def media_materia4(self):
         return (self.nota1_materia4 + self.nota2_materia4 + self.nota3_materia4) / 3
 

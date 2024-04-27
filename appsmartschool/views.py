@@ -156,6 +156,6 @@ def visualiza_notas(request):
         if not notas:
             messages.error(request, "Não há notas cadastradas para este aluno.")
             return redirect('appsmartschool:home_aluno')
-        return render(request, 'notas.html', {'aluno': aluno, 'notas': notas})
+        return render(request, 'appsmartschool/notas.html', {'aluno': aluno, 'notas': notas})
     except UserAluno.DoesNotExist:
         return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})

@@ -1,0 +1,63 @@
+{% extends 'global/base_aluno.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style_notas.css' %}">
+<div class="container">
+    <div class="header-section">
+        <h1>Boletim</h1>
+        <p>Colegio xxxxx xxxxx</p>
+    </div>
+
+    <div class="info-section">
+        <div>Nome: {{ aluno.nome }}</div>
+        <div>Série: {{ aluno.serie }}</div>
+        <div>Matrícula: {{ aluno.matricula }}</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                {% for notas in notas %}
+                <th>Disciplina</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Média Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Notas de cada matéria do aluno -->
+            <tr>
+                <td>{{ notas.materia_1 }}</td>
+                <td>{{ notas.nota1_materia1 }}</td>
+                <td>{{ notas.nota2_materia1 }}</td>
+                <td>{{ notas.nota3_materia1 }}</td>
+                <td>{{ notas.media_materia1|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ notas.materia_2 }}</td>
+                <td>{{ notas.nota1_materia2 }}</td>
+                <td>{{ notas.nota2_materia2 }}</td>
+                <td>{{ notas.nota3_materia2 }}</td>
+                <td>{{ notas.media_materia2|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ notas.materia_3 }}</td>
+                <td>{{ notas.nota1_materia3 }}</td>
+                <td>{{ notas.nota2_materia3 }}</td>
+                <td>{{ notas.nota3_materia3 }}</td>
+                <td>{{ notas.media_materia3|floatformat:2 }}</td>
+            </tr>
+            <tr>
+                <td>{{ notas.materia_4 }}</td>
+                <td>{{ notas.nota1_materia4 }}</td>
+                <td>{{ notas.nota2_materia4 }}</td>
+                <td>{{ notas.nota3_materia4 }}</td>
+                <td>{{ notas.media_materia4|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
