@@ -11,6 +11,7 @@ from .views import contato_sucesso
 from .views import visualizar_horario
 from . import views
 from .views import logout_view
+from .views import visualiza_notas
 
 app_name= 'appsmartschool'
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
     path('menu_funcionario/', menu_funcionario, name = 'menu_funcionario'),
     path('logout/', logout_view, name='logout'),
     path('horario/', visualizar_horario, name='HorarioAula'),
+    path('notas/', visualiza_notas, name='vsisualiza_notas'),
 ]

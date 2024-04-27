@@ -7,6 +7,7 @@ from .models import Dados_saude
 from .models import MensagemContato
 from .models import Frequencia_Aluno
 from .models import HorarioAula
+from .models import Notas
 
 admin.site.register(UserAluno)
 admin.site.register(UserProfessor)
@@ -15,4 +16,4 @@ admin.site.register(Dados_saude)
 admin.site.register(MensagemContato)
 admin.site.register(Frequencia_Aluno)
 admin.site.register(HorarioAula)
-
+admin.site.register(Notas)

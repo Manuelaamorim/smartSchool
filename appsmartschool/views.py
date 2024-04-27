@@ -7,6 +7,7 @@ from .models import Dados_saude
 from .models import MensagemContato
 from .models import Frequencia_Aluno
 from .models import HorarioAula
+from .models import Notas
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -146,3 +147,15 @@ def visualizar_horario(request):
     except UserAluno.DoesNotExist:
         messages.error(request, "Perfil de aluno não encontrado.")
         return redirect('appsmartschool:tela_inicial')
+    
+@login_required
+def visualiza_notas(request):
+    try:
+        aluno = UserAluno.objects.get(user=request.user)  # Pega o aluno logado
+        notas = Notas.objects.filter(aluno=aluno)  # Filtra as notas pelo aluno
+        if not notas:
+            messages.error(request, "Não há notas cadastradas para este aluno.")
+            return redirect('appsmartschool:menu_aluno')
+        return render(request, 'notas.html', {'aluno': aluno, 'notas': notas})
+    except UserAluno.DoesNotExist:
+        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})

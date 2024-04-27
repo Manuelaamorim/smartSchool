@@ -172,3 +172,39 @@ class HorarioAula(models.Model):
         app_label = 'appsmartschool'
         verbose_name = "Horário de Aula"
         verbose_name_plural = "Horários de Aulas"
+
+class Notas(models.Model):
+    aluno = models.ForeignKey(UserAluno, on_delete=models.CASCADE)
+    materia_1 = models.CharField(max_length=200, null=False, default='Matéria 1')
+    materia_2 = models.CharField(max_length=200, null=False, default='Matéria 2')
+    materia_3 = models.CharField(max_length=200, null=False, default='Matéria 3')
+    materia_4 = models.CharField(max_length=200, null=False, default='Matéria 4')
+
+    nota1_materia1 = models.FloatField(max_length=4, null = False)
+    nota2_materia1 = models.FloatField(max_length=4, null = False)
+    nota3_materia1 = models.FloatField(max_length=4, null = False)
+    media_materia1 = models.FloatField(max_length=4, null = False)
+
+    nota1_materia2 = models.FloatField(max_length=4, null = False)
+    nota2_materia2 = models.FloatField(max_length=4, null = False)
+    nota3_materia2 = models.FloatField(max_length=4, null = False)
+    media_materia2 = models.FloatField(max_length=4, null = False)
+
+    nota1_materia3 = models.FloatField(max_length=4, null = False)
+    nota2_materia3 = models.FloatField(max_length=4, null = False)
+    nota3_materia3 = models.FloatField(max_length=4, null = False)
+    media_materia3 = models.FloatField(max_length=4, null = False)
+
+    nota1_materia4 = models.FloatField(max_length=4, null = False)
+    nota2_materia4 = models.FloatField(max_length=4, null = False)
+    nota3_materia4 = models.FloatField(max_length=4, null = False)
+    media_materia4 = models.FloatField(max_length=4, null = False)
+    
+    def __str__(self):
+        return "Nota do aluno " + self.aluno.nome
+    
+    class Meta:
+        app_label = 'appsmartschool'
+        verbose_name = "Notas do aluno"
+        verbose_name_plural = "Notas do aluno"
+
