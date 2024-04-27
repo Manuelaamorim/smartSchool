@@ -1,52 +1,43 @@
-<!DOCTYPE html>
+{% extends 'global/base.html' %}
+{% block content %}
 {% load static %}
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horário</title>
-</head>
-<body>
     
+<h2>Horário de Aulas</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Dia da Semana</th>
+            <th>Horario Início</th>
+            <th>Horario Fim</th>
+            <th>Matéria</th>
+            <th>Professor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for horario in horarios %}
+        <tr>
+            <td>{{ horario.dia_semana_1 }}</td>
+            <td>{{ horario.horario_inicio_1 }}</td>
+            <td>{{ horario.horario_fim_1 }}</td>
+            <td>{{ horario.materia_1 }}</td>
 
-    <h2>Horário de Aulas</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Dia da Semana</th>
-                <th>Horario Início</th>
-                <th>Horario Fim</th>
-                <th>Matéria</th>
-                <th>Professor</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for horario in horarios %}
-            <tr>
-                <td>{{ horario.dia_semana_1 }}</td>
-                <td>{{ horario.horario_inicio_1 }}</td>
-                <td>{{ horario.horario_fim_1 }}</td>
-                <td>{{ horario.materia_1 }}</td>
+            <td>{{ horario.dia_semana_2 }}</td>
+            <td>{{ horario.horario_inicio_2 }}</td>
+            <td>{{ horario.horario_fim_2 }}</td>
+            <td>{{ horario.materia_2 }}</td>
 
-                <td>{{ horario.dia_semana_2 }}</td>
-                <td>{{ horario.horario_inicio_2 }}</td>
-                <td>{{ horario.horario_fim_2 }}</td>
-                <td>{{ horario.materia_2 }}</td>
+            <td>{{ horario.dia_semana_3 }}</td>
+            <td>{{ horario.horario_inicio_3 }}</td>
+            <td>{{ horario.horario_fim_3 }}</td>
+            <td>{{ horario.materia_3 }}</td>
 
-                <td>{{ horario.dia_semana_3 }}</td>
-                <td>{{ horario.horario_inicio_3 }}</td>
-                <td>{{ horario.horario_fim_3 }}</td>
-                <td>{{ horario.materia_3 }}</td>
-
-                <td>{{ horario.dia_semana_4 }}</td>
-                <td>{{ horario.horario_inicio_4 }}</td>
-                <td>{{ horario.horario_fim_4 }}</td>
-                <td>{{ horario.materia_4 }}</td>
-                <td>{{ horario.professor.nome }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-</body>
-</html>
+            <td>{{ horario.dia_semana_4 }}</td>
+            <td>{{ horario.horario_inicio_4 }}</td>
+            <td>{{ horario.horario_fim_4 }}</td>
+            <td>{{ horario.materia_4 }}</td>
+            <td>{{ horario.professor.nome }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

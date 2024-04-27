@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="{% static 'css/style_menu_funcionario.css' %}"> 
   </head>
   
-  <body>
-    <header>
-        <div class="cabecalho">
-          <div class="div-logo">
-            <a href="{% url 'appsmartschool:menu_funcionario' %}">SmartSchool</a>
-          </div>
-          <div class="div-menu">
-            <ul>
-              <li class="nav-item">
-                <a class="nav-menu-texto" href="#">Cadastrar Aluno</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-menu-texto" href="#">Cadastrar Professor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-menu-texto" href="#">Cadastrar Dados de Saúde</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-menu-texto" href="#">Cadastrar Disciplinas</a>
-              </li>
-            </ul>
-          </div>
-          <div class="div-logout">
-              <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
-          </div>
+<body>
+  <header>
+      <div class="cabecalho">
+        <div class="div-logo">
+          <a href="{% url 'appsmartschool:menu_funcionario' %}">SmartSchool</a>
         </div>
-    </header>
+        <div class="div-menu">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-menu-texto" href="#">Cadastrar Aluno</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-menu-texto" href="#">Cadastrar Professor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-menu-texto" href="#">Cadastrar Dados de Saúde</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-menu-texto" href="#">Cadastrar Disciplinas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="div-logout">
+            <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
+        </div>
+      </div>
+  </header>
 </body>
 </html>

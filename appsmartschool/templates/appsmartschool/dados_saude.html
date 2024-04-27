@@ -1,61 +1,23 @@
-<!DOCTYPE html>
+{% extends 'global/base.html' %}
+{% block content %}
 {% load static %}
-<html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dados de saúde</title>
-  <link rel="stylesheet" href="{% static 'css/style_dados_saude.css' %}">
-</head>
+<link rel="stylesheet" href="{% static '../static/css/style_dados_saude.css' %}">
 
-<body>
-  <header>
-    <div class="cabecalho">
-      <div class="div-logo">
-        <a href="{% url 'appsmartschool:menu_aluno' %}">SmartSchool</a>
-      </div>
-      <div class="div-menu">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:dados-saude' %}">Dados de saúde</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Boletim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Horários</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:frequencia_aluno' %}">Frequência</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:formulario_contato' %}">Contato</a>
-          </li>
-        </ul>
-      </div>
-      <div class="div-logout">
-        <a class="nav-menu-perfil" href="#">Perfil</a>
-        <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
-      </div>
+<section>
+  <div class="container">
+    <div class="glass">
+      {% for dado in dados %}
+      <h1 class="dados-titulo">Dados de saúde</h1>
+      <ul class="dados-ul">
+        <li class="dados">Seu peso: {{dado.peso}} kg</li>
+        <li class="dados">Sua altura: {{dado.altura}} cm</li>
+        <li class="dados">Possui restrição alimentar: {{dado.restricao_alimentar}}</li>
+        <li class="dados">Possui TDAH/TEA: {{dado.tdah}}</li>
+        <li class="dados-margin">É PCD: {{dado.pcd}}</li>
+        {% endfor %}
+      </ul>
     </div>
-  </header>
-  <section>
-    <div class="container">
-      <div class="glass">
-        {% for dado in dados %}
-        <h1 class="dados-titulo">Dados de saúde</h1>
-        <ul class="dados-ul">
-          <li class="dados">Seu peso: {{dado.peso}} kg</li>
-          <li class="dados">Sua altura: {{dado.altura}} cm</li>
-          <li class="dados">Possui restrição alimentar: {{dado.restricao_alimentar}}</li>
-          <li class="dados">Possui TDAH/TEA: {{dado.tdah}}</li>
-          <li class="dados-margin">É PCD: {{dado.pcd}}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
-</body>
-
-</html>
+  </div>
+</section>
+{% endblock %}
