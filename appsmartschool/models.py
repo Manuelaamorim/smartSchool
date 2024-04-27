@@ -200,8 +200,20 @@ class Notas(models.Model):
     nota3_materia4 = models.FloatField(max_length=4, null = False)
     media_materia4 = models.FloatField(max_length=4, null = False)
     
-    def __str__(self):
-        return "Nota do aluno " + self.aluno.nome
+    def media_materia1(self):
+        return (self.nota1_materia1 + self.nota2_materia1 + self.nota3_materia1) / 3
+
+    def media_materia2(self):
+        return (self.nota1_materia2 + self.nota2_materia2 + self.nota3_materia2) / 3
+
+    def media_materia3(self):
+        return (self.nota1_materia3 + self.nota2_materia3 + self.nota3_materia3) / 3
+
+    def media_materia4(self):
+        return (self.nota1_materia4 + self.nota2_materia4 + self.nota3_materia4) / 3
+
+    def _str_(self):
+        return "Notas de {}".format(self.aluno.user.username)
     
     class Meta:
         app_label = 'appsmartschool'
