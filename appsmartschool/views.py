@@ -31,7 +31,7 @@ def login_aluno(request):
             user = authenticate(request, username=user_aluno.user.username, password=senha)
             if user is not None:
                 login(request, user)
-                return redirect('appsmartschool:menu_aluno')  # Certifique-se que a URL está correta
+                return redirect('appsmartschool:home_aluno')  # Certifique-se que a URL está correta
             else:
                 # CPF existe, mas a senha está errada
                 context['senha_error'] = True
@@ -57,7 +57,7 @@ def login_funcionario(request):
             user = authenticate(request, username=user_funcionario.user.username, password=senha)
             if user is not None:
                 login(request, user)
-                return redirect('appsmartschool:menu_funcionario')  # Certifique-se que a URL está correta
+                return redirect('appsmartschool:home_funcionario')  # Certifique-se que a URL está correta
             else:
                 # CPF existe, mas a senha está errada
                 context['senha_error'] = True
@@ -118,16 +118,16 @@ def contato_sucesso(request):
     return render(request, 'appsmartschool/contato_sucesso.html')
 
 @login_required
-def menu_aluno(request):
-    return render(request, 'appsmartschool/menu_aluno.html')
+def home_aluno(request):
+    return render(request, 'appsmartschool/home_aluno.html')
 
 @login_required
-def menu_professor(request):
-    return render(request, 'appsmartschool/menu_professor.html')
+def home_professor(request):
+    return render(request, 'appsmartschool/home_professor.html')
 
 @login_required
-def menu_funcionario(request):
-    return render(request, 'appsmartschool/menu_funcionario.html')
+def home_funcionario(request):
+    return render(request, 'appsmartschool/home_funcionario.html')
 
 @login_required
 def logout_view(request):
@@ -142,7 +142,7 @@ def visualizar_horario(request):
         horarios = HorarioAula.objects.filter(serie=aluno.serie)
         if not horarios:
             messages.error(request, "Não há horários cadastrados para sua série e turma.")
-            return redirect('appsmartschool:menu_aluno')
+            return redirect('appsmartschool:home_aluno')
         return render(request, 'appsmartschool/horarios.html', {'horarios': horarios})
     except UserAluno.DoesNotExist:
         messages.error(request, "Perfil de aluno não encontrado.")
@@ -155,7 +155,7 @@ def visualiza_notas(request):
         notas = Notas.objects.filter(aluno=aluno)  # Filtra as notas pelo aluno
         if not notas:
             messages.error(request, "Não há notas cadastradas para este aluno.")
-            return redirect('appsmartschool:menu_aluno')
+            return redirect('appsmartschool:home_aluno')
         return render(request, 'notas.html', {'aluno': aluno, 'notas': notas})
     except UserAluno.DoesNotExist:
         return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
