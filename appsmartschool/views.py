@@ -219,6 +219,11 @@ def cadastro_disciplina(request):
             messages.error(request, "Uma disciplina com este código já está cadastrada.")
             return render(request, 'appsmartschool/cadastro_disciplina.html')
 
+         # Verifica se já existe uma disciplina com o mesmo nome
+        if Disciplina.objects.filter(nome=nome).exists():
+            messages.error(request, "Uma disciplina com este nome já está cadastrada.")
+            return render(request, 'appsmartschool/cadastro_disciplina.html')
+        
         try:
             # Cria uma nova disciplina
             Disciplina.objects.create(codigo=codigo, nome=nome, carga_horaria=carga_horaria, ementa=ementa)
