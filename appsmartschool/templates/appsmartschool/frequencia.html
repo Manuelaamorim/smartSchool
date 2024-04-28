@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="{% static 'css/style_frequencia.css' %}">
 <div class="container">
-  {% for frequencia in frequencias %}
   <div class="header-section">
+      {% for frequencia in frequencias %}
       <h1>Frequência</h1>
       <p>Colégio {{frequencia.colegio}}</p>
   </div>
@@ -16,28 +16,40 @@
     <div>Matrícula: {{ frequencia.matricula }}</div>
 </div>
 
-<table id="tabela">
-  <tr>
-    <td id = "negrito">Frequência</td>
-    <td id = "negrito">{{frequencia.materia_1}}</td>
-    <td id = "negrito">{{frequencia.materia_2}}</td>
-    <td id = "negrito">{{frequencia.materia_3}}</td>
-    <td id = "negrito">{{frequencia.materia_4}}</td>
-  </tr>
-  <tr>
-    <td id = "negrito">Faltas</td>
-    <td>{{frequencia.faltas_da_materia_1}}</td>
-    <td>{{frequencia.faltas_da_materia_2}}</td>
-    <td>{{frequencia.faltas_da_materia_3}}</td>
-    <td>{{frequencia.faltas_da_materia_4}}</td>
-  </tr>
-  <tr>
-    <td id = "negrito">Frequência (em %)</td>
-    <td>{{frequencia.porcentagem_da_materia_1}}%</td>
-    <td>{{frequencia.porcentagem_da_materia_2}}%</td>
-    <td>{{frequencia.porcentagem_da_materia_3}}%</td>
-    <td>{{frequencia.porcentagem_da_materia_4}}%</td>
-  </tr>
+<table>
+  <thead>
+    <tr>
+        <th>Disciplina</th>
+        <th>Frequência</th> <!-- Note que corrigi a tag de fechamento -->
+        <th>Faltas</th>
+        <th>Frequência (em %)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>{{ frequencia.materia_1 }}</td>
+        <td>{{ frequencia.faltas_da_materia_1 }}</td>
+        <td>{{ frequencia.aulas_da_materia_1 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_1 }}%</td>
+    </tr>
+    <tr>
+        <td>{{ frequencia.materia_2 }}</td>
+        <td>{{ frequencia.faltas_da_materia_2 }}</td>
+        <td>{{ frequencia.aulas_da_materia_2 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_2 }}%</td>
+    </tr>
+    <tr>
+        <td>{{ frequencia.materia_3 }}</td>
+        <td>{{ frequencia.faltas_da_materia_3 }}</td> 
+        <td>{{ frequencia.aulas_da_materia_3 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_3 }}%</td>
+    </tr>
+    <tr>
+      <td>{{ frequencia.materia_4 }}</td>
+      <td>{{ frequencia.faltas_da_materia_4 }}</td>
+      <td>{{ frequencia.aulas_da_materia_4 }}</td>
+      <td>{{ frequencia.porcentagem_da_materia_4 }}%</td>   
+    </tr>
   {% endfor %}
-</table>
-{% endblock %}
+  </tbody>
+  {% endblock %}

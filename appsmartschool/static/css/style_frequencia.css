@@ -45,10 +45,6 @@ th {
     flex-direction: column;
 }
 
-.header-section h1{
-    font-weight: 500;
-    font-size: 3rem;
-}
 
 .linha{
     border-bottom: 1px solid grey;
@@ -65,4 +61,9 @@ th {
 ul.messages {
     padding: 10px;
     margin: 10px;
+}
+
+.header-section h1{
+    font-weight: 500;
+    font-size: 3rem;
 }
