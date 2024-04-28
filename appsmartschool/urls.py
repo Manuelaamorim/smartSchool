@@ -1,18 +1,9 @@
 from django import urls
 from django.urls import path
-from .views import login
-from .views import dados_saude_visualizar
-from .views import formulario_contato
-from .views import frequencia_alunos_visualizar
+from .views import *
 from django.contrib import admin
-from .views import home_aluno
-from .views import home_funcionario
-from .views import contato_sucesso
-from .views import visualizar_horario
 from . import views
-from .views import logout_view
-from .views import visualiza_notas
-from .views import cadastro_disciplina
+
 
 app_name= 'appsmartschool'
 urlpatterns = [
