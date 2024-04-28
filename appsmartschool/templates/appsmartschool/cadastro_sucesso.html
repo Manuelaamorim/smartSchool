@@ -1,0 +1,12 @@
+{% extends 'global/base_funcionario.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_cadastro_sucesso.css' %}">
+
+<<div class="cadastro-sucesso">
+    <p>Cadastro realizado com sucesso.</p>
+</div>
+<div class="botao-container">
+    <a href="{% url 'appsmartschool:home_funcionario' %}" class="botao-voltar">Voltar para a página inicial</a>
+</div>
+{% endblock %}

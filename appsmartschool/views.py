@@ -13,6 +13,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.contrib.auth import logout
 
 def tela_inicial(request):
@@ -160,3 +161,41 @@ def visualiza_notas(request):
     except UserAluno.DoesNotExist:
         messages.error(request, "Aluno não encontrado.", extra_tags='notas')
         return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})  
+
+@login_required  
+def cadastro_professor(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        matricula = request.POST.get('matricula')
+        cpf = request.POST.get('cpf')
+        data_de_nascimento = request.POST.get('data_de_nascimento')
+        telefone = request.POST.get('telefone')
+        email = request.POST.get('email')
+
+        # Verificar se já existe um usuário com o mesmo CPF
+        if User.objects.filter(username=cpf).exists():
+            messages.error(request, 'Um usuário com este CPF já está cadastrado.')
+            return render(request, 'appsmartschool/cadastro_professor.html')
+
+        try:
+            # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
+            user = User.objects.create_user(username=cpf, email=email, password=matricula)
+            user.save()
+
+            # Criar o UserProfessor
+            professor = UserProfessor(user=user, nome=nome, matricula=matricula, cpf=cpf,
+                                      data_de_nascimento=data_de_nascimento, telefone=telefone, email=email)
+            professor.save()
+
+            return redirect('appsmartschool:cadastro_sucesso')
+        
+        except IntegrityError:
+            messages.error(request, 'Falha ao criar o usuário. CPF já utilizado.')
+        except Exception as e:
+            messages.error(request, f'Erro ao cadastrar professor: {e}')
+
+    return render(request, 'appsmartschool/cadastro_professor.html')
+
+@login_required
+def cadastro_sucesso(request):
+    return render(request, 'appsmartschool/cadastro_sucesso.html')

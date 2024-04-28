@@ -28,4 +28,6 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('horario/', visualizar_horario, name='HorarioAula'),
     path('notas/', visualiza_notas, name='visualiza_notas'),
+    path('cadastro_professor/', views.cadastro_professor, name='cadastro_professor'),
+    path('cadastro_sucesso/', views.cadastro_sucesso, name='cadastro_sucesso'),
 ]

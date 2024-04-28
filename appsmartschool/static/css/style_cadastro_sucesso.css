@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    
+    --font-color: whitesmoke;
+    
+    --btn-color: rgb(49, 53, 90);
+    --btn-pressed: rgb(31, 34, 57);
+    --cor-principal:#171a4a;
+    --cor-branca: #eae2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cadastro-sucesso {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* ou um valor específico que prefira */
+    height: 200px; /* Ajuste conforme necessário para o seu design */
+    text-align: center;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; /* Ajuste conforme a necessidade para espaço acima do botão */
+}
+
+.botao-voltar {
+    margin-top: 60px; /* Aumente o espaço conforme necessário */
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.botao-voltar:hover {
+    background-color: var(--cor-azul-clara);
+}
