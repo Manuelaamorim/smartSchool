@@ -3,16 +3,17 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/style_frequencia.css' %}">
+<div class="container">
+  {% for frequencia in frequencias %}
+  <div class="header-section">
+      <h1>Frequência</h1>
+      <p>Colégio {{frequencia.colegio}}</p>
+  </div>
 
-
-{% for frequencia in frequencias %}
-<h1 id="frequencia">Frequência</h1>
-<h1 id="colegio">Colégio {{frequencia.colegio}}</h1>
-
-<div id="div">
-  <h2 id="nome">Nome: {{frequencia.nome}}</h2>
-  <h2 id="serie">Série: {{frequencia.serie}} Ano</h2>
-  <h2 id="matricula">Matrícula: {{frequencia.matricula}}</h2>
+  <div class="info-section">
+    <div>Nome: {{ frequencia.nome }}</div>
+    <div>Série: {{ frequencia.serie }}</div>
+    <div>Matrícula: {{ frequencia.matricula }}</div>
 </div>
 
 <table id="tabela">
