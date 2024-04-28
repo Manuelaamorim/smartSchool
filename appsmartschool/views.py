@@ -1,14 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import UserAluno
-from .models import UserProfessor
-from .models import UserFuncionario
-from .models import Dados_saude
-from .models import MensagemContato
-from .models import Frequencia_Aluno
-from .models import HorarioAula
-from .models import Notas
-from .models import Disciplina
+from .models import *
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
