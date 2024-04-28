@@ -1,0 +1,32 @@
+{% extends 'global/base_funcionario.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style_cadastro_disciplina.css' %}">
+
+<!-- Bloco para exibir mensagens -->
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form class="formulario-cadastro" method="post" action="{% url 'appsmartschool:cadastro_disciplina' %}">
+    {% csrf_token %}
+    <h1>Cadastro de Disciplina</h1>
+    <label for="codigo">Código:</label>
+    <input type="text" name="codigo" id="codigo" maxlength="8" required><br>
+
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" maxlength="40" required><br>
+
+    <label for="carga_horaria">Carga Horária:</label>
+    <input type="number" name="carga_horaria" id="carga_horaria" max="200" maxlength="3" required><br>
+
+    <label for="ementa">Ementa:</label>
+    <textarea name="ementa" id="ementa" maxlength="2000" required></textarea><br>
+
+    <button type="submit">Cadastrar Disciplina</button>
+</form>
+{% endblock %}

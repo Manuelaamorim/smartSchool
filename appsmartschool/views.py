@@ -8,6 +8,7 @@ from .models import MensagemContato
 from .models import Frequencia_Aluno
 from .models import HorarioAula
 from .models import Notas
+from .models import Disciplina
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -199,3 +200,31 @@ def cadastro_professor(request):
 @login_required
 def cadastro_sucesso(request):
     return render(request, 'appsmartschool/cadastro_sucesso.html')
+
+@login_required
+def cadastro_disciplina(request):
+    if request.method == 'POST':
+        codigo = request.POST.get('codigo')
+        nome = request.POST.get('nome')
+        carga_horaria = request.POST.get('carga_horaria')
+        ementa = request.POST.get('ementa')
+
+        # Validação da carga horária
+        if int(carga_horaria) > 200:
+            messages.error(request, "A carga horária não deve exceder 200.")
+            return render(request, 'appsmartschool/cadastro_disciplina.html')
+
+        # Verifica se já existe uma disciplina com o mesmo código
+        if Disciplina.objects.filter(codigo=codigo).exists():
+            messages.error(request, "Uma disciplina com este código já está cadastrada.")
+            return render(request, 'appsmartschool/cadastro_disciplina.html')
+
+        try:
+            # Cria uma nova disciplina
+            Disciplina.objects.create(codigo=codigo, nome=nome, carga_horaria=carga_horaria, ementa=ementa)
+            return redirect('appsmartschool:cadastro_sucesso')
+        except Exception as e:
+            messages.error(request, f'Erro ao cadastrar disciplina: {e}')
+            return render(request, 'appsmartschool/cadastro_disciplina.html')
+
+    return render(request, 'appsmartschool/cadastro_disciplina.html')

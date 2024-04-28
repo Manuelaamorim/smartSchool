@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
 
 
 class UserAluno (models.Model):
@@ -220,3 +221,15 @@ class Notas(models.Model):
         verbose_name = "Notas do aluno"
         verbose_name_plural = "Notas do aluno"
 
+class Disciplina(models.Model):
+    codigo = models.CharField(max_length=8, unique=True)
+    nome = models.CharField(max_length=40)
+    carga_horaria = models.CharField(max_length=3, validators=[RegexValidator(r'^\d{1,3}$', 'Somente números são permitidos.')])
+    ementa = models.TextField(max_length=2000)
+
+    def __str__(self):
+        return f"{self.nome} ({self.codigo})"
+
+    class Meta:
+        verbose_name = "Disciplina"
+        verbose_name_plural = "Disciplinas"

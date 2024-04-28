@@ -12,6 +12,7 @@ from .views import visualizar_horario
 from . import views
 from .views import logout_view
 from .views import visualiza_notas
+from .views import cadastro_disciplina
 
 app_name= 'appsmartschool'
 urlpatterns = [
@@ -30,4 +31,5 @@ urlpatterns = [
     path('notas/', visualiza_notas, name='visualiza_notas'),
     path('cadastro_professor/', views.cadastro_professor, name='cadastro_professor'),
     path('cadastro_sucesso/', views.cadastro_sucesso, name='cadastro_sucesso'),
+    path('cadastro_disciplina/', views.cadastro_disciplina, name='cadastro_disciplina'),
 ]

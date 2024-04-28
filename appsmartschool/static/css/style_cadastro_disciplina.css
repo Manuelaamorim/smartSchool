@@ -1,0 +1,51 @@
+.formulario-cadastro {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario-cadastro h1 {
+    color: #000000;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.formulario-cadastro label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    padding-top: 10px;
+}
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="number"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulario-cadastro button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formulario-cadastro button:hover {
+    background-color: #004494;
+}
