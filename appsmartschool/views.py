@@ -1,3 +1,4 @@
+from sqlite3 import IntegrityError
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import UserAluno
@@ -87,14 +88,14 @@ def dados_saude_visualizar(request):
 
 @login_required
 def frequencia_alunos_visualizar(request):
+    user_aluno = UserAluno.objects.get(user=request.user)
     try:
         # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
-        user_aluno = UserAluno.objects.get(user=request.user)
         frequencias = Frequencia_Aluno.objects.filter(user_aluno=user_aluno)
         if not frequencias:
-            messages.error(request, 'Frequência não cadastrada.')
+            messages.error(request, 'Frequência não cadastrada.', extra_tags='frequencia')
     except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.')
+        messages.error(request, 'Aluno não cadastrado.', extra_tags='frequencia')
         frequencias = []
 
     return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
@@ -139,8 +140,8 @@ def logout_view(request):
 
 @login_required
 def visualizar_horario(request):
+    aluno = UserAluno.objects.get(user=request.user)
     try:
-        aluno = UserAluno.objects.get(user=request.user)
         horarios = HorarioAula.objects.filter(serie=aluno.serie)
         if not horarios:
             messages.error(request, "Não há horários cadastrados para sua série e turma.")
@@ -152,16 +153,16 @@ def visualizar_horario(request):
     
 @login_required
 def visualiza_notas(request):
+    aluno = UserAluno.objects.get(user=request.user)
     try:
-        aluno = UserAluno.objects.get(user=request.user)  # Pega o aluno logado
-        notas = Notas.objects.filter(aluno=aluno)  # Filtra as notas pelo aluno
+        notas = Notas.objects.filter(aluno=aluno)
         if not notas:
-            messages.error(request, "Não há notas cadastradas para este aluno.")
+            messages.error(request, "Não há notas cadastradas para este aluno.", extra_tags='notas')
             return redirect('appsmartschool:home_aluno')
         return render(request, 'appsmartschool/notas.html', {'aluno': aluno, 'notas': notas})
     except UserAluno.DoesNotExist:
         messages.error(request, "Aluno não encontrado.", extra_tags='notas')
-        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})  
+        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
 
 @login_required  
 def cadastro_professor(request):

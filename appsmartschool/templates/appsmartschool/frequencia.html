@@ -11,10 +11,25 @@
   </div>
 
   <div class="info-section">
-    <div>Nome: {{ frequencia.nome }}</div>
-    <div>Série: {{ frequencia.serie }}</div>
-    <div>Matrícula: {{ frequencia.matricula }}</div>
+    <div>Nome: {{ frequencia.nome }}
+      <div class="linha"></div>
+    </div>
+    <div>Série: {{ frequencia.serie }}
+      <div class="linha"></div>
+    </div>
+    <div>Matrícula: {{ frequencia.matricula }}
+      <div class="linha"></div>
+    </div>
 </div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    {% if 'frequencia' in message.tags %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
 
 <table>
   <thead>

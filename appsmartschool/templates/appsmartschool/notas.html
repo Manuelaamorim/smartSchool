@@ -10,10 +10,25 @@
     </div>
 
     <div class="info-section">
-        <div>Nome: {{ aluno.nome }}</div>
-        <div>Série: {{ aluno.serie }}</div>
-        <div>Matrícula: {{ aluno.matricula }}</div>
+        <div>Nome: {{ aluno.nome }}
+            <div class="linha"></div>
+        </div>
+        <div>Série: {{ aluno.serie }}
+            <div class="linha"></div>
+        </div>
+        <div>Matrícula: {{ aluno.matricula }}
+            <div class="linha"></div>
+        </div>
     </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        {% if 'notas' in message.tags %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
 
     <table>
         <thead>
@@ -27,7 +42,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Notas de cada matéria do aluno -->
+
             <tr>
                 <td>{{ notas.materia_1 }}</td>
                 <td>{{ notas.nota1_materia1 }}</td>
