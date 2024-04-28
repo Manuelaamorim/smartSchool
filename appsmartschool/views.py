@@ -78,7 +78,7 @@ def dados_saude_visualizar(request):
         if not dados:
             messages.error(request, 'Dados de saúde não cadastrados.')
     except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.')
+        messages.error(request, 'Aluno não cadastrado.', extra_tags='dados')
         dados = []
 
     return render(request, 'appsmartschool/dados_saude.html', {"dados": dados})
@@ -158,4 +158,5 @@ def visualiza_notas(request):
             return redirect('appsmartschool:home_aluno')
         return render(request, 'appsmartschool/notas.html', {'aluno': aluno, 'notas': notas})
     except UserAluno.DoesNotExist:
-        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
+        messages.error(request, "Aluno não encontrado.", extra_tags='notas')
+        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})  

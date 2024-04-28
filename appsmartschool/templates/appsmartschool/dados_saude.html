@@ -7,6 +7,15 @@
 <section>
   <div class="container">
     <div class="glass">
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          {% if 'dados' in message.tags %}
+          <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+          {% endif %}
+          {% endfor %}
+      </ul>
+      {% endif %}
       {% for dado in dados %}
       <h1 class="dados-titulo">Dados de saúde</h1>
       <ul class="dados-ul">

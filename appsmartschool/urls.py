@@ -27,5 +27,5 @@ urlpatterns = [
     path('home_funcionario/', home_funcionario, name = 'home_funcionario'),
     path('logout/', logout_view, name='logout'),
     path('horario/', visualizar_horario, name='HorarioAula'),
-    path('notas/', visualiza_notas, name='vsisualiza_notas'),
+    path('notas/', visualiza_notas, name='visualiza_notas'),
 ]
