@@ -11,6 +11,7 @@ class UserAluno (models.Model):
     data_de_nascimento = models.DateField("Data de Nascimento")
     endereco = models.TextField()
     serie = models.PositiveSmallIntegerField()
+    turma = models.CharField(max_length=1, null=True)
     email = models.EmailField()
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
@@ -145,6 +146,7 @@ class Frequencia_Aluno(models.Model):
 
 class HorarioAula(models.Model):
     serie = models.PositiveSmallIntegerField()
+    turma = models.CharField(max_length=1, null=True)
     dia_semana_1 = models.CharField(max_length=20)
     dia_semana_2 = models.CharField(max_length=20, null=True)
     dia_semana_3 = models.CharField(max_length=20, null=True)
