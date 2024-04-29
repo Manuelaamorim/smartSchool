@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class UserAluno (models.Model):
@@ -62,8 +63,10 @@ class UserFuncionario (models.Model):
 
 class Dados_saude(models.Model):
     user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
-    peso = models.FloatField(max_length=4, null=False)
-    altura = models.FloatField(max_length = 4, null=False)
+    peso = models.FloatField(max_length=4, null=False, validators=[MinValueValidator(10), MaxValueValidator(120)],
+    help_text='Idade deve ser entre 10 e 120 anos.')
+    altura = models.FloatField(max_length = 4, null=False, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
+    help_text='Altura deve ser entre 0.50 m e 2 m.')
     restricao_alimentar = models.TextField(max_length = 100)
     tdah = models.CharField(max_length = 4)
     pcd = models.CharField(max_length = 4)
