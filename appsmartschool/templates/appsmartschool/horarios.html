@@ -2,6 +2,9 @@
 {% block content %}
 {% load static %}
     
+<link rel="stylesheet" href="{% static 'css/style_horario.css' %}">
+
+
 <h2>Horário de Aulas</h2>
 <table>
     <thead>
@@ -10,7 +13,6 @@
             <th>Horario Início</th>
             <th>Horario Fim</th>
             <th>Matéria</th>
-            <th>Professor</th>
         </tr>
     </thead>
     <tbody>
@@ -20,22 +22,24 @@
             <td>{{ horario.horario_inicio_1 }}</td>
             <td>{{ horario.horario_fim_1 }}</td>
             <td>{{ horario.materia_1 }}</td>
-
+        </tr>
+        <tr>        
             <td>{{ horario.dia_semana_2 }}</td>
             <td>{{ horario.horario_inicio_2 }}</td>
             <td>{{ horario.horario_fim_2 }}</td>
             <td>{{ horario.materia_2 }}</td>
-
+        </tr>
+        <tr>    
             <td>{{ horario.dia_semana_3 }}</td>
             <td>{{ horario.horario_inicio_3 }}</td>
             <td>{{ horario.horario_fim_3 }}</td>
             <td>{{ horario.materia_3 }}</td>
-
+        </tr>
+        <tr>
             <td>{{ horario.dia_semana_4 }}</td>
             <td>{{ horario.horario_inicio_4 }}</td>
             <td>{{ horario.horario_fim_4 }}</td>
             <td>{{ horario.materia_4 }}</td>
-            <td>{{ horario.professor.nome }}</td>
         </tr>
         {% endfor %}
     </tbody>
