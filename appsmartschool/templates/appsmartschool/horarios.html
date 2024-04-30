@@ -5,6 +5,27 @@
 <link rel="stylesheet" href="{% static 'css/style_horario.css' %}">
 
 
+<div class="container">
+    <div class="header-section">
+        {% for horario in horarios %}
+        <h1>Horario</h1>
+        <p>Colégio {{horario.colegio}}</p>
+    </div>
+  
+    <div class="info-section">
+      <div>Nome: {{ horario.nome }}
+        <div class="linha"></div>
+      </div>
+      <div>Série: {{ horario.serie }}
+        <div class="linha"></div>
+      </div>
+      <div>turma: {{ horario.turma }}
+        <div class="linha"></div>
+      </div>
+  </div>
+
+  {% endfor %}
+
 <h2>Horário de Aulas</h2>
 <table>
     <thead>
