@@ -156,33 +156,24 @@ João Antônio Lira Correia - Segundo User:
 
 ***Relato da Programação em Par experimentada:***
 
-Incluída entre os temas ministrados na disciplina Fundamentos de Desenvolvimento de Software, a Extreme Programming (XP) se destaca por ser um método ágil cuja abordagem de desenvolvimento de software promove a agilidade e a qualidade, sendo recomendada quando os requisitos do projeto a ser desenvolvido são vagos ou sujeitos a mudanças. 
-Além de valores e princípios, essa metodologia proposta por Kent Beck no final dos anos 90 preconiza práticas como a programação em pares (pair programming), onde dois desenvolvedores colaboram na implementação do código, alternando-se entre quem codifica e quem revisa/orienta o trabalho.
-Essa forma de desenvolvimento promove uma visão ampla do projeto, permitindo antecipar problemas e soluções futuras durante o processo de codificação, além de contribuir para disseminar o conhecimento sobre o código e facilitar a comunicação entre os membros do time. 
-Em relação à atividade prática proposta pela disciplina, consistente no desenvolvimento de uma aplicação utilizando a framework Django e o ambiente da Azure, a equipe optou por criar uma aplicação voltada para o ambiente escolar, denominada SmartSchool.
-Para realizar essa tarefa, os membros do grupo se organizaram em três duplas, cada uma responsável pela codificação e outras tarefas específicas. O método de condução do trabalho foi deixado à livre escolha de cada dupla e os resultados dessa abordagem serão apresentados a seguir.
+1. Introdução
 
+Dando continuidade ao projeto de desenvolvimento da aplicação Smart School, a segunda etapa demandou a implementação de três novas histórias além da realização de Testes de Sistema (E2E) Automatizados. Para atender a esse novo requisito, a equipe escolheu a ferramenta Cypress, framework de teste end-to-end de código aberto. Nos tópicos seguintes, serão detalhadas as experiências de cada dupla durante esta etapa do projeto.
 
-- Par 01 – Beatriz e Manuela
+2.	Par 01 – Beatriz e Manuela
 
-Inicialmente, o Par 01 assumiu a tarefa de desenvolver a funcionalidade de consulta aos dados de saúde dos alunos. Essa seção específica do sistema disponibiliza informações pertinentes ao aluno, incluindo, mas não se limitando a, altura, peso, existência de restrições alimentares, condição de pessoa com deficiência (PCD), entre outros aspectos relevantes.
-De forma coordenada e operando remotamente, a equipe deu início ao trabalho com um esforço concentrado na compreensão do framework Django, o qual fundamenta a arquitetura da aplicação em questão. O material didático fornecido pelo professor se mostrou um recurso valioso para o aprendizado e progresso do projeto.
-Durante o desenvolvimento, um integrante do par desempenhou o papel de programadora, conduzindo a sessão de codificação e compartilhando sua tela através do Google Meet durante as reuniões virtuais. Paralelamente, o outro integrante contribuiu com a pesquisa de informações e esclarecimento de dúvidas ao longo do processo. Em um segundo momento, a dupla optou por alternar os papéis, visando otimizar a eficiência do trabalho e minimizar a margem para erros futuros.
+O Par 01 concentrou seus esforços na implementação da funcionalidade de visualização de notas, proporcionando aos alunos acesso fácil e rápido ao seu desempenho acadêmico. Além disso, o par dedicou um tempo significativo para aprender sobre o funcionamento da ferramenta Cypress, integrando-a ao processo de desenvolvimento para realizar testes automatizados de ponta a ponta. Dessa forma, seus integrantes puderam aplicar suas habilidades conjuntas para enfrentar os desafios dessa nova etapa, buscando não apenas desenvolver a funcionalidade, mas também garantir sua qualidade por meio de testes abrangentes.
 
-- Par 02 – Lisa e Luziane
+3.	Par 02 – Lisa e Luziane
 
-De início, coube ao Par 02 a tarefa de desenvolver a funcionalidade do formulário de contato, consistente em uma página na qual o usuário da aplicação informa alguns dados básicos (nome, telefone e e-mail), e envia uma mensagem para posterior análise pelo funcionário competente. Adicionalmente, este par foi responsável pela inclusão das funcionalidades de login e logout, bem como pela pesquisa de inconsistências e elaboração do presente relatório.
-Nessa etapa do projeto, os integrantes do par já possuíam certa familiaridade com Python, HTML e CSS, mas não detinham conhecimentos de Django ou de Azure. Cientes desse cenário, os integrantes procuraram sanar suas deficiências técnicas através de aulas específicas e por meio de consultas com o professor, contando ainda com a colaboração de colegas experientes nos temas. Tais recursos foram essenciais para esclarecer dúvidas e conseguir executar e finalizar essa etapa do projeto.
-No que se refere à elaboração do código, o Par 02 realizou suas atividades de forma presencial e remota, empregando a funcionalidade de compartilhamento de tela do Google Meet durante as interações remotas. Em ambos os casos, houve alternância entre as atividades de codificação e revisão/orientação do código. Destaque-se que essa prática se revelou benéfica tanto para prevenir eventuais equívocos como para facilitar a resolução destes de forma mais ágil.
+Por sua vez, o Par 02 assumiu a responsabilidade pelo desenvolvimento do cadastro de professores, uma adição crucial ao sistema SmartSchool, bem como da tela inicial de login, diferenciando os acessos para cada tipo de usuário (aluno, professor ou funcionário). Esta tarefa exigiu uma extensão dos conhecimentos prévios do par, particularmente no que diz respeito à manipulação de dados e à integração com o banco de dados Azure. Para incorporar os testes utilizando o Cypress, o par dedicou um tempo para compreender os fundamentos da ferramenta e integrá-la ao seu fluxo de trabalho, assegurando, ao final, não apenas a funcionalidade adequada do cadastro de professores, mas também sua robustez por meio de testes automatizados.
 
-- Par 03 – Matheus e Ygor
+4.	Par 03 – Matheus e Ygor
 
-Após a divisão de tarefas, o Par 03 assumiu a função de desenvolver a funcionalidade da frequência dos alunos, consistente na visualização das faltas obtidas pelo aluno, bem como do seu percentual de presença nas aulas ministradas..
-Para a realização desse processo, os integrantes do Par 03 reuniram-se em uma sala remota e distribuíram entre si as atividades que iriam produzir. Após diversas análises, um dos integrantes ficou responsável pelo HTML e CSS do site, ficando o outro responsável pela codificação do Django e pelo preenchimento do banco de dados na Microsoft Azure.
-Com todas as tarefas concluídas, surgiram novas atividades para serem efetuadas, além da correção de erros observados durante o desenvolvimento do projeto. Por essa razão, um dos integrantes do par adicionou ao código uma funcionalidade onde os alunos cadastrados poderiam visualizar apenas os seus dados correspondentes e, em paralelo, o outro ficou responsável pela gravação do vídeo desenvolvido pelo grupo, no qual seriam demonstradas as funcionalidades da aplicação.
+Por fim, o Par 03 focou na implementação da funcionalidade de visualização de horários, uma característica essencial para os alunos organizarem suas atividades acadêmicas. Para incorporar os testes com o Cypress, o par combinou seus esforços para enfrentar os desafios técnicos e garantir que a funcionalidade de visualização de horários fosse implementada com sucesso, com testes automatizados para validar sua integridade e desempenho.
 
-- Conclusões
+5.	Conclusões
 
-A primeira etapa do projeto de desenvolvimento de software utilizando Python e Django juntamente com o ambiente Azure foi concluída e alcançou marcos significativos, embora diversos pontos tenham permanecido pendentes de implementação ou correção, os quais serão objeto de etapas posteriores.
-Ressalta-se, mais uma vez, a importância da programação em pares para atingir esse objetivo, eis que promoveu não apenas uma colaboração mais estreita entre os membros da equipe como também contribuiu para um aperfeiçoamento da codificação em sentido amplo, o que representa mais um incentivo para prosseguir com sua aplicação.
+A segunda etapa do projeto está transcorrendo de forma positiva, com cada equipe seguindo adiante com suas tarefas de forma consistente. A adição dos Testes de Sistema Automatizados representa um avanço significativo na busca por uma aplicação robusta e confiável. O aprendizado continua sendo uma constante, e embora desafios sempre se apresentem, a equipe está comprometida em superá-los. À medida que nos aproximamos da última entrega, permanece o compromisso de melhoria contínua e de garantir que o a aplicação atenda às expectativas e necessidades estabelecidas para o aprendizado do conteúdo da disciplina.
+
 
