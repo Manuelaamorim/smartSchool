@@ -35,7 +35,7 @@
   <thead>
     <tr>
         <th>Disciplina</th>
-        <th>Frequência</th> <!-- Note que corrigi a tag de fechamento -->
+        <th>Aulas totais</th> 
         <th>Faltas</th>
         <th>Frequência (em %)</th>
     </tr>
@@ -43,26 +43,26 @@
   <tbody>
     <tr>
         <td>{{ frequencia.materia_1 }}</td>
-        <td>{{ frequencia.faltas_da_materia_1 }}</td>
         <td>{{ frequencia.aulas_da_materia_1 }}</td>
+        <td>{{ frequencia.faltas_da_materia_1 }}</td>
         <td>{{ frequencia.porcentagem_da_materia_1 }}%</td>
     </tr>
     <tr>
         <td>{{ frequencia.materia_2 }}</td>
-        <td>{{ frequencia.faltas_da_materia_2 }}</td>
         <td>{{ frequencia.aulas_da_materia_2 }}</td>
+        <td>{{ frequencia.faltas_da_materia_2 }}</td>
         <td>{{ frequencia.porcentagem_da_materia_2 }}%</td>
     </tr>
     <tr>
         <td>{{ frequencia.materia_3 }}</td>
-        <td>{{ frequencia.faltas_da_materia_3 }}</td> 
-        <td>{{ frequencia.aulas_da_materia_3 }}</td>
+        <td>{{ frequencia.aulas_da_materia_3 }}</td> 
+        <td>{{ frequencia.faltas_da_materia_3 }}</td>
         <td>{{ frequencia.porcentagem_da_materia_3 }}%</td>
     </tr>
     <tr>
       <td>{{ frequencia.materia_4 }}</td>
-      <td>{{ frequencia.faltas_da_materia_4 }}</td>
       <td>{{ frequencia.aulas_da_materia_4 }}</td>
+      <td>{{ frequencia.faltas_da_materia_4 }}</td>
       <td>{{ frequencia.porcentagem_da_materia_4 }}%</td>   
     </tr>
   {% endfor %}

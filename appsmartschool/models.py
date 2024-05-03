@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class UserAluno (models.Model):
@@ -10,7 +11,9 @@ class UserAluno (models.Model):
     cpf = models.CharField(max_length=11)
     data_de_nascimento = models.DateField("Data de Nascimento")
     endereco = models.TextField()
+    colegio = models.CharField(max_length=200, null=True)
     serie = models.PositiveSmallIntegerField()
+    turma = models.CharField(max_length=1, null=True, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
     email = models.EmailField()
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
@@ -61,8 +64,10 @@ class UserFuncionario (models.Model):
 
 class Dados_saude(models.Model):
     user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
-    peso = models.FloatField(max_length=4, null=False)
-    altura = models.FloatField(max_length = 4, null=False)
+    peso = models.FloatField(max_length=4, null=False, validators=[MinValueValidator(10), MaxValueValidator(120)],
+    help_text='Idade deve ser entre 10 e 120 anos.')
+    altura = models.FloatField(max_length = 4, null=False, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
+    help_text='Altura deve ser entre 0.50 m e 2 m.')
     restricao_alimentar = models.TextField(max_length = 100)
     tdah = models.CharField(max_length = 4)
     pcd = models.CharField(max_length = 4)
@@ -144,24 +149,42 @@ class Frequencia_Aluno(models.Model):
         verbose_name_plural = "Frequência"
 
 class HorarioAula(models.Model):
+    colegio = models.CharField(max_length=200, null=True)
     serie = models.PositiveSmallIntegerField()
-    dia_semana_1 = models.CharField(max_length=20)
-    dia_semana_2 = models.CharField(max_length=20, null=True)
-    dia_semana_3 = models.CharField(max_length=20, null=True)
-    dia_semana_4 = models.CharField(max_length=20, null=True)
-    dia_semana_5 = models.CharField(max_length=20, null=True)
+    turma = models.CharField(max_length=1, null=True, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
     horario_inicio_1 = models.TimeField()
     horario_fim_1 = models.TimeField()
-    materia_1 = models.CharField(max_length=200, null=False)
     horario_inicio_2 = models.TimeField(null=True)
     horario_fim_2 = models.TimeField(null=True)
-    materia_2 = models.CharField(max_length=200, null=True)
     horario_inicio_3 = models.TimeField(null=True)
     horario_fim_3 = models.TimeField(null=True)
-    materia_3 = models.CharField(max_length=200, null=True)
     horario_inicio_4 = models.TimeField(null=True)
     horario_fim_4 = models.TimeField(null=True)
-    materia_4 = models.CharField(max_length=200, null=True)
+
+    seg_materia_do_horario_1 = models.CharField(max_length=200, null=False)
+    seg_materia_do_horario_2 = models.CharField(max_length=200, null=True)
+    seg_materia_do_horario_3 = models.CharField(max_length=200, null=True)
+    seg_materia_do_horario_4 = models.CharField(max_length=200, null=True)
+    
+    ter_materia_do_horario_1 = models.CharField(max_length=200, null=True)
+    ter_materia_do_horario_2 = models.CharField(max_length=200, null=True)
+    ter_materia_do_horario_3 = models.CharField(max_length=200, null=True)
+    ter_materia_do_horario_4 = models.CharField(max_length=200, null=True)
+    
+    quar_materia_do_horario_1 = models.CharField(max_length=200, null=True)
+    quar_materia_do_horario_2 = models.CharField(max_length=200, null=True)
+    quar_materia_do_horario_3 = models.CharField(max_length=200, null=True)
+    quar_materia_do_horario_4 = models.CharField(max_length=200, null=True)
+    
+    quin_materia_do_horario_1 = models.CharField(max_length=200, null=True)
+    quin_materia_do_horario_2 = models.CharField(max_length=200, null=True)
+    quin_materia_do_horario_3 = models.CharField(max_length=200, null=True)
+    quin_materia_do_horario_4 = models.CharField(max_length=200, null=True)
+    
+    sex_materia_do_horario_1 = models.CharField(max_length=200, null=True)
+    sex_materia_do_horario_2 = models.CharField(max_length=200, null=True)
+    sex_materia_do_horario_3 = models.CharField(max_length=200, null=True)
+    sex_materia_do_horario_4 = models.CharField(max_length=200, null=True)
     
 
 
