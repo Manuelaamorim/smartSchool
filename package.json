@@ -1,0 +1,14 @@
+{
+  "name": "smartschool",
+  "version": "1.0.0",
+  "description": "Nosso propósito é utilizar a tecnologia com o escopo de automatizar e otimizar tarefas administrativas e gerenciais de escolas públicas na Região Metropolitana do Recife (RMR), a exemplo das atividades de planejamento e organização, as quais são comumente realizadas de forma manual pela equipe pedagógica.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.8.1"
+  }
+}

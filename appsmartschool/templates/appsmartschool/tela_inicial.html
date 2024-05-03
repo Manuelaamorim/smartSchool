@@ -19,10 +19,9 @@
     <div class="split right">
         <div class="centered">
             <h1>Smart School</h1>
-            <button onclick="window.location.href='{% url 'appsmartschool:login_aluno' %}';">Aluno</button>
-            <button onclick="window.location.href='{% url 'appsmartschool:login_professor' %}';">Professor</button>
-            <button onclick="window.location.href='{% url 'appsmartschool:login_funcionario' %}';">Funcionário</button>
-
+            <a href="{% url 'appsmartschool:login_aluno' %}"><button class="botao">Aluno</button></a>
+            <a href="{% url 'appsmartschool:login_professor' %}"><button class="botao">Professor</button></a>
+            <a href="{% url 'appsmartschool:login_funcionario' %}"><button class="botao">Funcionário</button></a>
         </div>
     </div>
 
