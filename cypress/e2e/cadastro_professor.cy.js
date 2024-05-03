@@ -23,10 +23,20 @@ describe('test visualizar Boletim', () => {
 
         cy.visit('/');
         cy.get('[href="/funcionario/"] > .botao').click()
-        cy.get('#username').type('59843216754')
-        cy.get('#password').type('lui20090304')
+        cy.get('#username').type('76513312493')
+        cy.get('#password').type('ga123456')
         cy.get('.btn-submit').click()
+        cy.wait(3000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.get('#nome').type('Maria Alice Gusmão')
+        cy.get('#matricula').type('malgu123')
+        cy.get('#cpf').type('94671686422')
+        cy.get('#data_de_nascimento').type('1997-11-07')
+        cy.get('#telefone').type('961876432')
+        cy.get('#email').type('malicegusmao@outlook.com')
+        cy.get('.btn-submit').click()
+        cy.get('.error').invoke('text').should('have.string', "Um usuário com este CPF já está cadastrado.")
+        cy.wait(3000)
         
     })
 

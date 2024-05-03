@@ -3,6 +3,15 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/style_cadastro_professor.css' %}">
 
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
 
 <form class="formulario-cadastro" method="post" action="{% url 'appsmartschool:cadastro_professor' %}">
     {% csrf_token %}
