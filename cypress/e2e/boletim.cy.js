@@ -3,19 +3,21 @@ describe('test visualizar Boletim', () => {
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
         cy.get('#username').type('12476892303')
-        cy.get('#password').type('20240102')
+        cy.get('#password').type('mar12345')
         cy.get('.btn-submit').click()
+        cy.get(':nth-child(2) > .nav-menu-texto').click()
 
         
     })
 
-    it('cenario2', () => { //Marcos Rosa está cadastrado no sistema da SmartSchool com os seguintes dados: matrícula - 20090304; CPF - 59843216754; data de nascimento - 24/05/2018; endereço - Rua Padre Roma 345; e-mail - germanarosa@gmail.com; nome do responsável - Germana Rosa; CPF do responsável - 94325674387 e está matriculado nas aulas do 1º ano B do Fundamental I, que inclui as matérias de História I, Geografia I, Matemática I, Português I e Ciências I. Ele poderá consultar apenas as notas de cada matéria em que está matriculado, e não as de Maria Ferreira, ainda que ela esteja na mesma turma;
+    it('cenario2', () => { //Luiz Rosa está cadastrado no sistema da SmartSchool com os seguintes dados: matrícula - 20090304; CPF - 59843216754; data de nascimento - 24/05/2018; endereço - Rua Padre Roma 345; e-mail - germanarosa@gmail.com; nome do responsável - Germana Rosa; CPF do responsável - 94325674387 e está matriculado nas aulas do 1º ano B do Fundamental I, que inclui as matérias de História I, Geografia I, Matemática I, Português I e Ciências I. Ele poderá consultar apenas as notas de cada matéria em que está matriculado, e não as de Maria Ferreira, ainda que ela esteja na mesma turma;
 
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
         cy.get('#username').type('59843216754')
-        cy.get('#password').type('20090304')
+        cy.get('#password').type('lui20090304')
         cy.get('.btn-submit').click()
+        cy.get(':nth-child(2) > .nav-menu-texto').click()
         
     })
 
@@ -24,8 +26,9 @@ describe('test visualizar Boletim', () => {
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
         cy.get('#username').type('12528976549')
-        cy.get('#password').type('20240506')
+        cy.get('#password').type('and20240506')
         cy.get('.btn-submit').click()
+        cy.get(':nth-child(2) > .nav-menu-texto').click()
 
         
     })
