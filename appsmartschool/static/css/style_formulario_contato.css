@@ -43,6 +43,7 @@
 #id_mensagem{
     color: rgb(0, 0, 0);
 }
+
 * {
     border: 0;
     margin: 0;
@@ -57,15 +58,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #ffffff;
 }
 
 h1 {
     font-weight: bolder;
-    color: var(--font-color);
+    color: var(--cor-preta);
 }
 
 h2 {
-    color: var(--font-color);
+    color: var(--cor-preta);
 }
 
 .content-wrapper {
@@ -84,11 +86,7 @@ h2 {
 
 .contact-info {
     flex: 1;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
+    background-color: var(--font-color);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 20px;
@@ -105,11 +103,7 @@ h2 {
 
 .form-area {
     flex: 1;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
+    background-color: var(--font-color);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
@@ -139,9 +133,9 @@ label, input, textarea {
     margin-top: 4px; 
     font-size: 16px;
     padding: 4px;
-    color: var(--font-color);
+    color: var(--cor-preta);
     border-radius: 10px;
-    border: 2px white;
+    border: 2px var(--cor-preta);
 }
 
 textarea {
@@ -160,4 +154,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: var(--btn-pressed);
+}
+
+.phone-icon {
+    width: 265px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
 }
