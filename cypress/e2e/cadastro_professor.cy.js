@@ -1,5 +1,5 @@
 describe('test visualizar Boletim', () => {
-    it('cenario1', () => { //
+    it('cenario1', () => { // A funcionária Stella Natalia Bernardes, cadastrada no sistema, acessa a aplicação e informa login (34479066420) e senha (stella123) e acessa o menu para cadastrar um professor. Informa os dados do professor a ser cadastrado (nome - José Manuel Barros, matrícula - jmaba123, CPF - 94671686422, data de nascimento - 1992-04-22, telefone - 81987654321 e email - josemanuelb@gmail.com), clica no botão "Cadastrar Professor" e o cadastro é finalizado com sucesso.
         
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
@@ -28,6 +28,8 @@ describe('test visualizar Boletim', () => {
 
         cy.get('#logout-form > button').click()
         
+        //Acessa a página http://127.0.0.1:8000/, faz login como funcionário Stella e cadastra o professor José Manuel Barros com sucesso
+
         cy.visit('/');
         cy.get('[href="/funcionario/"] > .botao').click()
         cy.get('#username').type('34479066420')
@@ -39,7 +41,7 @@ describe('test visualizar Boletim', () => {
         cy.get('#matricula').type('jmaba123')
         cy.get('#cpf').type('94671686422')
         cy.get('#data_de_nascimento').type('1992-04-22')
-        cy.get('#telefone').type('8198765-4321')
+        cy.get('#telefone').type('81987654321')
         cy.get('#email').type('josemanuelb@gmail.com')
         cy.get('.btn-submit').click()
         cy.get('p').invoke('text').should('have.string', "Cadastro realizado com sucesso.")
@@ -47,7 +49,9 @@ describe('test visualizar Boletim', () => {
         
     })
 
-    it('cenario2', () => { //
+    it('cenario2', () => { //A funcionária Stella Natalia Bernardes, cadastrada no sistema, acessa a aplicação e informa login (34479066420) e senha (stella123) e acessa o menu para cadastrar um professor. Informa os dados do professor a ser cadastrado (nome - Maria Alice Gusmão, matrícula - malgu123, CPF - 94671686422, data de nascimento - 1997-11-07, telefone - 81961876432 e email - malicegusmao@outlook.com), clica no botão "Cadastrar Professor" e o cdastro não é realizado, pois já há um professor cadastrado com o mesmo CPF no sistema.
+
+        //Acessa a página http://127.0.0.1:8000/, faz login como funcionário Stella e tenta cadastrar novamente o professor José Manuel Barros
 
         cy.visit('/');
         cy.get('[href="/funcionario/"] > .botao').click()
