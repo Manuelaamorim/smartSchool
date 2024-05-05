@@ -5,11 +5,15 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_username').type('admin')
         cy.get('#id_password').type('123456')
         cy.get('.submit-row > input').click()
+        cy.wait(1000)
         cy.get('.model-user > :nth-child(2) > .addlink').click()
+        cy.wait(1000)
         cy.get('#id_username').type('12476892303')
         cy.get('#id_password1').type('mar12345')
         cy.get('#id_password2').type('mar12345')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-useraluno > td > .addlink')
         cy.get('.model-useraluno > td > .addlink').click()
@@ -27,9 +31,12 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_cpf_responsavel').type('98765434210')
         cy.get('#id_telefone').type('81940028926')
         cy.get('#id_email_responsavel').type('antoniaferreira@gmail.com')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-notas > th').click()
+        cy.wait(1000)
         cy.get('li > .addlink').click()
         cy.get('#id_aluno').select('Aluno Maria Ferreira')
         cy.get('#id_materia_1').clear()
@@ -57,15 +64,19 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_nota2_materia4').type('9.2')
         cy.get('#id_nota3_materia4').type('9.8')
 
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
+        cy.wait(1000)
         cy.get('#username').type('12476892303')
         cy.get('#password').type('mar12345')
         cy.get('.btn-submit').click()
+        cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
-        cy.wait(5000)
+        cy.wait(3000)
 
         
     })
@@ -74,13 +85,17 @@ describe('test visualizar Boletim', () => {
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123')
+        cy.get('#id_password').type('123456')
         cy.get('.submit-row > input').click()
+        cy.wait(1000)
         cy.get('.model-user > :nth-child(2) > .addlink').click()
+        cy.wait(1000)
         cy.get('#id_username').type('59843216754')
         cy.get('#id_password1').type('lui20090304')
         cy.get('#id_password2').type('lui20090304')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-useraluno > td > .addlink')
         cy.get('.model-useraluno > td > .addlink').click()
@@ -98,9 +113,12 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_cpf_responsavel').type('94325674387')
         cy.get('#id_telefone').type('81985676822')
         cy.get('#id_email_responsavel').type('germanarosa@gmail.com')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-notas > th').click()
+        cy.wait(1000)
         cy.get('li > .addlink').click()
         cy.get('#id_aluno').select('Aluno Luiz Rosa')
         cy.get('#id_materia_1').clear()
@@ -128,14 +146,19 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_nota2_materia4').type('8.8')
         cy.get('#id_nota3_materia4').type('9.5')
 
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
+        cy.wait(1000)
         cy.get('#username').type('59843216754')
         cy.get('#password').type('lui20090304')
         cy.get('.btn-submit').click()
+        cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.wait(3000)
         
     })
 
@@ -145,11 +168,15 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_username').type('admin')
         cy.get('#id_password').type('123456')
         cy.get('.submit-row > input').click()
+        cy.wait(1000)
         cy.get('.model-user > :nth-child(2) > .addlink').click()
+        cy.wait(1000)
         cy.get('#id_username').type('12528976549')
         cy.get('#id_password1').type('and20240506')
         cy.get('#id_password2').type('and20240506')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-useraluno > td > .addlink')
         cy.get('.model-useraluno > td > .addlink').click()
@@ -167,18 +194,25 @@ describe('test visualizar Boletim', () => {
         cy.get('#id_cpf_responsavel').type('02399752827')
         cy.get('#id_telefone').type('81940148945')
         cy.get('#id_email_responsavel').type('paulosales@gmail.com')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-notas > th').click()
+        cy.wait(1000)
         cy.get('li > .addlink').click()
+        cy.wait(3000)
 
 
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
+        cy.wait(1000)
         cy.get('#username').type('12528976549')
         cy.get('#password').type('and20240506')
         cy.get('.btn-submit').click()
+        cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.wait(3000)
 
         
     })

@@ -3,13 +3,17 @@ describe('test visualizar Horario', () => {
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123')
+        cy.get('#id_password').type('123456')
         cy.get('.submit-row > input').click()
+        cy.wait(1000)
         cy.get('.model-user > :nth-child(2) > .addlink').click()
+        cy.wait(1000)
         cy.get('#id_username').type('45698732109')
         cy.get('#id_password1').type('mar12345')
         cy.get('#id_password2').type('mar12345')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.get('.model-useraluno > td > .addlink')
         cy.get('.model-useraluno > td > .addlink').click()
@@ -27,9 +31,12 @@ describe('test visualizar Horario', () => {
         cy.get('#id_cpf_responsavel').type('70345612603')
         cy.get('#id_telefone').type('81985060793')
         cy.get('#id_email_responsavel').type('marcelros@gmail.com')
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
         
         cy.get('.model-horarioaula > td > .addlink').click()
+        cy.wait(1000)
         cy.get('#id_colegio').type('Maria Cecilia')
         cy.get('#id_serie').type('2')
         cy.get('#id_turma').type('A')
@@ -61,31 +68,37 @@ describe('test visualizar Horario', () => {
         cy.get('#id_sex_materia_do_horario_2').type('Matemática')
         cy.get('#id_sex_materia_do_horario_3').type('Geografia')
         cy.get('#id_sex_materia_do_horario_4').type('História')
-
+        cy.wait(3000)
         cy.get('.default').click()
+        cy.wait(1000)
 
         cy.visit('/');
         cy.get('[href="/aluno/"] > .botao').click()
+        cy.wait(1000)
         cy.get('#username').type('45698732109')
         cy.get('#password').type('mar12345')
         cy.get('.btn-submit').click()
-
+        cy.wait(1000)
         cy.get(':nth-child(3) > .nav-menu-texto').click()
-
-        cy.wait(5000)
+        cy.wait(3000)
 
    })
 
    it('cenario2', () => {
-    cy.visit('/admin'); //pagina http://127.0.0.1:8000/
+    cy.visit('/admin');
     cy.get('#id_username').type('admin')
     cy.get('#id_password').type('123456')
     cy.get('.submit-row > input').click()
+    cy.wait(1000)
     cy.get('.model-user > :nth-child(2) > .addlink').click()
+    cy.wait(1000)
     cy.get('#id_username').type('70250518231')
     cy.get('#id_password1').type('raf12345')
     cy.get('#id_password2').type('raf12345')
+    cy.wait(3000)
     cy.get('.default').click()
+    cy.wait(1000)
+
     cy.get('.model-useraluno > td > .addlink').click()
     cy.get('#id_user').select('70250518231');
     cy.get('#id_matricula').type('raf12345')
@@ -101,7 +114,9 @@ describe('test visualizar Horario', () => {
     cy.get('#id_cpf_responsavel').type('73681609210')
     cy.get('#id_telefone').type('81997725630')
     cy.get('#id_email_responsavel').type('mantonieta@gmail.com')
+    cy.wait(3000)
     cy.get('.default').click()
+    cy.wait(1000)
     cy.get('.model-horarioaula > td > .addlink').click()
     cy.get('#id_colegio').type('Dom Domingos II')
     cy.get('#id_serie').type('1')
@@ -134,16 +149,22 @@ describe('test visualizar Horario', () => {
     cy.get('#id_sex_materia_do_horario_2').type('Português')
     cy.get('#id_sex_materia_do_horario_3').type('História')
     cy.get('#id_sex_materia_do_horario_4').type('Geografia')
+    cy.wait(3000)
     cy.get('.default').click()
+    cy.wait(1000)
     cy.get('#logout-form > button').click()
     cy.visit('/')
+    cy.wait(1000)
     cy.get('[href="/aluno/"] > .botao').click()
+    cy.wait(1000)
     cy.get('#username').type('70250518231')
     cy.get('#password').type('raf12345')
+    cy.wait(1000)
     cy.get('.btn-submit').click()
+    cy.wait(1000)
     cy.get(':nth-child(3) > .nav-menu-texto').click()
 
-    cy.wait(5000)
+    cy.wait(3000)
     })
 })
 
