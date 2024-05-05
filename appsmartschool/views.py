@@ -145,12 +145,12 @@ def visualizar_horario(request):
     
 @login_required
 def visualiza_notas(request):
-    aluno = UserAluno.objects.get(user=request.user)
     try:
+        aluno = UserAluno.objects.get(user=request.user)
         notas = Notas.objects.filter(aluno=aluno)
-        if not notas:
+        if not notas.exists():  # Usa exists() para verificar se a queryset está vazia
             messages.error(request, "Não há notas cadastradas para este aluno.", extra_tags='notas')
-            return redirect('appsmartschool:home_aluno')
+            return render(request, 'appsmartschool/notas.html', {'aluno': aluno, 'notas': notas})  # Mantenha na mesma página
         return render(request, 'appsmartschool/notas.html', {'aluno': aluno, 'notas': notas})
     except UserAluno.DoesNotExist:
         messages.error(request, "Aluno não encontrado.", extra_tags='notas')

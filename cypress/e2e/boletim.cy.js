@@ -223,6 +223,13 @@ describe('test visualizar Boletim', () => {
         cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
         cy.wait(3000)
+        cy.get('.info-section').invoke('text').then((text) => {
+            expect(text.trim()).to.include('Nome: André Sales')
+            expect(text.trim()).to.include('Série: 2º');
+            expect(text.trim()).to.include('Matrícula: and20240506');
+          })
+        cy.get('.notas').invoke('text').should('have.string', "Não há notas cadastradas para este aluno.")
+        cy.wait(3000)
 
         
     })
