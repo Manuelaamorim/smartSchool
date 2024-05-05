@@ -80,6 +80,10 @@ describe('test visualizar Horario', () => {
         cy.get('.btn-submit').click()
         cy.wait(1000)
         cy.get(':nth-child(3) > .nav-menu-texto').click()
+        cy.get('.info-section').invoke('text').then((text) => {
+            expect(text.trim()).to.include('Série: 2º')
+            expect(text.trim()).to.include('Turma: A');
+          })
         cy.wait(3000)
 
    })
@@ -163,6 +167,10 @@ describe('test visualizar Horario', () => {
     cy.get('.btn-submit').click()
     cy.wait(1000)
     cy.get(':nth-child(3) > .nav-menu-texto').click()
+    cy.get('.info-section').invoke('text').then((text) => {
+        expect(text.trim()).to.include('Série: 1º')
+        expect(text.trim()).to.include('Turma: A');
+      })
 
     cy.wait(3000)
     })

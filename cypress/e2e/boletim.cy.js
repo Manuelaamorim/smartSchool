@@ -76,6 +76,11 @@ describe('test visualizar Boletim', () => {
         cy.get('.btn-submit').click()
         cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.get('.info-section').invoke('text').then((text) => {
+            expect(text.trim()).to.include('Nome: Maria Ferreira')
+            expect(text.trim()).to.include('Série: 3º');
+            expect(text.trim()).to.include('Matrícula: mar12345');
+          })
         cy.wait(3000)
 
         
@@ -158,6 +163,11 @@ describe('test visualizar Boletim', () => {
         cy.get('.btn-submit').click()
         cy.wait(1000)
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.get('.info-section').invoke('text').then((text) => {
+            expect(text.trim()).to.include('Nome: Luiz Rosa')
+            expect(text.trim()).to.include('Série: 3º');
+            expect(text.trim()).to.include('Matrícula: lui20090304');
+          })
         cy.wait(3000)
         
     })
