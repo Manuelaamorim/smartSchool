@@ -79,7 +79,7 @@ describe('test visualizar Horario', () => {
    it('cenario2', () => {
     cy.visit('/admin'); //pagina http://127.0.0.1:8000/
     cy.get('#id_username').type('admin')
-    cy.get('#id_password').type('123')
+    cy.get('#id_password').type('123456')
     cy.get('.submit-row > input').click()
     cy.get('.model-user > :nth-child(2) > .addlink').click()
     cy.get('#id_username').type('70250518231')

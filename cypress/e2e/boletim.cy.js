@@ -3,7 +3,7 @@ describe('test visualizar Boletim', () => {
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123456')
+        cy.get('#id_password').type('123')
         cy.get('.submit-row > input').click()
         cy.get('.model-user > :nth-child(2) > .addlink').click()
         cy.get('#id_username').type('12476892303')
@@ -33,6 +33,9 @@ describe('test visualizar Boletim', () => {
         cy.get('li > .addlink').click()
         cy.get('#id_aluno').select('Aluno Maria Ferreira')
         cy.get('#id_materia_1').clear()
+        cy.get('#id_materia_2').clear()
+        cy.get('#id_materia_3').clear()
+        cy.get('#id_materia_4').clear()
         cy.get('#id_materia_1').type('História')
         cy.get('#id_materia_2').type('Geografia')
         cy.get('#id_materia_3').type('Matemática')
@@ -62,6 +65,7 @@ describe('test visualizar Boletim', () => {
         cy.get('#password').type('mar12345')
         cy.get('.btn-submit').click()
         cy.get(':nth-child(2) > .nav-menu-texto').click()
+        cy.wait(5000)
 
         
     })
@@ -70,7 +74,7 @@ describe('test visualizar Boletim', () => {
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123456')
+        cy.get('#id_password').type('123')
         cy.get('.submit-row > input').click()
         cy.get('.model-user > :nth-child(2) > .addlink').click()
         cy.get('#id_username').type('59843216754')
@@ -99,6 +103,10 @@ describe('test visualizar Boletim', () => {
         cy.get('.model-notas > th').click()
         cy.get('li > .addlink').click()
         cy.get('#id_aluno').select('Aluno Luiz Rosa')
+        cy.get('#id_materia_1').clear()
+        cy.get('#id_materia_2').clear()
+        cy.get('#id_materia_3').clear()
+        cy.get('#id_materia_4').clear()
         cy.get('#id_materia_1').type('História')
         cy.get('#id_materia_2').type('Geografia')
         cy.get('#id_materia_3').type('Matemática')
@@ -135,7 +143,7 @@ describe('test visualizar Boletim', () => {
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123456')
+        cy.get('#id_password').type('123')
         cy.get('.submit-row > input').click()
         cy.get('.model-user > :nth-child(2) > .addlink').click()
         cy.get('#id_username').type('12528976549')
