@@ -328,16 +328,16 @@ Nota 3: 8.0
 ***Colégio do usuário:*** Fronte Nogueira
 
 &nbsp;
-Faltas da matéria 1 (matemática): 5
+***Faltas da matéria 1 (matemática):*** 5
 
 &nbsp;
-Faltas da matéria 2 (português): 2
+***Faltas da matéria 2 (português):*** 2
 
 &nbsp;
-Faltas da matéria 3 (geografia): 7
+***Faltas da matéria 3 (geografia):*** 7
 
 &nbsp;
-Faltas da matéria 4 (história): 3
+***Faltas da matéria 4 (história):*** 3
 
 &nbsp;
 - ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
@@ -467,6 +467,9 @@ Nota 2: 9.5
 
 &nbsp;
 Nota 3: 8.6
+
+&nbsp;
+###
 
 &nbsp;
 ***FUNCIONÁRIOS:***
