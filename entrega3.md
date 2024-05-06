@@ -47,9 +47,9 @@
 - Administração do Django
 &nbsp;
 
-Superuser: useradmin
+***Superuser:*** useradmin
 &nbsp;
-Senha: 123
+***Senha:*** 123
 &nbsp;
 
 - Usuários cadastrados
@@ -58,15 +58,15 @@ Senha: 123
   ***ALUNOS:***
 &nbsp;
 
-1) Ana Luiza Eugênio - 1 User Aluno:
+***1) Ana Luiza Eugênio - 1 User Aluno:***
 &nbsp;
 
-Cadastro do User:
+***Cadastro do User:***
 &nbsp;
 
-CPF: 60356365433
+***CPF:*** 60356365433
 &nbsp;
-Matrícula: ale12345
+***Matrícula:*** ale12345
 &nbsp;
 Data de nascimento: 25/08/2018
 &nbsp;
