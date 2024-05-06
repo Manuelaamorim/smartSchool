@@ -40,7 +40,7 @@
 
 ***Instruções de acesso ao projeto:***
 
-****Banco de dados da AZURE*****
+****Banco de dados da AZURE****
 
 - Administração do Django
 
