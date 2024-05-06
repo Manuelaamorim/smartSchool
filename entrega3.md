@@ -40,7 +40,7 @@
 
 ***Instruções de acesso ao projeto:***
 
-<mark>Banco de dados da AZURE</mark>
+<i>Banco de dados da AZURE</i>
 
 - Administração do Django
 
@@ -50,7 +50,7 @@ Senha: 123
 
 - Usuários cadastrados
   
-  *****ALUNOS:*****
+  <u>ALUNOS:</u>
 
 1) Ana Luiza Eugênio - 1 User Aluno:
 
@@ -224,7 +224,7 @@ Nota 1: 10
 Nota 2: 9.5
 Nota 3: 8.6
 
-*****FUNCIONÁRIOS:*****
+<u>FUNCIONÁRIOS:</u>
 
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
