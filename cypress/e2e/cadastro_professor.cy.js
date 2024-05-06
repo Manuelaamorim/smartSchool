@@ -155,8 +155,8 @@ describe('test cadastrar professor', () => {
 
         cy.visit('/')
         cy.get('[href="/funcionario/"] > .botao').click()
-        cy.get('#username').type('34479066420')
-        cy.get('#password').type('stellanb123')
+        cy.get('#username').type('27307763460')
+        cy.get('#password').type('clams123')
         cy.get('.btn-submit').click()
         cy.wait(3000)
 
