@@ -25,7 +25,7 @@
 </ul>
 <br/>
 
-***Deployment das histórias produzidas:***
+## Deployment das histórias produzidas:
 <ul>
   <li>
     <a  href="https://fdssmartschool.azurewebsites.net/"
@@ -38,10 +38,10 @@
 </ul>
 <br/>
 
-***Instruções de acesso ao projeto:***
+## Instruções de acesso ao projeto:
 <br/>
 
-<i>Banco de dados da AZURE</i>
+*Banco de dados da AZURE*
 <br/>
 
 - Administração do Django
@@ -52,7 +52,7 @@ Senha: 123
 <br/>
 - Usuários cadastrados
   
-  <u>ALUNOS:</u>
+  ***ALUNOS:***
   
 <br/>
 1) Ana Luiza Eugênio - 1 User Aluno:
@@ -228,7 +228,7 @@ Nota 2: 9.5
 Nota 3: 8.6
 
 <br/>
-<u>FUNCIONÁRIOS:</u>
+***FUNCIONÁRIOS:***
 
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
@@ -251,12 +251,12 @@ Telefone para contato: 81971162481
 Email do responsável: luizcarfig@gmail.com
 <br/>
 
-***Diagrama de atividades do sistema:***
+## Diagrama de atividades do sistema:
 
 
 <br/>
 
-***Issues/bug tracker:***
+## Issues/bug tracker:
   
   - Issues em abertas:
        
@@ -266,35 +266,35 @@ Email do responsável: luizcarfig@gmail.com
 
 <br/>
 
- ***Print do backlog do projeto:***
+ ## Print do backlog do projeto:
   
   ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/5962221e-b44c-4d8f-a07f-aadd585747a0)
 
 <br/>  
  
-***Print do quadro da Sprint:***
+## Print do quadro da Sprint:
 
 ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/162fdaf2-4e8e-4da3-a3a9-a8e8a1947175)
 
 
 <br/>
 
-***Relato da Programação em Par experimentada:***
+## Relato da Programação em Par experimentada:
 
 
-Introdução
+*Introdução*
 
 Dando continuidade ao projeto de desenvolvimento da aplicação Smart School, a segunda etapa demandou a implementação de três novas histórias além da realização de Testes de Sistema (E2E) Automatizados. Para atender a esse novo requisito, a equipe escolheu a ferramenta Cypress, framework de teste end-to-end de código aberto. Nos tópicos seguintes, serão detalhadas as experiências de cada dupla durante esta etapa do projeto.
 
-Par 01 – Beatriz e Manuela
+*Par 01 – Beatriz e Manuela*
 
 O Par 01 concentrou seus esforços na implementação da funcionalidade de visualização de notas, proporcionando aos alunos acesso fácil e rápido ao seu desempenho acadêmico. Além disso, o par dedicou um tempo significativo para aprender sobre o funcionamento da ferramenta Cypress, integrando-a ao processo de desenvolvimento para realizar testes automatizados de ponta a ponta. Dessa forma, seus integrantes puderam aplicar suas habilidades conjuntas para enfrentar os desafios dessa nova etapa, buscando não apenas desenvolver a funcionalidade, mas também garantir sua qualidade por meio de testes abrangentes.
 
-Par 02 – Lisa e Luziane
+*Par 02 – Lisa e Luziane*
 
 Por sua vez, o Par 02 assumiu a responsabilidade pelo desenvolvimento do cadastro de professores, uma adição crucial ao sistema SmartSchool, bem como da tela inicial de login, diferenciando os acessos para cada tipo de usuário (aluno, professor ou funcionário). Esta tarefa exigiu uma extensão dos conhecimentos prévios do par, particularmente no que diz respeito à manipulação de dados e à integração com o banco de dados Azure. Para incorporar os Testes de Sistema Automatizados utilizando o Cypress, o par dedicou um tempo para compreender os fundamentos da ferramenta e integrá-la ao seu fluxo de trabalho, assegurando, ao final, não apenas a funcionalidade adequada do cadastro de professores, mas também sua robustez por meio de testes automatizados.
 
-Par 03 – Matheus e Ygor
+*Par 03 – Matheus e Ygor*
 
 Por fim, o Par 03 focou na implementação da funcionalidade de visualização de horários, uma característica essencial para os alunos organizarem suas atividades acadêmicas. Para incorporar os Testes de Sistema Automatizados com o Cypress, o par combinou seus esforços para enfrentar os desafios técnicos e garantir que a funcionalidade de visualização de horários fosse implementada com sucesso, com testes automatizados para validar sua integridade e desempenho.
 
