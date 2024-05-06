@@ -151,7 +151,7 @@ describe('test cadastrar professor', () => {
  
         cy.get('#logout-form > button').click()
 
-       //Acessa a página http://127.0.0.1:8000/ e faz login como funcionário Stella Bernardes para cadastrar a professora Maria das Dores Pascoal
+       //Acessa a página http://127.0.0.1:8000/ e faz login como funcionário Clarice Maria da Silva para cadastrar a professora Maria das Dores Pascoal
 
         cy.visit('/')
         cy.get('[href="/funcionario/"] > .botao').click()
