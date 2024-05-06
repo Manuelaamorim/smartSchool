@@ -50,7 +50,6 @@ Superuser: useradmin
 <br/>
 Senha: 123
 
-<br/>
 - Usuários cadastrados
 
   ***ALUNOS:***
