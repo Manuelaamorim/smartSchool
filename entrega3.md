@@ -42,365 +42,467 @@
 <br/>
 
 **Banco de dados da AZURE**
-<br/>
 
+&nbsp;
 - Administração do Django
-- 
+  
 &nbsp;
 ***Superuser:*** useradmin
   
 &nbsp;
 ***Senha:*** 123
 
-- Usuários cadastrados
 &nbsp;
+- Usuários cadastrados
 
   ***ALUNOS:***
+  
 &nbsp;
-
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
-&nbsp;
 
+&nbsp;
 ***Cadastro do User:***
-&nbsp;
 
+&nbsp;
 ***CPF:*** 60356365433
+
 &nbsp;
 ***Matrícula:*** ale12345
-&nbsp;
-Data de nascimento: 25/08/2018
-&nbsp;
-Série do usuário: 2 ano do fundamental
-&nbsp;
-Email do usuário: analueu@gmail.com
-&nbsp;
-Endereço da residência: Rua Visconde Seca, 134 - Apt. 242, Bloco A, Casa Amarela - Recife - Pernambuco, PE
-&nbsp;
-Nome do responsável: Luciana Eugênio Alves
-&nbsp;
-Cpf do responsável: 65898388443
-&nbsp;
-Telefone do responsável: 81996614073
-&nbsp;
-Email do responsável: lucianaeualves@gmail.com
-&nbsp;
 
-Dados de Saúde do User:
 &nbsp;
+***Data de nascimento:*** 25/08/2018
 
-Peso do usuário: 22,0 kg
 &nbsp;
-Altura do usuário: 1,25 m
-&nbsp;
-Restrição alimentar: Nenhuma
-&nbsp;
-Possui TDAH: Sim
-&nbsp;
-É PCD: Não
-&nbsp;
+***Série do usuário:*** 2 ano do fundamental
 
-Frequência das aulas do User (15 aulas ministradas de cada matéria):
 &nbsp;
+***Email do usuário:*** analueu@gmail.com
 
-Colégio do usuário: Júlio Mesquita
 &nbsp;
-Faltas da matéria 1 (matemática): 0
-&nbsp;
-Faltas da matéria 2 (português): 2
-&nbsp;
-Faltas da matéria 3 (geografia): 1
-&nbsp;
-Faltas da matéria 4 (história): 4
-&nbsp;
+***Endereço da residência:*** Rua Visconde Seca, 134 - Apt. 242, Bloco A, Casa Amarela - Recife - Pernambuco, PE
 
-Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
 &nbsp;
+***Nome do responsável:*** Luciana Eugênio Alves
 
-Nas Segundas-Feiras:
 &nbsp;
+***Cpf do responsável:*** 65898388443
 
+&nbsp;
+***Telefone do responsável:*** 81996614073
+
+&nbsp;
+***Email do responsável:*** lucianaeualves@gmail.com
+
+&nbsp;
+***Dados de Saúde do User:***
+
+&nbsp;
+***Peso do usuário:*** 22,0 kg
+
+&nbsp;
+***Altura do usuário:*** 1,25 m
+
+&nbsp;
+***Restrição alimentar:*** Nenhuma
+
+&nbsp;
+***Possui TDAH:*** Sim
+
+&nbsp;
+***É PCD:*** Não
+
+&nbsp;
+***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
+
+&nbsp;
+***Colégio do usuário:*** Júlio Mesquita
+
+&nbsp;
+***Faltas da matéria 1 (matemática):*** 0
+
+&nbsp;
+***Faltas da matéria 2 (português):*** 2
+
+&nbsp;
+***Faltas da matéria 3 (geografia):*** 1
+
+&nbsp;
+***Faltas da matéria 4 (história):*** 4
+
+&nbsp;
+***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
+
+&nbsp;
+***Nas Segundas-Feiras:***
+
+&nbsp;
 07:30 - 08:30 Português
+
 &nbsp;
 08:30 - 09:30 Matemática
+
 &nbsp;
 10:00 - 11:00 Matemática
+
 &nbsp;
 11:00 - 12:00 Português
-&nbsp;
 
-Nas Terças-Feiras:
 &nbsp;
+***Nas Terças-Feiras:***
 
+&nbsp;
 07:30 - 08:30 História
+
 &nbsp;
 08:30 - 09:30 Geografia
+
 &nbsp;
 10:00 - 11:00 Geografia
+
 &nbsp;
 11:00 - 12:00 História
-&nbsp;
 
-Nas Quartas-Feiras:
 &nbsp;
+***Nas Quartas-Feiras:***
 
+&nbsp;
 07:30 - 08:30 Matemática
+
 &nbsp;
 08:30 - 09:30 Português
+
 &nbsp;
 10:00 - 11:00 Português
+
 &nbsp;
 11:00 - 12:00 Matemática
-&nbsp;
 
-Nas Quintas-Feiras:
 &nbsp;
+***Nas Quintas-Feiras:***
 
+&nbsp;
 07:30 - 08:30 Geografia
+
 &nbsp;
 08:30 - 09:30 História
+
 &nbsp;
 10:00 - 11:00 História
+
 &nbsp;
 11:00 - 12:00 Geografia
-&nbsp;
 
-Nas Sextas-Feiras:
 &nbsp;
+***Nas Sextas-Feiras:***
 
+&nbsp;
 07:30 - 08:30 História
+
 &nbsp;
 08:30 - 09:30 Geografia
+
 &nbsp;
 10:00 - 11:00 Matemárica
+
 &nbsp;
 11:00 - 12:00 Português
-&nbsp;
 
-Boletim do aluno nas matérias cadastradas pela turma:
 &nbsp;
+***Boletim do aluno nas matérias cadastradas pela turma:***
 
-Matemática:
+&nbsp;
+***Matemática:***
+
 &nbsp;
 Nota 1: 10.0
+
 &nbsp;
 Nota 2: 10.0
+
 &nbsp;
 Nota 3: 8.4
-&nbsp;
 
-Português:
+&nbsp;
+***Português:***
+
 &nbsp;
 Nota 1: 9.7
+
 &nbsp;
 Nota 2: 10.0
+
 &nbsp;
 Nota 3: 8.9
-&nbsp;
 
-História:
+&nbsp;
+***História:***
+
 &nbsp;
 Nota 1: 10.0
+
 &nbsp;
 Nota 2: 8.5
+
 &nbsp;
 Nota 3: 10.0
-&nbsp;
 
-Geografia:
+&nbsp;
+***Geografia:***
+
 &nbsp;
 Nota 1: 10
+
 &nbsp;
 Nota 2: 9.4
+
 &nbsp;
 Nota 3: 8.0
-&nbsp;
 
+&nbsp;
 2) João Antônio Lira Correia - 2 User Aluno:
-3) &nbsp;
 
-Cadastro do User:
 &nbsp;
+***Cadastro do User:***
 
-CPF: 03049815400
 &nbsp;
-Matrícula: jalc1234
-&nbsp;
-Data de nascimento: 09/02/2015
-&nbsp;
-Série do usuário: 5 ano do fundamental
-&nbsp;
-Email do usuário: joaolcorreia@gmail.com
-&nbsp;
-Endereço da residência: Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
-&nbsp;
-Nome do responsável: Maria Alice Correia Gomes
-&nbsp;
-Cpf do responsável: 98362769475
-&nbsp;
-Telefone do responsável: 81912270736
-&nbsp;
-Email do responsável: mlicecg@gmail.com
-&nbsp;
+***CPF:*** 03049815400
 
-Dados de Saúde do User:
 &nbsp;
+***Matrícula:*** jalc1234
 
-Peso do usuário: 38, 8 kg
 &nbsp;
-Altura do usuário: 1,37 m
-&nbsp;
-Restrição alimentar: Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
-&nbsp;
-Possui TDAH: Não
-&nbsp;
-É PCD: Não
-&nbsp;
+***Data de nascimento:*** 09/02/2015
 
-Frequência das aulas do User (15 aulas ministradas de cada matéria):
 &nbsp;
+***Série do usuário:*** 5 ano do fundamental
 
-Colégio do usuário: Fronte Nogueira
+&nbsp;
+***Email do usuário:*** joaolcorreia@gmail.com
+
+&nbsp;
+***Endereço da residência:*** Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
+
+&nbsp;
+***Nome do responsável:*** Maria Alice Correia Gomes
+
+&nbsp;
+***Cpf do responsável:*** 98362769475
+
+&nbsp;
+***Telefone do responsável:*** 81912270736
+
+&nbsp;
+***Email do responsável:*** mlicecg@gmail.com
+
+&nbsp;
+***Dados de Saúde do User:***
+
+&nbsp;
+***Peso do usuário:*** 38, 8 kg
+
+&nbsp;
+***Altura do usuário:*** 1,37 m
+
+&nbsp;
+***Restrição alimentar:*** Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
+
+&nbsp;
+***Possui TDAH:*** Não
+
+&nbsp;
+***É PCD:*** Não
+
+&nbsp;
+***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
+
+&nbsp;
+***Colégio do usuário:*** Fronte Nogueira
+
 &nbsp;
 Faltas da matéria 1 (matemática): 5
+
 &nbsp;
 Faltas da matéria 2 (português): 2
+
 &nbsp;
 Faltas da matéria 3 (geografia): 7
+
 &nbsp;
 Faltas da matéria 4 (história): 3
+
 &nbsp;
+***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
 
-
-Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
 &nbsp;
+***Nas Segundas-Feiras:***
 
-Nas Segundas-Feiras:
 &nbsp;
-
 07:30 - 08:30 Matemática
+
 &nbsp;
 08:30 - 09:30 Matemática
+
 &nbsp;
 10:00 - 11:00 Português
+
 &nbsp;
 11:00 - 12:00 Português
-&nbsp;
 
-Nas Terças-Feiras:
+&nbsp;
+***Nas Terças-Feiras:***
+
 &nbsp;
 07:30 - 08:30 História
+
 &nbsp;
 08:30 - 09:30 História
+
 &nbsp;
 10:00 - 11:00 Geografia
+
 &nbsp;
 11:00 - 12:00 Geografia
-&nbsp;
 
-Nas Quartas-Feiras:
+&nbsp;
+***Nas Quartas-Feiras:***
+
 &nbsp;
 07:30 - 08:30 Português
+
 &nbsp;
 08:30 - 09:30 Português
+
 &nbsp;
 10:00 - 11:00 Matemática
+
 &nbsp;
 11:00 - 12:00 Matemática
-&nbsp;
 
-Nas Quintas-Feiras:
+&nbsp;
+***Nas Quintas-Feiras:***
+
 &nbsp;
 07:30 - 08:30 Geografia
+
 &nbsp;
 08:30 - 09:30 Geografia
+
 &nbsp;
 10:00 - 11:00 História
+
 &nbsp;
 11:00 - 12:00 História
-&nbsp;
 
-Nas Sextas-Feiras:
+&nbsp;
+***Nas Sextas-Feiras:***
+
 &nbsp;
 07:30 - 08:30 Matemárica
+
 &nbsp;
 08:30 - 09:30 História
+
 &nbsp;
 10:00 - 11:00 Português
+
 &nbsp;
 11:00 - 12:00 Geografia
-&nbsp;
 
-Boletim do aluno nas matérias cadastradas pela turma:
 &nbsp;
+***Boletim do aluno nas matérias cadastradas pela turma:***
 
-Matemática:
+&nbsp;
+***Matemática:***
+
 &nbsp;
 Nota 1: 9.8
+
 &nbsp;
 Nota 2: 9.5
+
 &nbsp;
 Nota 3: 8.7
-&nbsp;
 
-Português:
+&nbsp;
+***Português:***
+
 &nbsp;
 Nota 1: 9.4
+
 &nbsp;
 Nota 2: 9.9
+
 &nbsp;
 Nota 3: 10.0
-&nbsp;
 
-História:
+&nbsp;
+***História:***
+
+&nbsp;
 Nota 1: 8.2
+
+&nbsp;
 Nota 2: 9.0
+
+&nbsp;
 Nota 3: 9.5
 
-Geografia:
+&nbsp;
+***Geografia:***
+
 &nbsp;
 Nota 1: 10
+
 &nbsp;
 Nota 2: 9.5
+
 &nbsp;
 Nota 3: 8.6
-&nbsp;
 
+&nbsp;
 ***FUNCIONÁRIOS:***
 
+&nbsp;
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
-   &nbsp;
+   
+&nbsp;
+***Cadastro do User:***
 
-Cadastro do User:
 &nbsp;
+***CPF:*** 92873712491
 
-CPF: 92873712491
 &nbsp;
-Matrícula: func9916
-&nbsp;
-Data de nascimento: 12/10/1989
-&nbsp;
-Telefone para contato: 81988271413
-&nbsp;
-Email do responsável: marcosboncordeiro@gmail.com
-&nbsp;
+***Matrícula:*** func9916
 
+&nbsp;
+***Data de nascimento:*** 12/10/1989
+
+&nbsp;
+***Telefone para contato:*** 81988271413
+
+&nbsp;
+***Email do responsável:*** marcosboncordeiro@gmail.com
+
+&nbsp;
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
-3) &nbsp;
 
-Cadastro do User:
 &nbsp;
+***Cadastro do User:***
 
-CPF: 31462581538
 &nbsp;
-Matrícula:func0193
-&nbsp;
-Data de nascimento: 23/05/1991
-&nbsp;
-Telefone para contato: 81971162481
-&nbsp;
-Email do responsável: luizcarfig@gmail.com
-&nbsp;
+***CPF:*** 31462581538
 
+&nbsp;
+***Matrícula:***func0193
+
+&nbsp;
+***Data de nascimento:*** 23/05/1991
+
+&nbsp;
+***Telefone para contato:*** 81971162481
+
+&nbsp;
+***Email do responsável:*** luizcarfig@gmail.com
 
 ## Diagrama de atividades do sistema:
 
