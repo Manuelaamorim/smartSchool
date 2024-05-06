@@ -477,7 +477,6 @@ Nota 3: 8.6
 &nbsp;
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
-&nbsp;
 - ***Cadastro do User:***
 
 &nbsp;
@@ -501,7 +500,6 @@ Nota 3: 8.6
 &nbsp;
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
 
-&nbsp;
 - ***Cadastro do User:***
 
 &nbsp;
