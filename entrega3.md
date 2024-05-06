@@ -54,11 +54,10 @@ Senha: 123
 
   ***ALUNOS:***
   
-<br/>
 1) Ana Luiza Eugênio - 1 User Aluno:
-<br/>
+
 Cadastro do User:
-<br/>
+
 CPF: 60356365433
 Matrícula: ale12345
 Data de nascimento: 25/08/2018
@@ -69,81 +68,81 @@ Nome do responsável: Luciana Eugênio Alves
 Cpf do responsável: 65898388443
 Telefone do responsável: 81996614073
 Email do responsável: lucianaeualves@gmail.com
-<br/>
+
 Dados de Saúde do User:
-<br/>
+
 Peso do usuário: 22,0 kg
 Altura do usuário: 1,25 m
 Restrição alimentar: Nenhuma
 Possui TDAH: Sim
 É PCD: Não
-<br/>
+
 Frequência das aulas do User (15 aulas ministradas de cada matéria):
-<br/>
+
 Colégio do usuário: Júlio Mesquita
 Faltas da matéria 1 (matemática): 0
 Faltas da matéria 2 (português): 2
 Faltas da matéria 3 (geografia): 1
 Faltas da matéria 4 (história): 4
-<br/>
+
 Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
-<br/>
+
 Nas Segundas-Feiras:
 07:30 - 08:30 Português
 08:30 - 09:30 Matemática
 10:00 - 11:00 Matemática
 11:00 - 12:00 Português
-<br/>
+
 Nas Terças-Feiras:
 07:30 - 08:30 História
 08:30 - 09:30 Geografia
 10:00 - 11:00 Geografia
 11:00 - 12:00 História
-<br/>
+
 Nas Quartas-Feiras:
 07:30 - 08:30 Matemática
 08:30 - 09:30 Português
 10:00 - 11:00 Português
 11:00 - 12:00 Matemática
-<br/>
+
 Nas Quintas-Feiras:
 07:30 - 08:30 Geografia
 08:30 - 09:30 História
 10:00 - 11:00 História
 11:00 - 12:00 Geografia
-<br/>
+
 Nas Sextas-Feiras:
 07:30 - 08:30 História
 08:30 - 09:30 Geografia
 10:00 - 11:00 Matemárica
 11:00 - 12:00 Português
-<br/>
+
 Boletim do aluno nas matérias cadastradas pela turma:
-<br/>
+
 Matemática:
 Nota 1: 10.0
 Nota 2: 10.0
 Nota 3: 8.4
-<br/>
+
 Português:
 Nota 1: 9.7
 Nota 2: 10.0
 Nota 3: 8.9
-<br/>
+
 História:
 Nota 1: 10.0
 Nota 2: 8.5
 Nota 3: 10.0
-<br/>
+
 Geografia:
 Nota 1: 10
 Nota 2: 9.4
 Nota 3: 8.0
-<br/>
+
 2) João Antônio Lira Correia - 2 User Aluno:
-<br/>
+
 Cadastro do User:
-<br/>
+
 CPF: 03049815400
 Matrícula: jalc1234
 Data de nascimento: 09/02/2015
@@ -154,101 +153,101 @@ Nome do responsável: Maria Alice Correia Gomes
 Cpf do responsável: 98362769475
 Telefone do responsável: 81912270736
 Email do responsável: mlicecg@gmail.com
-<br/>
+
 Dados de Saúde do User:
-<br/>	
+
 Peso do usuário: 38, 8 kg
 Altura do usuário: 1,37 m
 Restrição alimentar: Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
 Possui TDAH: Não
 É PCD: Não
-<br/>
+
 Frequência das aulas do User (15 aulas ministradas de cada matéria):
-<br/>
+
 Colégio do usuário: Fronte Nogueira
 Faltas da matéria 1 (matemática): 5
 Faltas da matéria 2 (português): 2
 Faltas da matéria 3 (geografia): 7
 Faltas da matéria 4 (história): 3
-<br/>
+
 
 Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
-<br/>
+
 Nas Segundas-Feiras:
 9916
 07:30 - 08:30 Matemática
 08:30 - 09:30 Matemática
 10:00 - 11:00 Português
 11:00 - 12:00 Português
-<br/>
+
 Nas Terças-Feiras:
 07:30 - 08:30 História
 08:30 - 09:30 História
 10:00 - 11:00 Geografia
 11:00 - 12:00 Geografia
-<br/>
+
 Nas Quartas-Feiras:
 07:30 - 08:30 Português
 08:30 - 09:30 Português
 10:00 - 11:00 Matemática
 11:00 - 12:00 Matemática
-<br/>
+
 Nas Quintas-Feiras:
 07:30 - 08:30 Geografia
 08:30 - 09:30 Geografia
 10:00 - 11:00 História
 11:00 - 12:00 História
-<br/>
+
 Nas Sextas-Feiras:
 07:30 - 08:30 Matemárica
 08:30 - 09:30 História
 10:00 - 11:00 Português
 11:00 - 12:00 Geografia
-<br/>
+
 Boletim do aluno nas matérias cadastradas pela turma:
-<br/>
+
 Matemática:
 Nota 1: 9.8
 Nota 2: 9.5
 Nota 3: 8.7
-<br/>
+
 Português:
 Nota 1: 9.4
 Nota 2: 9.9
 Nota 3: 10.0
-<br/>
+
 História:
 Nota 1: 8.2
 Nota 2: 9.0
 Nota 3: 9.5
-<br/>
+
 Geografia:
 Nota 1: 10
 Nota 2: 9.5
 Nota 3: 8.6
 
 ***FUNCIONÁRIOS:***
-<br/>
+
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
-<br/>
+
 Cadastro do User:
-<br/>
+
 CPF: 92873712491
 Matrícula: func9916
 Data de nascimento: 12/10/1989
 Telefone para contato: 81988271413
 Email do responsável: marcosboncordeiro@gmail.com
-<br/>
+
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
-<br/>
+
 Cadastro do User:
-<br/>
+
 CPF: 31462581538
 Matrícula:func0193
 Data de nascimento: 23/05/1991
 Telefone para contato: 81971162481
 Email do responsável: luizcarfig@gmail.com
-<br/>
+
 
 ## Diagrama de atividades do sistema:
 
