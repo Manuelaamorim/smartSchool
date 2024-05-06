@@ -10,6 +10,18 @@
     <a  href="https://www.figma.com/file/OodUDTbRUE7cAgmlOUiEr9/SmartSchool?type=design&node-id=0-1&mode=design&t=V3uiesp8LFjSo9ET-0"
       >Protótipo de Lo-Fi no Figma</a>
   </li>
+  <li>
+    <a  href=""
+      >Screencast do Portótipo Lo-fi - Entrega 03</a>
+  </li>
+  <li>
+    <a  href=""
+      >Screencast CI/CD com Build e Deployment Automatizado - Entrega 03</a>
+  </li>
+  <li>
+    <a  href=""
+      >Screencast da Execução dos Testes - Entrega 03</a>
+  </li>
 </ul>
 <br/>
 
@@ -18,6 +30,10 @@
   <li>
     <a  href="https://fdssmartschool.azurewebsites.net/"
       >Projeto na Azure</a>
+  </li>
+  <li>
+    <a  href=""
+      >Screencast da Azure - Entrega 03</a>
   </li>
 </ul>
 <br/>
