@@ -43,6 +43,7 @@
 
 ### Banco de dados da AZURE
 
+<br/>
 &nbsp;
 **Administração do Django**
  
@@ -58,6 +59,7 @@
 &nbsp;
 **Usuários cadastrados**
 
+<br/>
 &nbsp;
 ***ALUNOS:***
 
