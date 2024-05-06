@@ -1,6 +1,6 @@
 # Entrega 03
 
-***Links relevantes:***
+## Links relevantes:
 <ul>
   <li>
     <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/VNC/boards/2"
@@ -39,19 +39,22 @@
 <br/>
 
 ***Instruções de acesso ao projeto:***
+<br/>
 
 <i>Banco de dados da AZURE</i>
+<br/>
 
 - Administração do Django
 
 Superuser: useradmin
 Senha: 123
 
-
+<br/>
 - Usuários cadastrados
   
   <u>ALUNOS:</u>
-
+  
+<br/>
 1) Ana Luiza Eugênio - 1 User Aluno:
 
 Cadastro do User:
@@ -224,6 +227,7 @@ Nota 1: 10
 Nota 2: 9.5
 Nota 3: 8.6
 
+<br/>
 <u>FUNCIONÁRIOS:</u>
 
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
