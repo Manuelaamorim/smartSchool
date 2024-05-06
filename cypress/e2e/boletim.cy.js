@@ -172,11 +172,11 @@ describe('test visualizar Boletim', () => {
         
     })
 
-    it('cenario3', () => { //André Sales está cadastrado no sistema da SmartSchool com os seguintes dados: matrícula - 20240506; CPF - 12528976549; data de nascimento - 18/01/2017; endereço - Rua da Hora, 45; e-mail - paulosales@gmail.com; nome do responsável - Paulo Henrique Sales; CPF do responsável - 02399752827; número de telefone - 81940148945. Ele está matriculado nas aulas do 2° ano A do Fundamental I, que inclui as matérias de História II, Geografia II, Matemática II, Português II e Ciências II. Ele tentará consultar suas notas antes que o professor as tenha cadastrado e aparecerá a página vazia.
+    it('cenario3', () => { //André Sales está cadastrado no sistema da SmartSchool com os seguintes dados: matrícula - 20240506; CPF - 12528976549; data de nascimento - 18/01/2017; endereço - Rua da Hora, 45; e-mail - paulosales@gmail.com; nome do responsável - Paulo Henrique Sales; CPF do responsável - 02399752827; número de telefone - 81940148945. Ele está matriculado nas aulas do 2° ano A do Fundamental I, que inclui as matérias de História II, Geografia II, Matemática II, Português II e Ciências II. Ele tentará consultar suas notas antes que o professor as tenha cadastrado e aparecerá  a mensagem “Não há notas cadastradas para este aluno." na página de boletim.
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
-        cy.get('#id_password').type('123456')
+        cy.get('#id_password').type('123')
         cy.get('.submit-row > input').click()
         cy.wait(1000)
         cy.get('.model-user > :nth-child(2) > .addlink').click()
