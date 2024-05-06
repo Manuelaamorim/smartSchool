@@ -41,10 +41,10 @@
 ## Instruções de acesso ao projeto:
 <br/>
 
-**Banco de dados da AZURE**
+###Banco de dados da AZURE###
 
 &nbsp;
-_Administração do Django_
+**Administração do Django**
 
  
 &nbsp;
@@ -52,9 +52,8 @@ _Administração do Django_
   
 ***Senha:*** 123
 
-<br/>
 &nbsp;
-_Usuários cadastrados_
+**Usuários cadastrados**
 
 &nbsp;
 ***ALUNOS:***
