@@ -56,11 +56,10 @@
 ###
 
 &nbsp;
-**Usuários cadastrados**
+- ***Usuários cadastrados***:
 
 &nbsp;
 ###
-
 &nbsp;
 ***ALUNOS:***
 
