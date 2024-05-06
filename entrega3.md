@@ -64,7 +64,6 @@
 &nbsp;
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
 
-&nbsp;
 - ***Cadastro do User:***
 
 &nbsp;
