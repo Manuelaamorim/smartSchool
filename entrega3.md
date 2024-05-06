@@ -469,9 +469,6 @@ Nota 2: 9.5
 Nota 3: 8.6
 
 &nbsp;
-###
-
-&nbsp;
 ***FUNCIONÁRIOS:***
 
 &nbsp;
