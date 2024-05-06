@@ -41,20 +41,20 @@
 ## Instruções de acesso ao projeto:
 <br/>
 
+<li>
 ### Banco de dados da AZURE
 
 &nbsp;
-**Administração do Django**
+<li>**Administração do Django**
 
  
 &nbsp;
 ***Superuser:*** useradmin
   
-***Senha:*** 123
+***Senha:*** 123</li>
 
-<br/>
 &nbsp;
-**Usuários cadastrados**
+<li>**Usuários cadastrados**
 
 &nbsp;
 ***ALUNOS:***
@@ -495,7 +495,7 @@ Nota 3: 8.6
 ***CPF:*** 31462581538
 
 &nbsp;
-***Matrícula:***func0193
+***Matrícula:*** func0193
 
 &nbsp;
 ***Data de nascimento:*** 23/05/1991
@@ -505,6 +505,8 @@ Nota 3: 8.6
 
 &nbsp;
 ***Email do responsável:*** luizcarfig@gmail.com
+</li>
+</ul>
 <br/>
 
 ## Diagrama de atividades do sistema:
