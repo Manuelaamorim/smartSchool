@@ -40,7 +40,211 @@
 
 ***Instruções de acesso ao projeto:***
 
+****Banco de dados da AZURE*****
 
+- Administração do Django
+
+Superuser: useradmin
+Senha: 123
+
+
+- Usuários cadastrados
+  
+  *****ALUNOS:*****
+
+1) Ana Luiza Eugênio - 1 User Aluno:
+
+Cadastro do User:
+
+CPF: 60356365433
+Matrícula: ale12345
+Data de nascimento: 25/08/2018
+Série do usuário: 2 ano do fundamental
+Email do usuário: analueu@gmail.com
+Endereço da residência: Rua Visconde Seca, 134 - Apt. 242, Bloco A, Casa Amarela - Recife - Pernambuco, PE
+Nome do responsável: Luciana Eugênio Alves
+Cpf do responsável: 65898388443
+Telefone do responsável: 81996614073
+Email do responsável: lucianaeualves@gmail.com
+
+Dados de Saúde do User:
+	
+Peso do usuário: 22,0 kg
+Altura do usuário: 1,25 m
+Restrição alimentar: Nenhuma
+Possui TDAH: Sim
+É PCD: Não
+
+Frequência das aulas do User (15 aulas ministradas de cada matéria):
+
+Colégio do usuário: Júlio Mesquita
+Faltas da matéria 1 (matemática): 0
+Faltas da matéria 2 (português): 2
+Faltas da matéria 3 (geografia): 1
+Faltas da matéria 4 (história): 4
+
+Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
+
+Nas Segundas-Feiras:
+07:30 - 08:30 Português
+08:30 - 09:30 Matemática
+10:00 - 11:00 Matemática
+11:00 - 12:00 Português
+
+Nas Terças-Feiras:
+07:30 - 08:30 História
+08:30 - 09:30 Geografia
+10:00 - 11:00 Geografia
+11:00 - 12:00 História
+
+Nas Quartas-Feiras:
+07:30 - 08:30 Matemática
+08:30 - 09:30 Português
+10:00 - 11:00 Português
+11:00 - 12:00 Matemática
+
+Nas Quintas-Feiras:
+07:30 - 08:30 Geografia
+08:30 - 09:30 História
+10:00 - 11:00 História
+11:00 - 12:00 Geografia
+
+Nas Sextas-Feiras:
+07:30 - 08:30 História
+08:30 - 09:30 Geografia
+10:00 - 11:00 Matemárica
+11:00 - 12:00 Português
+
+Boletim do aluno nas matérias cadastradas pela turma:
+
+Matemática:
+Nota 1: 10.0
+Nota 2: 10.0
+Nota 3: 8.4
+
+Português:
+Nota 1: 9.7
+Nota 2: 10.0
+Nota 3: 8.9
+
+História:
+Nota 1: 10.0
+Nota 2: 8.5
+Nota 3: 10.0
+
+Geografia:
+Nota 1: 10
+Nota 2: 9.4
+Nota 3: 8.0
+
+2) João Antônio Lira Correia - 2 User Aluno:
+
+Cadastro do User:
+
+CPF: 03049815400
+Matrícula: jalc1234
+Data de nascimento: 09/02/2015
+Série do usuário: 5 ano do fundamental
+Email do usuário: joaolcorreia@gmail.com
+Endereço da residência: Rua General Graça, 74 - Num. 39, Arruda  - Recife - Pernambuco, PE
+Nome do responsável: Maria Alice Correia Gomes
+Cpf do responsável: 98362769475
+Telefone do responsável: 81912270736
+Email do responsável: mlicecg@gmail.com
+
+Dados de Saúde do User:
+	
+Peso do usuário: 38, 8 kg
+Altura do usuário: 1,37 m
+Restrição alimentar: Intolerância à lactose, intolerância ao glúten, alergia a amendoim.
+Possui TDAH: Não
+É PCD: Não
+
+Frequência das aulas do User (15 aulas ministradas de cada matéria):
+
+Colégio do usuário: Fronte Nogueira
+Faltas da matéria 1 (matemática): 5
+Faltas da matéria 2 (português): 2
+Faltas da matéria 3 (geografia): 7
+Faltas da matéria 4 (história): 3
+
+
+Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):
+
+Nas Segundas-Feiras:
+9916
+07:30 - 08:30 Matemática
+08:30 - 09:30 Matemática
+10:00 - 11:00 Português
+11:00 - 12:00 Português
+
+Nas Terças-Feiras:
+07:30 - 08:30 História
+08:30 - 09:30 História
+10:00 - 11:00 Geografia
+11:00 - 12:00 Geografia
+
+Nas Quartas-Feiras:
+07:30 - 08:30 Português
+08:30 - 09:30 Português
+10:00 - 11:00 Matemática
+11:00 - 12:00 Matemática
+
+Nas Quintas-Feiras:
+07:30 - 08:30 Geografia
+08:30 - 09:30 Geografia
+10:00 - 11:00 História
+11:00 - 12:00 História
+
+Nas Sextas-Feiras:
+07:30 - 08:30 Matemárica
+08:30 - 09:30 História
+10:00 - 11:00 Português
+11:00 - 12:00 Geografia
+
+Boletim do aluno nas matérias cadastradas pela turma:
+
+Matemática:
+Nota 1: 9.8
+Nota 2: 9.5
+Nota 3: 8.7
+
+Português:
+Nota 1: 9.4
+Nota 2: 9.9
+Nota 3: 10.0
+
+História:
+Nota 1: 8.2
+Nota 2: 9.0
+Nota 3: 9.5
+
+Geografia:
+Nota 1: 10
+Nota 2: 9.5
+Nota 3: 8.6
+
+*****FUNCIONÁRIOS:*****
+
+1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
+
+Cadastro do User:
+
+CPF: 92873712491
+Matrícula: func9916
+Data de nascimento: 12/10/1989
+Telefone para contato: 81988271413
+Email do responsável: marcosboncordeiro@gmail.com
+
+2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
+
+Cadastro do User:
+
+CPF: 31462581538
+Matrícula:func0193
+Data de nascimento: 23/05/1991
+Telefone para contato: 81971162481
+Email do responsável: luizcarfig@gmail.com
 <br/>
 
 ***Diagrama de atividades do sistema:***
