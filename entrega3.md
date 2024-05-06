@@ -472,9 +472,6 @@ Nota 3: 8.6
 ***FUNCIONÁRIOS:***
 
 &nbsp;
-###
-
-&nbsp;
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
 &nbsp;
@@ -518,6 +515,9 @@ Nota 3: 8.6
 
 &nbsp;
 ***Email do responsável:*** luizcarfig@gmail.com
+&nbsp;
+###
+
 <br/>
 
 ## Diagrama de atividades do sistema:
