@@ -54,11 +54,12 @@
 
 &nbsp;
 - Usuários cadastrados
-
+<br/>
   ***ALUNOS:***
-  
+<br/>
 &nbsp;
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
+<br/>
 
 &nbsp;
 ***Cadastro do User:***
@@ -93,6 +94,7 @@
 &nbsp;
 ***Email do responsável:*** lucianaeualves@gmail.com
 
+<br/>
 &nbsp;
 ***Dados de Saúde do User:***
 
@@ -111,6 +113,7 @@
 &nbsp;
 ***É PCD:*** Não
 
+<br/>
 &nbsp;
 ***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
 
@@ -129,6 +132,7 @@
 &nbsp;
 ***Faltas da matéria 4 (história):*** 4
 
+<br/>
 &nbsp;
 ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
 
@@ -207,6 +211,7 @@
 &nbsp;
 11:00 - 12:00 Português
 
+<br/>
 &nbsp;
 ***Boletim do aluno nas matérias cadastradas pela turma:***
 
@@ -258,9 +263,11 @@ Nota 2: 9.4
 &nbsp;
 Nota 3: 8.0
 
+<br/>
 &nbsp;
-2) João Antônio Lira Correia - 2 User Aluno:
+***2) João Antônio Lira Correia - 2 User Aluno:***
 
+<br/>
 &nbsp;
 ***Cadastro do User:***
 
@@ -294,6 +301,7 @@ Nota 3: 8.0
 &nbsp;
 ***Email do responsável:*** mlicecg@gmail.com
 
+<br/>
 &nbsp;
 ***Dados de Saúde do User:***
 
@@ -312,6 +320,7 @@ Nota 3: 8.0
 &nbsp;
 ***É PCD:*** Não
 
+<br/>
 &nbsp;
 ***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
 
@@ -330,6 +339,7 @@ Faltas da matéria 3 (geografia): 7
 &nbsp;
 Faltas da matéria 4 (história): 3
 
+<br/>
 &nbsp;
 ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
 
@@ -408,6 +418,7 @@ Faltas da matéria 4 (história): 3
 &nbsp;
 11:00 - 12:00 Geografia
 
+<br/>
 &nbsp;
 ***Boletim do aluno nas matérias cadastradas pela turma:***
 
@@ -459,12 +470,15 @@ Nota 2: 9.5
 &nbsp;
 Nota 3: 8.6
 
+<br/>
 &nbsp;
 ***FUNCIONÁRIOS:***
+<br/>
 
 &nbsp;
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
-   
+
+<br/>
 &nbsp;
 ***Cadastro do User:***
 
@@ -483,9 +497,11 @@ Nota 3: 8.6
 &nbsp;
 ***Email do responsável:*** marcosboncordeiro@gmail.com
 
+<br/>
 &nbsp;
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
 
+<br/>
 &nbsp;
 ***Cadastro do User:***
 
@@ -503,7 +519,7 @@ Nota 3: 8.6
 
 &nbsp;
 ***Email do responsável:*** luizcarfig@gmail.com
-
+<br/>
 ## Diagrama de atividades do sistema:
 
 
