@@ -54,12 +54,12 @@
 
 &nbsp;
 - Usuários cadastrados
-<br/>
+
+&nbsp;
   ***ALUNOS:***
-<br/>
+
 &nbsp;
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
-<br/>
 
 &nbsp;
 ***Cadastro do User:***
@@ -94,7 +94,6 @@
 &nbsp;
 ***Email do responsável:*** lucianaeualves@gmail.com
 
-<br/>
 &nbsp;
 ***Dados de Saúde do User:***
 
