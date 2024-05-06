@@ -94,7 +94,7 @@
 &nbsp;
 ***Email do responsável:*** lucianaeualves@gmail.com
 
-<br/>
+&nbsp;
 &nbsp;
 ***Dados de Saúde do User:***
 
