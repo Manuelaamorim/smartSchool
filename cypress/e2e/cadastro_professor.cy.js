@@ -1,4 +1,4 @@
-describe('test visualizar Boletim', () => {
+describe('test cadastrar professor', () => {
     it('cenario1', () => { // A funcionária Stella Natalia Bernardes, cadastrada no sistema, acessa a aplicação e informa login (34479066420) e senha (stella123) e acessa o menu para cadastrar um professor. Informa os dados do professor a ser cadastrado (nome - José Manuel Barros, matrícula - jmaba123, CPF - 94671686422, data de nascimento - 1992-04-22, telefone - 81987654321 e email - josemanuelb@gmail.com), clica no botão "Cadastrar Professor" e o cadastro é finalizado com sucesso.
         
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
