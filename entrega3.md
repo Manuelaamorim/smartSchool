@@ -270,7 +270,6 @@ Nota 3: 8.0
 &nbsp;
 ***2) João Antônio Lira Correia - 2 User Aluno:***
 
-&nbsp;
 - ***Cadastro do User:***
 
 &nbsp;
