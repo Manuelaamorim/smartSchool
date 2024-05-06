@@ -522,6 +522,8 @@ Nota 3: 8.6
 
 ## Diagrama de atividades do sistema:
 
+![diagrama_fds](https://github.com/MatheusVelame/projetos2g3/assets/142773064/fafa48b3-d51c-4237-9833-5e9aa0210344)
+
 
 <br/>
 
