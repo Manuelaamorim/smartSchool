@@ -45,12 +45,12 @@
 <br/>
 
 - Administração do Django
+- 
 &nbsp;
-
 ***Superuser:*** useradmin
+  
 &nbsp;
 ***Senha:*** 123
-&nbsp;
 
 - Usuários cadastrados
 &nbsp;
