@@ -1,81 +1,70 @@
-<!DOCTYPE html>
+{% extends 'global/base_aluno.html' %}
+{% block content %}
 {% load static %}
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequência</title>
-    <link rel="stylesheet" href="{% static 'css/style_frequencia.css' %}">
-</head>
-<body>
 
-  <header>
-    <div class="cabecalho">
-      <div class="div-logo">
-        <a href="{% url 'appsmartschool:pagina_home' %}">SmartSchool</a>
-      </div>
-      <div class="div-menu">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:dados-saude' %}">Dados de saúde</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Boletim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Horários</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:frequencia_aluno' %}">Frequência</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:formulario_contato' %}">Contato</a>
-          </li>
-        </ul>
-      </div>
-      <div class="div-logout">
-          <a class="nav-menu-perfil" href="#">Perfil</a>
-          <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
-      </div>
+<link rel="stylesheet" href="{% static 'css/style_frequencia.css' %}">
+<div class="container">
+  <div class="header-section">
+      {% for frequencia in frequencias %}
+      <h1>Frequência</h1>
+      <p>Colégio {{frequencia.colegio}}</p>
+  </div>
+
+  <div class="info-section">
+    <div>Nome: {{ frequencia.nome }}
+      <div class="linha"></div>
     </div>
-</header>
-
-    {% for frequencia in frequencias %}
-    <h1 id="frequencia">Frequência</h1>
-    <h1 id="colegio">Colégio {{frequencia.colegio}}</h1>
-
-    <div id="div">
-      <h2 id="nome">Nome: {{frequencia.nome}}</h2>
-      <h2 id="serie">Série: {{frequencia.serie}} Ano</h2>
-      <h2 id="matricula">Matrícula: {{frequencia.matricula}}</h2>
+    <div>Série: {{ frequencia.serie }}
+      <div class="linha"></div>
     </div>
-    
+    <div>Matrícula: {{ frequencia.matricula }}
+      <div class="linha"></div>
+    </div>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    {% if 'frequencia' in message.tags %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
 
-    <table id="tabela">
-        <tr>
-          <td id = "negrito">Frequência</td>
-          <td id = "negrito">{{frequencia.materia_1}}</td>
-          <td id = "negrito">{{frequencia.materia_2}}</td>
-          <td id = "negrito">{{frequencia.materia_3}}</td>
-          <td id = "negrito">{{frequencia.materia_4}}</td>
-        </tr>
-
-        <tr>
-          <td id = "negrito">Faltas</td>
-          <td>{{frequencia.faltas_da_materia_1}}</td>
-          <td>{{frequencia.faltas_da_materia_2}}</td>
-          <td>{{frequencia.faltas_da_materia_3}}</td>
-          <td>{{frequencia.faltas_da_materia_4}}</td>
-        </tr>
-
-        <tr>
-          <td id = "negrito">Frequência (em %)</td>
-          <td>{{frequencia.porcentagem_da_materia_1}}%</td>
-          <td>{{frequencia.porcentagem_da_materia_2}}%</td>
-          <td>{{frequencia.porcentagem_da_materia_3}}%</td>
-          <td>{{frequencia.porcentagem_da_materia_4}}%</td>
-        </tr>
-      </table>
-      {% endfor %}
-</body>
-</html>
+<table>
+  <thead>
+    <tr>
+        <th>Disciplina</th>
+        <th>Aulas totais</th> 
+        <th>Faltas</th>
+        <th>Frequência (em %)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>{{ frequencia.materia_1 }}</td>
+        <td>{{ frequencia.aulas_da_materia_1 }}</td>
+        <td>{{ frequencia.faltas_da_materia_1 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_1 }}%</td>
+    </tr>
+    <tr>
+        <td>{{ frequencia.materia_2 }}</td>
+        <td>{{ frequencia.aulas_da_materia_2 }}</td>
+        <td>{{ frequencia.faltas_da_materia_2 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_2 }}%</td>
+    </tr>
+    <tr>
+        <td>{{ frequencia.materia_3 }}</td>
+        <td>{{ frequencia.aulas_da_materia_3 }}</td> 
+        <td>{{ frequencia.faltas_da_materia_3 }}</td>
+        <td>{{ frequencia.porcentagem_da_materia_3 }}%</td>
+    </tr>
+    <tr>
+      <td>{{ frequencia.materia_4 }}</td>
+      <td>{{ frequencia.aulas_da_materia_4 }}</td>
+      <td>{{ frequencia.faltas_da_materia_4 }}</td>
+      <td>{{ frequencia.porcentagem_da_materia_4 }}%</td>   
+    </tr>
+  {% endfor %}
+  </tbody>
+  {% endblock %}

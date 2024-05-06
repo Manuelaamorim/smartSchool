@@ -43,6 +43,7 @@
 #id_mensagem{
     color: rgb(0, 0, 0);
 }
+
 * {
     border: 0;
     margin: 0;
@@ -53,98 +54,20 @@
 
 body {
     overflow-x: hidden;
-    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
     font-size: 14px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #ffffff;
 }
 
 h1 {
     font-weight: bolder;
-    color: var(--font-color);
+    color: var(--cor-preta);
 }
 
 h2 {
-    color: var(--font-color);
-}
-
-header {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background-color: var(--cor-branca);
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: var(--cor-principal);
-    font-family: 'Poppins';
-}
-
-a:hover {
-
-    color: var(--primary);
-}
-
-.nav-menu-texto {
-    font-size: 16px;
-    padding: 2em;
-}
-
-.nav-menu-perfil {
-    font-size: 16px;
-    padding: 0.5em;
-}
-
-.div-logo {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.div-menu {
-    font-size: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-div-logout {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.cabecalho {
-    height: 7vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 0.15fr 1fr 0.15fr;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-}
-
-.nav-menu-texto:hover, .nav-menu-perfil:hover {
-    color: var(--primary);
-}
-
-.nav-item {
-    margin: 0;
-    padding: 0;
+    color: var(--cor-preta);
 }
 
 .content-wrapper {
@@ -163,11 +86,7 @@ div-logout {
 
 .contact-info {
     flex: 1;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
+    background-color: var(--font-color);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 20px;
@@ -184,11 +103,7 @@ div-logout {
 
 .form-area {
     flex: 1;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
+    background-color: var(--font-color);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
@@ -218,9 +133,9 @@ label, input, textarea {
     margin-top: 4px; 
     font-size: 16px;
     padding: 4px;
-    color: var(--font-color);
+    color: var(--cor-preta);
     border-radius: 10px;
-    border: 2px white;
+    border: 2px var(--cor-preta);
 }
 
 textarea {
@@ -239,4 +154,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: var(--btn-pressed);
+}
+
+.phone-icon {
+    width: 265px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
 }

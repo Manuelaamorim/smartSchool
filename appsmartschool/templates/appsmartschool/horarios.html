@@ -1,0 +1,77 @@
+{% extends 'global/base_aluno.html' %}
+{% block content %}
+{% load static %}
+    
+<link rel="stylesheet" href="{% static 'css/style_horario.css' %}">
+
+
+<div class="container">
+    <div class="header-section">
+        {% for horario in horarios %}
+        <h1>Horário das aulas</h1>
+        <p>Colégio {{horario.colegio}}</p>
+    </div>
+  
+    <div class="info-section">
+      <div>Série: {{ horario.serie }}º
+        <div class="linha"></div>
+      </div>
+      <div>Turma: {{ horario.turma }}
+        <div class="linha"></div>
+      </div>
+      <div>
+        <div></div>
+      </div>
+  </div>
+
+  {% endfor %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Horário</th>
+            <th>Segunda-Feira</th>
+            <th>Terça-Feira</th>
+            <th>Quarta-Feira</th>
+            <th>Quinta-Feira</th>
+            <th>Sexta-Feira</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for horario in horarios %}
+        <tr>
+            <td>{{ horario.horario_inicio_1 }} - {{ horario.horario_fim_1 }}</td>
+            <td>{{ horario.seg_materia_do_horario_1 }}</td>
+            <td>{{ horario.ter_materia_do_horario_1 }}</td>
+            <td>{{ horario.quar_materia_do_horario_1 }}</td>
+            <td>{{ horario.quin_materia_do_horario_1 }}</td>
+            <td>{{ horario.sex_materia_do_horario_1 }}</td>
+        </tr>
+        <tr>        
+            <td>{{ horario.horario_inicio_2 }} - {{ horario.horario_fim_2 }}</td>
+            <td>{{ horario.seg_materia_do_horario_2 }}</td>
+            <td>{{ horario.ter_materia_do_horario_2 }}</td>
+            <td>{{ horario.quar_materia_do_horario_2 }}</td>
+            <td>{{ horario.quin_materia_do_horario_2 }}</td>
+            <td>{{ horario.sex_materia_do_horario_2 }}</td>
+        </tr>
+        <tr>    
+            <td>{{ horario.horario_inicio_3 }} - {{ horario.horario_fim_3 }}</td>
+            <td>{{ horario.seg_materia_do_horario_3 }}</td>
+            <td>{{ horario.ter_materia_do_horario_3 }}</td>
+            <td>{{ horario.quar_materia_do_horario_3 }}</td>
+            <td>{{ horario.quin_materia_do_horario_3 }}</td>
+            <td>{{ horario.sex_materia_do_horario_3 }}</td>
+        </tr>
+        <tr>
+            <td>{{ horario.horario_inicio_4 }} - {{ horario.horario_fim_4 }}</td>
+            <td>{{ horario.seg_materia_do_horario_4 }}</td>
+            <td>{{ horario.ter_materia_do_horario_4 }}</td>
+            <td>{{ horario.quar_materia_do_horario_4 }}</td>
+            <td>{{ horario.quin_materia_do_horario_4 }}</td>
+            <td>{{ horario.sex_materia_do_horario_4 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

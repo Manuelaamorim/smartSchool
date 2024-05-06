@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
+<header>
+    <div class="cabecalho">
+        <div class="div-logo">
+            <a href="{% url 'appsmartschool:home_aluno' %}">SmartSchool</a>
+        </div>
+        <div class="div-menu">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:dados-saude' %}">Dados de saúde</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:visualiza_notas' %}">Boletim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:HorarioAula' %}">Horários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:frequencia_aluno' %}">Frequência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:formulario_contato' %}">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <div class="div-logout">
+            <a class="nav-menu-perfil" href="#">Perfil</a>
+            <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
+        </div>
+    </div>
+</header>
