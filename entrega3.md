@@ -61,7 +61,9 @@
 &nbsp;
 ***ALUNOS:***
 
-<br/>
+&nbsp;
+###
+
 &nbsp;
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
 
@@ -261,6 +263,9 @@ Nota 2: 9.4
 
 &nbsp;
 Nota 3: 8.0
+
+&nbsp;
+###
 
 &nbsp;
 ***2) João Antônio Lira Correia - 2 User Aluno:***
@@ -467,6 +472,9 @@ Nota 3: 8.6
 ***FUNCIONÁRIOS:***
 
 &nbsp;
+###
+
+&nbsp;
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
 &nbsp;
@@ -486,6 +494,9 @@ Nota 3: 8.6
 
 &nbsp;
 ***Email do responsável:*** marcosboncordeiro@gmail.com
+
+&nbsp;
+###
 
 &nbsp;
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
