@@ -41,20 +41,19 @@
 ## Instruções de acesso ao projeto:
 <br/>
 
-<li>
 ### Banco de dados da AZURE
 
 &nbsp;
-<li>**Administração do Django**
-
+**Administração do Django**
  
 &nbsp;
 ***Superuser:*** useradmin
   
-***Senha:*** 123</li>
+***Senha:*** 123
 
+##
 &nbsp;
-<li>**Usuários cadastrados**
+**Usuários cadastrados**
 
 &nbsp;
 ***ALUNOS:***
@@ -505,8 +504,6 @@ Nota 3: 8.6
 
 &nbsp;
 ***Email do responsável:*** luizcarfig@gmail.com
-</li>
-</ul>
 <br/>
 
 ## Diagrama de atividades do sistema:
