@@ -44,25 +44,26 @@
 **Banco de dados da AZURE**
 
 &nbsp;
-- Administração do Django
-  
+_Administração do Django_
+
+ 
 &nbsp;
 ***Superuser:*** useradmin
   
-&nbsp;
 ***Senha:*** 123
 
+<br/>
 &nbsp;
-- Usuários cadastrados
+_Usuários cadastrados_
 
 &nbsp;
-  - ***ALUNOS:***
+***ALUNOS:***
 
 &nbsp;
 ***1) Ana Luiza Eugênio - 1 User Aluno:***
 
 &nbsp;
-***Cadastro do User:***
+- ***Cadastro do User:***
 
 &nbsp;
 ***CPF:*** 60356365433
@@ -95,8 +96,7 @@
 ***Email do responsável:*** lucianaeualves@gmail.com
 
 &nbsp;
-&nbsp;
-***Dados de Saúde do User:***
+- ***Dados de Saúde do User:***
 
 &nbsp;
 ***Peso do usuário:*** 22,0 kg
@@ -114,7 +114,7 @@
 ***É PCD:*** Não
 
 &nbsp;
-***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
+- ***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
 
 &nbsp;
 ***Colégio do usuário:*** Júlio Mesquita
@@ -132,7 +132,7 @@
 ***Faltas da matéria 4 (história):*** 4
 
 &nbsp;
-***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
+- ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
 
 &nbsp;
 ***Nas Segundas-Feiras:***
@@ -210,7 +210,7 @@
 11:00 - 12:00 Português
 
 &nbsp;
-***Boletim do aluno nas matérias cadastradas pela turma:***
+- ***Boletim do aluno nas matérias cadastradas pela turma:***
 
 &nbsp;
 ***Matemática:***
@@ -264,7 +264,7 @@ Nota 3: 8.0
 ***2) João Antônio Lira Correia - 2 User Aluno:***
 
 &nbsp;
-***Cadastro do User:***
+- ***Cadastro do User:***
 
 &nbsp;
 ***CPF:*** 03049815400
@@ -297,7 +297,7 @@ Nota 3: 8.0
 ***Email do responsável:*** mlicecg@gmail.com
 
 &nbsp;
-***Dados de Saúde do User:***
+- ***Dados de Saúde do User:***
 
 &nbsp;
 ***Peso do usuário:*** 38, 8 kg
@@ -315,7 +315,7 @@ Nota 3: 8.0
 ***É PCD:*** Não
 
 &nbsp;
-***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
+- ***Frequência das aulas do User (15 aulas ministradas de cada matéria):***
 
 &nbsp;
 ***Colégio do usuário:*** Fronte Nogueira
@@ -333,7 +333,7 @@ Faltas da matéria 3 (geografia): 7
 Faltas da matéria 4 (história): 3
 
 &nbsp;
-***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
+- ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
 
 &nbsp;
 ***Nas Segundas-Feiras:***
@@ -411,7 +411,7 @@ Faltas da matéria 4 (história): 3
 11:00 - 12:00 Geografia
 
 &nbsp;
-***Boletim do aluno nas matérias cadastradas pela turma:***
+- ***Boletim do aluno nas matérias cadastradas pela turma:***
 
 &nbsp;
 ***Matemática:***
@@ -468,7 +468,7 @@ Nota 3: 8.6
 1) Marcos Luiz Bonifácio Cordeiro - 1 User Funcionário:
 
 &nbsp;
-***Cadastro do User:***
+- ***Cadastro do User:***
 
 &nbsp;
 ***CPF:*** 92873712491
@@ -489,7 +489,7 @@ Nota 3: 8.6
 2) Luiz Felipe Carneiro Figueira - 2 User Funcionário:
 
 &nbsp;
-***Cadastro do User:***
+- ***Cadastro do User:***
 
 &nbsp;
 ***CPF:*** 31462581538
