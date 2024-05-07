@@ -19,7 +19,7 @@
       >Screencast CI/CD com Build e Deployment Automatizado - Entrega 03</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=7rWFUA_x34w"
       >Screencast da Execução dos Testes - Entrega 03</a>
   </li>
 </ul>
