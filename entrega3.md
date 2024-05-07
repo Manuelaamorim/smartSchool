@@ -533,7 +533,8 @@ Nota 3: 8.6
 
   - Issues fechadas:
 
-    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/2a8ac521-ebd0-4657-a7da-1d194d294ed6)
+    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/05d64a60-e0b7-4f4d-8f19-3c0fb6216a05)
+
   
 
 <br/>
