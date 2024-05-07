@@ -42,7 +42,7 @@
 
 ###
 
-Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seus respectivo login.  Atualmente, o acesso para Professores ainda está em desenvolvimento e as funcionalidades correspondentes serão implementadas futuramente, conforme indicado nas issues abertas do Github.
+Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seu respectivo login.  Atualmente, o acesso para Professores ainda está em desenvolvimento e as funcionalidades correspondentes serão implementadas futuramente, conforme indicado nas issues abertas do Github.
 
 ###
 
