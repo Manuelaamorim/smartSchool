@@ -73,7 +73,6 @@ body{
 
 .dados-titulo {
     font-size: 45px;
-    color: var(--font-color);
     font-weight: bold;
 }
 
@@ -82,7 +81,6 @@ body{
     margin-bottom: 1em;
     font-weight: 400;
     font-size: 18px;
-    color: var(--font-color);
     list-style-type: disc;
 }
 
@@ -91,7 +89,6 @@ body{
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 18px;
-    color: var(--font-color);
     list-style-type: disc;
 
 }
