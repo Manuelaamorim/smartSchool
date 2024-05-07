@@ -11,11 +11,11 @@
       >Protótipo de Lo-Fi no Figma</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=aKq5v7QJX0w"
       >Screencast do Portótipo Lo-fi - Entrega 03</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=fw72oc_WmSU"
       >Screencast CI/CD com Build e Deployment Automatizado - Entrega 03</a>
   </li>
   <li>
@@ -32,7 +32,7 @@
       >Projeto na Azure</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=9ORi6V3U_1Y"
       >Screencast da Azure - Entrega 03</a>
   </li>
 </ul>
