@@ -59,8 +59,6 @@
 - ***Usuários cadastrados***:
 
 &nbsp;
-###
-&nbsp;
 ***ALUNOS:***
 
 &nbsp;
