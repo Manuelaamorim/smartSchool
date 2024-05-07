@@ -53,13 +53,11 @@
 ***Senha:*** 123
 
 &nbsp;
-###
-
-&nbsp;
 - ***Usuários cadastrados***:
 
 &nbsp;
 ###
+
 &nbsp;
 ***ALUNOS:***
 
@@ -135,7 +133,7 @@
 ***Faltas da matéria 4 (história):*** 4
 
 &nbsp;
-- ***Horário de aulas da 5 série turma A (com a ementa de matemática, português, história e geografia):***
+- ***Horário de aulas da 2 série turma B (com a ementa de matemática, português, história e geografia):***
 
 &nbsp;
 ***Nas Segundas-Feiras:***
