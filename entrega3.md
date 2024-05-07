@@ -528,7 +528,7 @@ Nota 3: 8.6
   
   - Issues em abertas:
 
-    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/511ab4c6-d2b1-43b4-944d-76cfc00de9cc)
+    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/dbf3cda7-10e3-4118-a19a-c7d2ce0f6f78)
        
 
   - Issues fechadas:
