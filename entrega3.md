@@ -40,6 +40,11 @@
 
 ## Instruções de acesso ao projeto:
 
+Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seus respectivo login.  Atualmente, o acesso para Professores ainda está em desenvolvimento e as funcionalidades correspondentes serão implementadas futuramente, conforme indicado nas issues abertas do Github.
+Para acessar como Aluno, utilize o CPF "60356365433" e a matrícula "ale12345". Com esse login, os usuários podem visualizar informações como dados de saúde, boletim escolar, horários de aula e frequência da estudante Ana Luiza Eugênio. Além disso, há uma opção para que Ana Luiza envie um formulário de contato para a instituição de ensino.
+Após realizar o logout e retornar à página principal, escolha o perfil de "Funcionário" para fazer login. Utilizando o CPF "92873712491" e a matrícula "func9916", o acesso é feito como Marcos Luiz Bonifácio Cordeiro, que possui autorização para cadastrar novos professores. Se o cadastro for concluído com sucesso, o usuário será redirecionado para uma página de confirmação.
+Para consultar outros dados cadastrados no Banco de Dados Azure, consulte as informações detalhadas abaixo.
+
 &nbsp;
 ### Banco de dados da AZURE
 
