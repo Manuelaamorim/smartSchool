@@ -12,7 +12,7 @@
   </li>
   <li>
     <a  href="https://www.youtube.com/watch?v=aKq5v7QJX0w"
-      >Screencast do Portótipo Lo-fi - Entrega 03</a>
+      >Screencast do Protótipo Lo-fi - Entrega 03</a>
   </li>
   <li>
     <a  href="https://www.youtube.com/watch?v=fw72oc_WmSU"
