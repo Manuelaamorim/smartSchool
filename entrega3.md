@@ -527,6 +527,8 @@ Nota 3: 8.6
 ## Issues/bug tracker:
   
   - Issues em abertas:
+
+    ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/511ab4c6-d2b1-43b4-944d-76cfc00de9cc)
        
 
   - Issues fechadas:
