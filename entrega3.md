@@ -54,7 +54,7 @@ Após realizar o logout e retornar à página principal, escolha o perfil de "Fu
 
 ###
 
-Para consultar outros dados cadastrados no Banco de Dados Azure, consulte as informações detalhadas abaixo.
+Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as informações detalhadas abaixo.
 
 &nbsp;
 ### Banco de dados da AZURE
