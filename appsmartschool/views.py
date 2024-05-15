@@ -177,8 +177,7 @@ def cadastro_professor(request):
             user.save()
 
             # Criar o UserProfessor
-            professor = UserProfessor(user=user, nome=nome, matricula=matricula, cpf=cpf,
-                                      data_de_nascimento=data_de_nascimento, telefone=telefone, email=email)
+            professor = UserProfessor(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, telefone=telefone, email=email)
             professor.save()
 
             return redirect('appsmartschool:cadastro_sucesso')
@@ -212,7 +211,7 @@ def cadastro_disciplina(request):
             messages.error(request, "Uma disciplina com este código já está cadastrada.")
             return render(request, 'appsmartschool/cadastro_disciplina.html')
 
-         # Verifica se já existe uma disciplina com o mesmo nome
+        # Verifica se já existe uma disciplina com o mesmo nome
         if Disciplina.objects.filter(nome=nome).exists():
             messages.error(request, "Uma disciplina com este nome já está cadastrada.")
             return render(request, 'appsmartschool/cadastro_disciplina.html')
@@ -226,3 +225,36 @@ def cadastro_disciplina(request):
             return render(request, 'appsmartschool/cadastro_disciplina.html')
 
     return render(request, 'appsmartschool/cadastro_disciplina.html')
+
+@login_required
+def cadastro_aluno(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        matricula = request.POST.get('matricula')
+        cpf = request.POST.get('cpf')
+        data_de_nascimento = request.POST.get('data_de_nascimento')
+        telefone = request.POST.get('telefone')
+        email_responsavel = request.POST.get('email_responsavel')
+
+        # Verificar se já existe um usuário com o mesmo CPF
+        if User.objects.filter(username=cpf).exists():
+            messages.error(request, 'Um usuário com este CPF já está cadastrado.')
+            return render(request, 'appsmartschool/cadastro_aluno.html')
+
+        try:
+            # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
+            user = User.objects.create_user(username=cpf, email=email_responsavel, password=matricula)
+            user.save()
+
+            # Criar o UserAluno
+            aluno = UserAluno(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, telefone=telefone, email=email_responsavel)
+            aluno.save()
+
+            return redirect('appsmartschool:cadastro_sucesso')
+        
+        except IntegrityError:
+            messages.error(request, 'Falha ao criar o usuário. CPF já utilizado.')
+        except Exception as e:
+            messages.error(request, f'Erro ao cadastrar aluno: {e}')
+
+    return render(request, 'appsmartschool/cadastro_aluno.html')

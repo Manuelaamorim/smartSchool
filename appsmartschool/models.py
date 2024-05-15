@@ -6,19 +6,26 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class UserAluno (models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    matricula = models.CharField(max_length=200)
     nome = models.CharField(max_length=200, null=False)
+    matricula = models.CharField(max_length=200)
     cpf = models.CharField(max_length=11)
     data_de_nascimento = models.DateField("Data de Nascimento")
     endereco = models.TextField()
     colegio = models.CharField(max_length=200, null=True)
     serie = models.PositiveSmallIntegerField()
     turma = models.CharField(max_length=1, null=True, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
-    email = models.EmailField()
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
     telefone = models.CharField(max_length=11, null=False)
     email_responsavel = models.EmailField()
+    peso = models.FloatField(max_length=4, null=False, validators=[MinValueValidator(5), MaxValueValidator(120)],
+    help_text='Peso deve ser entre 5 e 120KG.')
+    altura = models.FloatField(max_length = 4, null=False, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
+    help_text='Altura deve ser entre 0.50 m e 2 m.')
+    restricao_alimentar = models.TextField(max_length = 100)
+    tdah = models.CharField(max_length = 4)
+    pcd = models.CharField(max_length = 4)
+
 
     def __str__(self):
         return "Aluno " + self.nome

@@ -23,4 +23,5 @@ urlpatterns = [
     path('cadastro_professor/', views.cadastro_professor, name='cadastro_professor'),
     path('cadastro_sucesso/', views.cadastro_sucesso, name='cadastro_sucesso'),
     path('cadastro_disciplina/', views.cadastro_disciplina, name='cadastro_disciplina'),
+    path('cadastro_aluno/', views.cadastro_aluno, name='cadastro_aluno'),
 ]

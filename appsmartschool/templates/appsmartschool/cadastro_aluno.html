@@ -1,0 +1,72 @@
+{% extends 'global/base_funcionario.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_cadastro_aluno.css' %}">
+
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form class="formulario-cadastro" method="post" action="{% url 'appsmartschool:cadastro_aluno' %}">
+    {% csrf_token %}
+    <h1>Cadastro do Aluno</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" required><br>
+
+    <label for="matricula">Matrícula:</label>
+    <input type="text" name="matricula" id="matricula" required><br>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" name="cpf" id="cpf" required><br>
+
+    <label for="data_de_nascimento">Data de Nascimento:</label>
+    <input type="date" name="data_de_nascimento" id="data_de_nascimento" required><br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" name="endereco" id="endereco" required><br>
+
+    <label for="colegio">Colégio:</label>
+    <input type="text" name="colegio" id="colegio" required><br>
+
+    <label for="serie">Série:</label>
+    <input type="text" name="serie" id="serie" required><br>
+
+    <label for="turma">Turma:</label>
+    <input type="text" name="turma" id="turma" required><br>
+
+    <label for="nome_responsavel">Nome do responsável:</label>
+    <input type="text" name="nome_responsavel" id="nome_responsavel" required><br>
+
+    <label for="cpf_responsavel">CPF do responsável:</label>
+    <input type="text" name="cpf_responsavel" id="cpf_responsavel" required><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" name="telefone" id="telefone" required><br>
+
+    <label for="email_responsavel">Email:</label>
+    <input type="email" name="email" id="email" required><br>
+
+    <label for="peso">Peso do aluno:</label>
+    <input type="text" name="peso" id="peso" required><br>
+
+    <label for="altura">Altura do aluno:</label>
+    <input type="text" name="altura" id="altura" required><br>
+
+    <label for="restricao_alimentar">O aluno possui alguma restrição alimentar?</label>
+    <input type="text" name="restricao_alimentar" id="restricao_alimentar" required><br>
+
+    <label for="tdah">O aluno possui TDAH ou TEA?:</label>
+    <input type="text" name="tdah" id="tdah" required><br>
+
+    <label for="pcd">O aluno é uma pessoa com deficiência?</label>
+    <input type="text" name="pcd" id="pcd" required><br>
+
+    <button class="btn-submit" type="submit">Cadastrar Aluno</button>
+</form>
+{% endblock %}
