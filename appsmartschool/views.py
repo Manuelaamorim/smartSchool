@@ -233,8 +233,17 @@ def cadastro_aluno(request):
         matricula = request.POST.get('matricula')
         cpf = request.POST.get('cpf')
         data_de_nascimento = request.POST.get('data_de_nascimento')
+        endereco = request.POST.get('endereco')
+        serie = request.POST.get('serie')
+        nome_responsavel = request.POST.get('nome_responsavel')
+        cpf_responsavel = request.POST.get('cpf_responsavel')
         telefone = request.POST.get('telefone')
         email_responsavel = request.POST.get('email_responsavel')
+        peso = request.POST.get('peso')
+        altura = request.POST.get('altura')
+        restricao_alimentar = request.POST.get('restricao_alimentar')
+        tdah = request.POST.get('tdah')
+        pcd = request.POST.get('pcd')
 
         # Verificar se já existe um usuário com o mesmo CPF
         if User.objects.filter(username=cpf).exists():
@@ -243,11 +252,11 @@ def cadastro_aluno(request):
 
         try:
             # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
-            user = User.objects.create_user(username=cpf, email=email_responsavel, password=matricula)
+            user = User.objects.create_user(username=cpf, password=matricula)
             user.save()
 
             # Criar o UserAluno
-            aluno = UserAluno(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, telefone=telefone, email=email_responsavel)
+            aluno = UserAluno(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, endereco=endereco, serie=serie, nome_responsavel=nome_responsavel, cpf_responsavel=cpf_responsavel, telefone=telefone, email_responsavel = email_responsavel, peso=peso, altura=altura, restricao_alimentar=restricao_alimentar, tdah=tdah, pcd=pcd)
             aluno.save()
 
             return redirect('appsmartschool:cadastro_sucesso')

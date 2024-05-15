@@ -17,14 +17,14 @@ class UserAluno (models.Model):
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
     telefone = models.CharField(max_length=11, null=False)
-    email_responsavel = models.EmailField()
-    peso = models.FloatField(max_length=4, null=False, validators=[MinValueValidator(5), MaxValueValidator(120)],
+    email_responsavel = models.EmailField(null=True)
+    peso = models.FloatField(max_length=4, null=False, default=0.0, validators=[MinValueValidator(5), MaxValueValidator(120)],
     help_text='Peso deve ser entre 5 e 120KG.')
-    altura = models.FloatField(max_length = 4, null=False, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
+    altura = models.FloatField(max_length = 4, null=False, default=0.0, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
     help_text='Altura deve ser entre 0.50 m e 2 m.')
-    restricao_alimentar = models.TextField(max_length = 100)
-    tdah = models.CharField(max_length = 4)
-    pcd = models.CharField(max_length = 4)
+    restricao_alimentar = models.TextField(max_length = 100, default='Não possui')
+    tdah = models.CharField(max_length = 4, default='Não')
+    pcd = models.CharField(max_length = 4, default='Não')
 
 
     def __str__(self):
