@@ -49,10 +49,9 @@ body {
     padding-top: 10px;
 }
 
-.formulario-cadastro input[type="text"],
-.formulario-cadastro input[type="date"],
-.formulario-cadastro input[type="email"] {
-    width: 100%;
+.formulario-cadastro input[type="number"],
+.formulario-cadastro input[type="text"]{
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;

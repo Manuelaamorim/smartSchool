@@ -17,7 +17,7 @@
     {% csrf_token %}
     <h1>Cadastro da Turma</h1>
     <label for="serie">Série:</label>
-    <input type="number" id="serie" name="serie" required>
+    <input type="number" id="serie" name="serie" maxlength="1" required>
     
     <label for="turma">Turma:</label>
     <input type="text" id="turma" name="turma" maxlength="1" required>
