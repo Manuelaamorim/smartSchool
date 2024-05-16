@@ -13,7 +13,7 @@ class UserAluno (models.Model):
     endereco = models.TextField()
     colegio = models.CharField(max_length=200, null=True)
     serie = models.PositiveSmallIntegerField()
-    turma = models.CharField(max_length=1, null=True, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
+    turma = models.CharField(max_length=1, null=True, validaSFtors=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
     nome_responsavel= models.CharField(max_length=200, null=False)
     cpf_responsavel = models.CharField(max_length=11, null=False)
     telefone = models.CharField(max_length=11, null=False)
@@ -263,3 +263,10 @@ class Disciplina(models.Model):
     class Meta:
         verbose_name = "Disciplina"
         verbose_name_plural = "Disciplinas"
+
+class Turma(models.Model):
+    serie = models.PositiveSmallIntegerField()
+    turma = models.CharField(max_length=1, null=True, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
+
+    def __str__(self):
+        return f"Serie: {self.serie} {self.turma}"
