@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Turma</title>
+</head>
+<body>
+    <h2>Cadastro de Turma</h2>
+    
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        <label for="serie">Série:</label>
+        <input type="number" id="serie" name="serie" required>
+        
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" maxlength="1" required>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

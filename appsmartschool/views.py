@@ -249,6 +249,7 @@ def cadastro_aluno(request):
         if User.objects.filter(username=cpf).exists():
             messages.error(request, 'Um usuário com este CPF já está cadastrado.')
             return render(request, 'appsmartschool/cadastro_aluno.html')
+        
 
         try:
             # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
@@ -267,3 +268,27 @@ def cadastro_aluno(request):
             messages.error(request, f'Erro ao cadastrar aluno: {e}')
 
     return render(request, 'appsmartschool/cadastro_aluno.html')
+
+
+@login_required
+def cadastro_turma(request):
+    if request.method == 'POST':
+        serie = request.POST.get('serie')
+        turma = request.POST.get('turma').upper()
+
+        if Turma.objects.filter(serie=serie, turma=turma).exists():
+            messages.error(request, 'A turma já existe.')
+            return render(request, 'appsmartschool/cadastro_turma.html')
+
+        try:
+            serie_turma = Turma(serie=serie, turma=turma)
+            serie_turma.save()
+
+            messages.success(request, 'Turma cadastrada com sucesso!')
+            return redirect('appsmartschool:cadastro_sucesso')
+        
+        except Exception as e:
+            messages.error(request, f'Erro ao cadastrar Turma: {e}')
+            return render(request, 'appsmartschool/cadastro_turma.html')
+
+    return render(request, 'appsmartschool/cadastro_turma.html')
