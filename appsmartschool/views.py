@@ -235,6 +235,7 @@ def cadastro_aluno(request):
         data_de_nascimento = request.POST.get('data_de_nascimento')
         endereco = request.POST.get('endereco')
         serie = request.POST.get('serie')
+        turma = request.POST.get('turma').upper()
         nome_responsavel = request.POST.get('nome_responsavel')
         cpf_responsavel = request.POST.get('cpf_responsavel')
         telefone = request.POST.get('telefone')
@@ -248,6 +249,10 @@ def cadastro_aluno(request):
         # Verificar se já existe um usuário com o mesmo CPF
         if User.objects.filter(username=cpf).exists():
             messages.error(request, 'Um usuário com este CPF já está cadastrado.')
+            return render(request, 'appsmartschool/cadastro_aluno.html')
+        
+        if not Turma.objects.filter(serie=serie, turma=turma).exists():
+            messages.error(request, 'A combinação de Série e Turma não existe.')
             return render(request, 'appsmartschool/cadastro_aluno.html')
         
 
