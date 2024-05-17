@@ -267,6 +267,14 @@ class Disciplina(models.Model):
 class Turma(models.Model):
     serie = models.PositiveSmallIntegerField()
     turma = models.CharField(max_length=1, validators=[RegexValidator(r'^[A-Z]$', 'Apenas letras maiúsculas são permitidas.')])
+    materia_1 = models.CharField(max_length=40, null=True)
+    codigo_materia_1 = models.CharField(max_length=8, null=True)
+    materia_2 = models.CharField(max_length=40, null=True)
+    codigo_materia_2 = models.CharField(max_length=8, null=True)
+    materia_3 = models.CharField(max_length=40, null=True)
+    codigo_materia_3 = models.CharField(max_length=8, null=True)
+    materia_4 = models.CharField(max_length=40, null=True)
+    codigo_materia_4 = models.CharField(max_length=8, null=True)
 
     def __str__(self):
         return f"Serie: {self.serie} {self.turma}"
