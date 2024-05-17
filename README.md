@@ -85,10 +85,10 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/MatheusVelame">
-        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+      <a href="https://github.com/YgoRosa">
+        <img src="https://avatars.githubusercontent.com/YgoRosa" width="100px;" alt="Foto de Ygor"/><br>
         <sub>
-          <b>Matheus V. Pessoa</b>
+          <b>Ygor L. Rosa</b>
         </sub>
       </a>
     </td>
