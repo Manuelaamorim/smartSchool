@@ -68,6 +68,30 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/MatheusVelame">
+        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+        <sub>
+          <b>Matheus V. Pessoa</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MatheusVelame">
+        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+        <sub>
+          <b>Matheus V. Pessoa</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MatheusVelame">
+        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+        <sub>
+          <b>Matheus V. Pessoa</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
