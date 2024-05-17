@@ -1,3 +1,10 @@
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Status-Em%20desenvolvimento-green?style=flat-square"
+    alt="Status"
+  />
+</p>
+
 # SmartSchool 
 
 Nosso propósito é utilizar a tecnologia com o escopo de automatizar e otimizar tarefas administrativas e gerenciais de escolas públicas na Região Metropolitana do Recife (RMR), a exemplo das atividades de planejamento e organização, as quais são comumente realizadas de forma manual pela equipe pedagógica.
