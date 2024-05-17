@@ -29,7 +29,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
     lps@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/MatheusVelame">Manuela Cavalcanti Amorim</a> -
+    <a href="https://github.com/Manuelaamorim">Manuela Cavalcanti Amorim</a> -
     mca2@cesar.school 📩
   </li>
   <li>
@@ -37,7 +37,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
     mvp2@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/MatheusVelame">Ygor Luiz Rosa</a> -
+    <a href="https://github.com/YgoRosa">Ygor Luiz Rosa</a> -
     ylr@cesar.school 📩
   </li>
 </ul>
