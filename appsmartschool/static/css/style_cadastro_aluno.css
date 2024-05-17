@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    
+    --font-color: whitesmoke;
+    
+    --btn-color: rgb(49, 53, 90);
+    --btn-pressed: rgb(31, 34, 57);
+    --cor-principal:#171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+}
+
+body {
+    background-image: url('/static/images/background cad_aluno.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.formulario-cadastro {
+    width: 65vw;
+    height: 70vw;
+    padding: 5rem 2.5rem;
+    background-color: #ccc;
+    display: -webkit-inline-box;
+    flex-direction: column;
+    /* justify-content: center;  */
+    align-items: center; 
+    /* gap: 20px; */
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.form-outter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario-cadastro h1 {
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    margin-top: 0;  
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.formulario-cadastro label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    padding-top: 10px;
+}
+
+.form-box1, .form-box2 {
+    max-width: 30vw;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="date"],
+.formulario-cadastro input[type="email"] {
+    width: 400px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.formulario-cadastro button {
+    background-color: var(--btn-color);
+    color: var(--cor-branca);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formulario-cadastro button:hover {
+    background-color: var(--btn-pressed);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
