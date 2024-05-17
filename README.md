@@ -14,12 +14,63 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
 
 
 ## Membros da equipe
-Beatriz Carla Bandeira da Silva Pereira,
-Lisa Matubara,
-Luziane Pires dos Santos,
-Manuela Cavalcanti Amorim,
-Matheus Velame Pessoa,
-Ygor Luiz Rosa.
+
+<ul>
+  <li>
+    <a href="https://github.com/biapereira2">Beatriz Carla Bandeira da Silva Pereira</a> -
+    bcbsp@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/Manuelaamorim">Lisa Matubara</a> -
+    lm@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/MatheusVelame">Luziane Pires dos Santos</a> -
+    lps@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/MatheusVelame">Manuela Cavalcanti Amorim</a> -
+    mca2@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/MatheusVelame">Matheus Velame Pessoa</a> -
+    mvp2@cesar.school 📩
+  </li>
+  <li>
+    <a href="https://github.com/MatheusVelame">Ygor Luiz Rosa</a> -
+    ylr@cesar.school 📩
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/biapereira2">
+        <img src="https://avatars3.githubusercontent.com/biapereira2" width="100px;" alt="Foto de Beatriz"/><br>
+        <sub>
+          <b>Beatriz C. Pereira</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Manuelaamorim">
+        <img src="https://avatars.githubusercontent.com/Manuelaamorim" width="100px;" alt="Foto de Manuela"/><br>
+        <sub>
+          <b>Manuela C. Amorim</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MatheusVelame">
+        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+        <sub>
+          <b>Matheus V. Pessoa</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 
 *Temas: Protagonismo Escolar; Efeitos da educação no combate à pobreza no Brasil; Aumento na qualidade de ensino e rendimento escolar dos jovens brasileiros.*
