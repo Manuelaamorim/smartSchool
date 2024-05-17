@@ -56,15 +56,15 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
       <a href="https://github.com/lilymtbr">
         <img src="https://avatars.githubusercontent.com/lilymtbr" width="100px;" alt="Foto de Lisa"/><br>
         <sub>
-          <b>Manuela C. Amorim</b>
+          <b>Lisa Matubara</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/MatheusVelame">
-        <img src="https://avatars.githubusercontent.com/MatheusVelame" width="100px;" alt="Foto de Sofia"/><br>
+      <a href="https://github.com/luzianes">
+        <img src="https://avatars.githubusercontent.com/luzianes" width="100px;" alt="Foto de Luziane"/><br>
         <sub>
-          <b>Matheus V. Pessoa</b>
+          <b>Luziane P. Santos</b>
         </sub>
       </a>
     </td>
