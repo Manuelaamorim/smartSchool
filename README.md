@@ -25,7 +25,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
     lm@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/MatheusVelame">Luziane Pires dos Santos</a> -
+    <a href="https://github.com/luzianes">Luziane Pires dos Santos</a> -
     lps@cesar.school 📩
   </li>
   <li>
