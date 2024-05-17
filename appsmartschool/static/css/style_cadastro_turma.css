@@ -4,12 +4,10 @@
     --primary: rgb(104, 113, 183);
     --secondary: rgb(161, 167, 208);
     --container-bg: rgba(32, 34, 48, 0.426);
-    
     --font-color: whitesmoke;
-    
     --btn-color: rgb(49, 53, 90);
     --btn-pressed: rgb(31, 34, 57);
-    --cor-principal:#171a4a;
+    --cor-principal: #171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
@@ -19,12 +17,12 @@ body {
     background-image: url('/static/images/Background_Cad_Prof.jpg');
     background-size: cover;
     background-position: center;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .formulario-cadastro {
     background-color: var(--font-color);
-    color: #000000;
+    color: var(--cor-preta);
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
@@ -35,7 +33,7 @@ body {
 }
 
 .formulario-cadastro h1 {
-    color: #000000;
+    color: var(--cor-preta);
     text-align: center;
     margin-top: 0;  
     margin-bottom: 20px;
@@ -50,7 +48,7 @@ body {
 }
 
 .formulario-cadastro input[type="number"],
-.formulario-cadastro input[type="text"]{
+.formulario-cadastro input[type="text"] {
     width: 90%;
     padding: 10px;
     margin-bottom: 20px;
@@ -67,9 +65,34 @@ body {
     cursor: pointer;
     width: 100%;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .formulario-cadastro button:hover {
     background-color: var(--btn-pressed);
 }
 
+.messages {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.messages .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.messages .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
