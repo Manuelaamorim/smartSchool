@@ -21,7 +21,7 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
     bcbsp@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/Manuelaamorim">Lisa Matubara</a> -
+    <a href="https://github.com/lilymtbr">Lisa Matubara</a> -
     lm@cesar.school 📩
   </li>
   <li>
