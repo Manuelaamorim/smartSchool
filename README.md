@@ -53,8 +53,8 @@ Por fim, destaque-se que o foco é não apenas desenvolver as hard skills dos jo
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Manuelaamorim">
-        <img src="https://avatars.githubusercontent.com/Manuelaamorim" width="100px;" alt="Foto de Manuela"/><br>
+      <a href="https://github.com/lilymtbr">
+        <img src="https://avatars.githubusercontent.com/lilymtbr" width="100px;" alt="Foto de Lisa"/><br>
         <sub>
           <b>Manuela C. Amorim</b>
         </sub>
