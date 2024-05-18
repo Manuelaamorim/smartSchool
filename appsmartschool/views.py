@@ -289,6 +289,7 @@ def cadastro_turma(request):
         materia_4 = request.POST.get('materia_4')
         codigo_materia_4 = request.POST.get('codigo_materia_4')
         docente = request.POST.get('docente')
+        matricula_docente = request.POST.get('matricula_docente')
 
         if Turma.objects.filter(serie=serie, turma=turma).exists():
             messages.error(request, 'A turma já existe.')
@@ -326,11 +327,12 @@ def cadastro_turma(request):
             messages.error(request, 'Código da materia 4 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if Turma.objects.filter(docente=docente).exists():
+        if User.objects.filter(docente=docente, matricula_docente=matricula_docente).exists():
             messages.error(request, 'O docente já esta cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
+        
 
-        if not UserProfessor.objects.filter(nome=docente).exists():
+        if not UserProfessor.objects.filter(nome=docente, matricula=matricula_docente).exists():
             messages.error(request, 'Docente não cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
 

@@ -276,6 +276,7 @@ class Turma(models.Model):
     materia_4 = models.CharField(max_length=40, null=True)
     codigo_materia_4 = models.CharField(max_length=8, null=True)
     docente = models.CharField(max_length=40, null=True)
+    matricula_docente = models.CharField(max_length=200, null=True)
 
     def __str__(self):
         return f"Serie: {self.serie} {self.turma}"
