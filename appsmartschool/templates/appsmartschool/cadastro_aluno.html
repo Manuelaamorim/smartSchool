@@ -17,61 +17,65 @@
     <form class="formulario-cadastro" method="post" action="{% url 'appsmartschool:cadastro_aluno' %}">
         {% csrf_token %}
 
-        <div class="form-box1" id="form1">
-            <label for="nome">Digite o nome do aluno:</label>
-            <input type="text" name="nome" id="nome" required><br>
+        <h1 class="form-header">Cadastro Aluno</h1>
 
-            <label for="matricula">Digite a matrícula do aluno:</label>
-            <input type="text" name="matricula" id="matricula" required><br>
+        <div class="boxes">
+            <div class="form-box1" id="form1">
+                <label for="nome">Digite o nome do aluno:</label>
+                <input type="text" name="nome" id="nome" required><br>
 
-            <label for="cpf">Digite o CPF do aluno:</label>
-            <input type="text" name="cpf" id="cpf" required><br>
+                <label for="matricula">Digite a matrícula do aluno:</label>
+                <input type="text" name="matricula" id="matricula" required><br>
 
-            <label for="data_de_nascimento">Digite a data de nascimento do aluno:</label>
-            <input type="date" name="data_de_nascimento" id="data_de_nascimento" required><br>
+                <label for="cpf">Digite o CPF do aluno:</label>
+                <input type="text" name="cpf" id="cpf" required><br>
 
-            <label for="endereco">Digite o endereço do aluno:</label>
-            <input type="text" name="endereco" id="endereco" required><br>
+                <label for="data_de_nascimento">Digite a data de nascimento do aluno:</label>
+                <input type="date" name="data_de_nascimento" id="data_de_nascimento" required><br>
 
-            <label for="colegio">Digite o nome do colégio:</label>
-            <input type="text" name="colegio" id="colegio" required><br>
+                <label for="endereco">Digite o endereço do aluno:</label>
+                <input type="text" name="endereco" id="endereco" required><br>
 
-            <label for="serie">Digite a série do aluno:</label>
-            <input type="text" name="serie" id="serie" required><br>
+                <label for="colegio">Digite o nome do colégio:</label>
+                <input type="text" name="colegio" id="colegio" required><br>
 
-            <label for="turma">Digite a turma do aluno:</label>
-            <input type="text" name="turma" id="turma" required><br>
+                <label for="serie">Digite a série do aluno:</label>
+                <input type="text" name="serie" id="serie" required><br>
 
-            <label for="nome_responsavel">Digite o nome do responsável:</label>
-            <input type="text" name="nome_responsavel" id="nome_responsavel" required><br>
-        </div>
+                <label for="turma">Digite a turma do aluno:</label>
+                <input type="text" name="turma" id="turma" required><br>
 
-        <div class="form-box2" id="form2">
-            <label for="cpf_responsavel">Digite o CPF do responsável:</label>
-            <input type="text" name="cpf_responsavel" id="cpf_responsavel" required><br>
+                <label for="nome_responsavel">Digite o nome do responsável:</label>
+                <input type="text" name="nome_responsavel" id="nome_responsavel" required><br>
+            </div>
 
-            <label for="telefone">Digite o telefone do responsável:</label>
-            <input type="text" name="telefone" id="telefone" required><br>
+            <div class="form-box2" id="form2">
+                <label for="cpf_responsavel">Digite o CPF do responsável:</label>
+                <input type="text" name="cpf_responsavel" id="cpf_responsavel" required><br>
 
-            <label for="email_responsavel">Digite o email do responsável:</label>
-            <input type="email" name="email" id="email" required><br>
+                <label for="telefone">Digite o telefone do responsável:</label>
+                <input type="text" name="telefone" id="telefone" required><br>
 
-            <label for="peso">Digite o peso do aluno:</label>
-            <input type="text" name="peso" id="peso" required><br>
+                <label for="email_responsavel">Digite o email do responsável:</label>
+                <input type="email" name="email" id="email" required><br>
 
-            <label for="altura">Digite a altura do aluno:</label>
-            <input type="text" name="altura" id="altura" required><br>
+                <label for="peso">Digite o peso do aluno:</label>
+                <input type="text" name="peso" id="peso" required><br>
 
-            <label for="restricao_alimentar">O aluno possui restrição alimentar?</label>
-            <input type="text" name="restricao_alimentar" id="restricao_alimentar" required><br>
+                <label for="altura">Digite a altura do aluno:</label>
+                <input type="text" name="altura" id="altura" required><br>
 
-            <label for="tdah">O aluno possui TDAH ou TEA?:</label>
-            <input type="text" name="tdah" id="tdah" required><br>
+                <label for="restricao_alimentar">O aluno possui restrição alimentar?</label>
+                <input type="text" name="restricao_alimentar" id="restricao_alimentar" required><br>
 
-            <label for="pcd">O aluno é uma pessoa com deficiência?</label>
-            <input type="text" name="pcd" id="pcd" required><br>
+                <label for="tdah">O aluno possui TDAH ou TEA?:</label>
+                <input type="text" name="tdah" id="tdah" required><br>
 
-            <button class="btn-submit" type="submit">Cadastrar Aluno</button>
+                <label for="pcd">O aluno é uma pessoa com deficiência?</label>
+                <input type="text" name="pcd" id="pcd" required><br>
+
+                <button class="btn-submit" type="submit">Cadastrar Aluno</button>
+            </div>
         </div>
     </form>
 </section>
