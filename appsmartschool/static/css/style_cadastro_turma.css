@@ -5,8 +5,8 @@
     --secondary: rgb(161, 167, 208);
     --container-bg: rgba(32, 34, 48, 0.426);
     --font-color: whitesmoke;
-    --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
     --cor-principal: #171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
@@ -14,22 +14,26 @@
 }
 
 body {
-    background-image: url('/static/images/Background_Cad_Prof.jpg');
+    background-image: url('/static/images/teste5.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'Poppins', sans-serif;
 }
 
 .formulario-cadastro {
-    background-color: var(--font-color);
-    color: var(--cor-preta);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 87vw;
+    padding: 3rem 2.5rem; 
+    background-color:  rgba(250, 250, 250, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 50%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 .formulario-cadastro h1 {
@@ -51,16 +55,21 @@ body {
 .formulario-cadastro input[type="text"] {
     width: 90%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 12px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    outline: none;
 }
 
 .formulario-cadastro button {
     background-color: var(--btn-color);
     color: var(--cor-branca);
     padding: 12px 24px;
-    border: none;
+    border: 2px solid #e6c476;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
