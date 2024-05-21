@@ -4,11 +4,6 @@
 
 <link rel="stylesheet" href="{% static 'css/style_notas.css' %}">
 <div class="container">
-    <div class="header-section">
-        <h1>Boletim</h1>
-        <p>Colégio {{ aluno.colegio }}</p>
-    </div>
-
     <div class="info-section">
         <div>Nome: {{ aluno.nome }}
             <div class="linha"></div>
@@ -30,6 +25,7 @@
     </ul>
 {% endif %}
 
+<div class="glass-table">
     <table>
         <thead>
             <tr>

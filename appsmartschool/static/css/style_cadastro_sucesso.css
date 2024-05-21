@@ -40,8 +40,6 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 50%;
-    /* margin-left: auto;
-    margin-right: auto;  */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     margin: 20px auto;
