@@ -7,8 +7,8 @@
     
     --font-color: whitesmoke;
     
-    --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
@@ -58,7 +58,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 h1 {
@@ -145,10 +147,12 @@ textarea {
 
 input[type="submit"] {
     background-color: var(--btn-color);
-    color: var(--cor-branca);
-    padding: 10px;
+    color: white;
+    padding: 12px 24px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    width: 100%;
     margin-top: 2px;
 }
 
