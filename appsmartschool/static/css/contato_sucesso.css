@@ -7,8 +7,8 @@
     
     --font-color: whitesmoke;
     
-    --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-branca: #eae2e6;
 }
@@ -21,21 +21,29 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; */
 }
 
 .mensagem-sucesso {
+    background-color:  rgba(250, 250, 250, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    background-color: #ffffff;
     margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 50%; /* ou um valor específico que prefira */
     height: 200px; /* Ajuste conforme necessário para o seu design */
@@ -51,15 +59,14 @@ body {
 .botao-voltar {
     margin-top: 60px; /* Aumente o espaço conforme necessário */
     padding: 10px 20px;
-    background-color: var(--cor-principal);
+    background-color: var(--btn-color);
     color: var(--cor-branca);
-    padding: 10px;
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .botao-voltar:hover {
-    background-color: var(--cor-azul-clara);
+    color: var(--cor-branca);
+    background-color: var(--btn-pressed);
 }
