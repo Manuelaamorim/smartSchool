@@ -16,6 +16,7 @@ urlpatterns = [
     path('contato/sucesso/', contato_sucesso, name='contato_sucesso'),
     path('frequencia/', frequencia_alunos_visualizar, name='frequencia_aluno'), 
     path('home_aluno/', home_aluno, name = 'home_aluno'),
+    path('home_professor/', home_professor, name = 'home_professor'),
     path('home_funcionario/', home_funcionario, name = 'home_funcionario'),
     path('logout/', logout_view, name='logout'),
     path('horario/', visualizar_horario, name='HorarioAula'),

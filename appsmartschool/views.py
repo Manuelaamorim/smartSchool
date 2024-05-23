@@ -37,6 +37,26 @@ def login_aluno(request):
     return render(request, 'appsmartschool/login_aluno.html', context)
 
 def login_professor(request):
+    context = {}  # Inicializa o contexto vazio
+    if request.method == "POST":
+        cpf = request.POST.get('username')
+        senha = request.POST.get('password')
+        
+        # Verifica se um usuário com esse CPF existe em UserAluno
+        try:
+            user_professor = UserProfessor.objects.get(cpf=cpf)
+            # Se o CPF existe, tenta autenticar com o usuário relacionado
+            user = authenticate(request, username=user_professor.user.username, password=senha)
+            if user is not None:
+                login(request, user)
+                return redirect('appsmartschool:home_professor')  # Certifique-se que a URL está correta
+            else:
+                # CPF existe, mas a senha está errada
+                context['senha_error'] = True
+        except UserProfessor.DoesNotExist:
+            # Nenhum UserAluno com este CPF
+            context['cpf_error'] = True
+
     return render(request, 'appsmartschool/login_professor.html')
 
 def login_funcionario(request):
