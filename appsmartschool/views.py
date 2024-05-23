@@ -57,7 +57,8 @@ def login_professor(request):
             # Nenhum UserAluno com este CPF
             context['cpf_error'] = True
 
-    return render(request, 'appsmartschool/login_professor.html')
+    return render(request, 'appsmartschool/login_professor.html', context)
+
 
 def login_funcionario(request):
     context = {}  # Inicializa o contexto vazio
