@@ -42,7 +42,7 @@ class UserProfessor (models.Model):
     cpf = models.CharField(max_length=11)
     data_de_nascimento = models.DateField("Data de Nascimento")
     telefone = models.CharField(max_length=11, null=False)
-    email = models.EmailField()
+    email = models.EmailField(default=False)
 
     def __str__(self):
         return "Dados do professor " + self.nome
@@ -103,57 +103,33 @@ class MensagemContato(models.Model):
         verbose_name = "Dados de contato"
         verbose_name_plural = "Dados de contato"
 
-
-class Frequencia_Aluno(models.Model):
-    user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
-    colegio = models.CharField(max_length=200)
-    nome = models.CharField(max_length=200)
-    serie = models.PositiveSmallIntegerField()
-    matricula = models.CharField(max_length=200)
-    materia_1 = models.CharField(max_length=200, null=False)
-    faltas_da_materia_1 =  models.PositiveSmallIntegerField(null=False)
-    aulas_da_materia_1 = models.IntegerField(default=0)  # Total de aulas planejadas
-    materia_2 = models.CharField(max_length=200, null=False)
-    faltas_da_materia_2 =  models.PositiveSmallIntegerField(null=False)
-    aulas_da_materia_2 = models.IntegerField(default=0)  # Total de aulas planejadas
-    materia_3 = models.CharField(max_length=200, null=False)
-    faltas_da_materia_3 =  models.PositiveSmallIntegerField(null=False)
-    aulas_da_materia_3 = models.IntegerField(default=0)  # Total de aulas planejadas
-    materia_4 = models.CharField(max_length=200, null=False)
-    faltas_da_materia_4 =  models.PositiveSmallIntegerField(null=False)
-    aulas_da_materia_4 = models.IntegerField(default=0)  # Total de aulas planejadas
-
-    def porcentagem_da_materia_1(self):
-        """Calcula a porcentagem de presença."""
-        if self.aulas_da_materia_1 > 0:
-             return round(((self.aulas_da_materia_1 - self.faltas_da_materia_1) / self.aulas_da_materia_1) * 100, 2)
-        return 0
-
-    def porcentagem_da_materia_2(self):
-        """Calcula a porcentagem de presença."""
-        if self.aulas_da_materia_2 > 0:
-             return round(((self.aulas_da_materia_2 - self.faltas_da_materia_2) / self.aulas_da_materia_2) * 100, 2)
-        return 0
-
-    def porcentagem_da_materia_3(self):
-        """Calcula a porcentagem de presença."""
-        if self.aulas_da_materia_3 > 0:
-             return round(((self.aulas_da_materia_3 - self.faltas_da_materia_3) / self.aulas_da_materia_3) * 100, 2)
-        return 0
-
-    def porcentagem_da_materia_4(self):
-        """Calcula a porcentagem de presença."""
-        if self.aulas_da_materia_4 > 0:
-             return round(((self.aulas_da_materia_4 - self.faltas_da_materia_4) / self.aulas_da_materia_4) * 100, 2)
-        return 0
+class Disciplina(models.Model):
+    codigo = models.CharField(max_length=8, unique=True)
+    nome = models.CharField(max_length=40)
+    carga_horaria = models.CharField(max_length=3, validators=[RegexValidator(r'^\d{1,3}$', 'Somente números são permitidos.')])
+    ementa = models.TextField(max_length=2000)
 
     def __str__(self):
-        return "Frequência de " + self.user_aluno.nome
+        return f"{self.nome} ({self.codigo})"
+
+    class Meta:
+        verbose_name = "Disciplina"
+        verbose_name_plural = "Disciplinas"
+
+class Presenca(models.Model):
+    aluno = models.ForeignKey(UserAluno, on_delete=models.CASCADE)
+    data = models.DateField()
+    presente = models.BooleanField(default=False)
+    materia = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+
+    def __str__(self):
+        status = "Presente" if self.presente else "Ausente"
+        return f"{self.aluno.nome} - {status} em {self.data.strftime('%d/%m/%Y')} para {self.materia.nome}"
 
     class Meta:
         app_label = 'appsmartschool'
-        verbose_name = "Frequência"
-        verbose_name_plural = "Frequência"
+        verbose_name = "Presença do aluno"
+        verbose_name_plural = "Presenças dos alunos"
 
 class HorarioAula(models.Model):
     colegio = models.CharField(max_length=200, null=True)
@@ -250,19 +226,6 @@ class Notas(models.Model):
         app_label = 'appsmartschool'
         verbose_name = "Notas do aluno"
         verbose_name_plural = "Notas do aluno"
-
-class Disciplina(models.Model):
-    codigo = models.CharField(max_length=8, unique=True)
-    nome = models.CharField(max_length=40)
-    carga_horaria = models.CharField(max_length=3, validators=[RegexValidator(r'^\d{1,3}$', 'Somente números são permitidos.')])
-    ementa = models.TextField(max_length=2000)
-
-    def __str__(self):
-        return f"{self.nome} ({self.codigo})"
-
-    class Meta:
-        verbose_name = "Disciplina"
-        verbose_name_plural = "Disciplinas"
 
 class Turma(models.Model):
     serie = models.PositiveSmallIntegerField()

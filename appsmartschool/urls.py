@@ -26,4 +26,8 @@ urlpatterns = [
     path('cadastro_disciplina/', views.cadastro_disciplina, name='cadastro_disciplina'),
     path('cadastro_aluno/', views.cadastro_aluno, name='cadastro_aluno'),
     path('cadastro_turma/', views.cadastro_turma, name='cadastro_turma'),
+    path('registrar_presenca/', views.registrar_presenca, name='registrar_presenca'),
+    path('frequencia_sucesso/', registrar_presenca, name='frequencia_sucesso'),
+    path('api/get-alunos/<int:turma_id>/', views.get_alunos_by_turma, name='get-alunos-by-turma'),
+
 ]

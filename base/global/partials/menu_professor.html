@@ -3,12 +3,12 @@
 <header>
     <div class="cabecalho">
         <div class="div-logo">
-            <a href="{% url 'appsmartschool:home_aluno' %}">SmartSchool</a>
+            <a href="{% url 'appsmartschool:home_professor' %}">SmartSchool</a>
         </div>
         <div class="div-menu">
             <ul>
                 <li class="nav-item">
-                    <a class="nav-menu-texto" href="">Cadastrar Frequência</a>
+                    <a class="nav-menu-texto" href="{% url 'appsmartschool:registrar_presenca' %}">Registrar Presença</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-menu-texto" href="{% url 'appsmartschool:formulario_contato' %}">Contato</a>

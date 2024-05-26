@@ -9,6 +9,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from .models import Turma, UserAluno
 
 def tela_inicial(request):
     return render(request, 'appsmartschool/tela_inicial.html')
@@ -104,7 +108,7 @@ def frequencia_alunos_visualizar(request):
     user_aluno = UserAluno.objects.get(user=request.user)
     try:
         # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
-        frequencias = Frequencia_Aluno.objects.filter(user_aluno=user_aluno)
+        frequencias = Presenca.objects.filter(user_aluno=user_aluno)
         if not frequencias:
             messages.error(request, 'Frequência não cadastrada.', extra_tags='frequencia')
     except UserAluno.DoesNotExist:
@@ -401,3 +405,44 @@ def cadastro_turma(request):
             return render(request, 'appsmartschool/cadastro_turma.html')
 
     return render(request, 'appsmartschool/cadastro_turma.html')
+
+
+from django.contrib import messages
+
+@login_required
+def registrar_presenca(request):
+    disciplinas = Disciplina.objects.all()
+    turmas = Turma.objects.all()
+    alunos = []
+    selected_turma_id = None
+
+    if request.method == 'POST':
+        selected_turma_id = request.POST.get('turma_id')
+        if selected_turma_id:
+            turma = Turma.objects.get(id=selected_turma_id)
+            alunos = UserAluno.objects.filter(serie=turma.serie, turma=turma.turma)
+            # Processar a lista de presenças aqui
+            # Suponha que você cria objetos de presença aqui
+            for aluno in alunos:
+                presente = request.POST.get('presenca_' + str(aluno.id), False)
+                Presenca.objects.create(aluno=aluno, data=request.POST.get('data'), presente=presente, materia_id=request.POST.get('materia'))
+            messages.success(request, "Presenças registradas com sucesso!")
+            return redirect('appsmartschool:registrar_presenca')  # Redireciona para limpar o formulário
+
+    return render(request, 'appsmartschool/registrar_presenca.html', {
+        'turmas': turmas, 
+        'disciplinas': disciplinas, 
+        'alunos': alunos,
+        'selected_turma_id': selected_turma_id
+    })
+
+
+@login_required
+def get_alunos_by_turma(request, turma_id):
+    try:
+        turma = Turma.objects.get(id=turma_id)
+        alunos = UserAluno.objects.filter(serie=turma.serie, turma=turma.turma).values('id', 'nome')
+        return JsonResponse(list(alunos), safe=False)
+    except Turma.DoesNotExist:
+        return JsonResponse({'error': 'Turma não encontrada'}, status=404)
+

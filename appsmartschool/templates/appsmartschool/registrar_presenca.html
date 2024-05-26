@@ -1,0 +1,78 @@
+{% extends "global/base_professor.html" %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style_registrar_presenca.css' %}">
+<h2>Registrar Presença</h2>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form method="post" id="formPresenca">
+    {% csrf_token %}
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="turma_id">Turma:</label>
+    <select id="turma_id" name="turma_id">
+        <option value="">Selecione uma Turma</option>
+        {% for turma in turmas %}
+        <option value="{{ turma.id }}">{{ turma.serie }} - {{ turma.turma }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="materia">Matéria:</label>
+    <select id="materia" name="materia">
+        {% for materia in disciplinas %}
+        <option value="{{ materia.id }}">{{ materia.nome }}</option>
+        {% endfor %}
+    </select>
+
+    <h3>Alunos:</h3>
+    <div id="alunos"></div>
+    
+    <button type="submit">Registrar Presenças</button>
+</form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectTurma = document.getElementById('turma_id');
+    selectTurma.addEventListener('change', function() {
+        const turmaId = this.value;
+        if (turmaId) {
+            fetch(`/api/get-alunos/${turmaId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    const alunosDiv = document.getElementById('alunos');
+                    alunosDiv.innerHTML = ''; // Limpa alunos anteriores
+                    if (data.length > 0) {
+                        data.forEach(aluno => {
+                            const label = document.createElement('label');
+                            const checkbox = document.createElement('input');
+                            checkbox.type = 'checkbox';
+                            checkbox.name = 'presenca';
+                            checkbox.value = aluno.id;
+
+                            label.appendChild(checkbox);
+                            label.append(` ${aluno.nome}`);
+                            alunosDiv.appendChild(label);
+                            alunosDiv.appendChild(document.createElement('br'));
+                        });
+                    } else {
+                        alunosDiv.innerHTML = 'Nenhum aluno encontrado para a turma selecionada.';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        } else {
+            document.getElementById('alunos').innerHTML = '';
+        }
+    });
+});
+</script>
+
+{% endblock %}
