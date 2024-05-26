@@ -40,39 +40,40 @@
 </form>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const selectTurma = document.getElementById('turma_id');
-    selectTurma.addEventListener('change', function() {
-        const turmaId = this.value;
-        if (turmaId) {
-            fetch(`/api/get-alunos/${turmaId}/`)
-                .then(response => response.json())
-                .then(data => {
-                    const alunosDiv = document.getElementById('alunos');
-                    alunosDiv.innerHTML = ''; // Limpa alunos anteriores
-                    if (data.length > 0) {
-                        data.forEach(aluno => {
-                            const label = document.createElement('label');
-                            const checkbox = document.createElement('input');
-                            checkbox.type = 'checkbox';
-                            checkbox.name = 'presenca';
-                            checkbox.value = aluno.id;
-
-                            label.appendChild(checkbox);
-                            label.append(` ${aluno.nome}`);
-                            alunosDiv.appendChild(label);
-                            alunosDiv.appendChild(document.createElement('br'));
-                        });
-                    } else {
-                        alunosDiv.innerHTML = 'Nenhum aluno encontrado para a turma selecionada.';
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        } else {
-            document.getElementById('alunos').innerHTML = '';
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+        const selectTurma = document.getElementById('turma_id');
+        selectTurma.addEventListener('change', function() {
+            const turmaId = this.value;
+            if (turmaId) {
+                fetch(`/api/get-alunos/${turmaId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const alunosDiv = document.getElementById('alunos');
+                        alunosDiv.innerHTML = ''; // Limpa alunos anteriores
+                        if (data.length > 0) {
+                            data.forEach(aluno => {
+                                const label = document.createElement('label');
+                                const checkbox = document.createElement('input');
+                                checkbox.type = 'checkbox';
+                                checkbox.name = 'presenca_' + aluno.id; // Garantindo que cada checkbox tenha um identificador único
+                                checkbox.value = 'true'; // Envia 'true' quando marcado
+    
+                                label.appendChild(checkbox);
+                                label.append(` ${aluno.nome}`);
+                                alunosDiv.appendChild(label);
+                                alunosDiv.appendChild(document.createElement('br'));
+                            });
+                        } else {
+                            alunosDiv.innerHTML = 'Nenhum aluno encontrado para a turma selecionada.';
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            } else {
+                document.getElementById('alunos').innerHTML = '';
+            }
+        });
     });
-});
-</script>
+    </script>
+    
 
 {% endblock %}

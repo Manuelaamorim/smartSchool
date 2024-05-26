@@ -430,17 +430,25 @@ def registrar_presenca(request):
     selected_turma_id = None
 
     if request.method == 'POST':
+        data = request.POST.get('data')
+        materia_id = request.POST.get('materia')
         selected_turma_id = request.POST.get('turma_id')
+        
         if selected_turma_id:
             turma = Turma.objects.get(id=selected_turma_id)
             alunos = UserAluno.objects.filter(serie=turma.serie, turma=turma.turma)
-            # Processar a lista de presenças aqui
-            # Suponha que você cria objetos de presença aqui
+            
             for aluno in alunos:
-                presente = request.POST.get('presenca_' + str(aluno.id), False)
-                Presenca.objects.create(aluno=aluno, data=request.POST.get('data'), presente=presente, materia_id=request.POST.get('materia'))
+                # A chave para cada aluno determina se ele estava presente
+                presente = request.POST.get('presenca_' + str(aluno.id), 'false') == 'true'
+                Presenca.objects.create(
+                    aluno=aluno,
+                    data=data,
+                    presente=presente,  # Verdadeiro se marcado, falso se não marcado
+                    materia_id=materia_id
+                )
             messages.success(request, "Presenças registradas com sucesso!")
-            return redirect('appsmartschool:registrar_presenca')  # Redireciona para limpar o formulário
+            return redirect('appsmartschool:registrar_presenca')
 
     return render(request, 'appsmartschool/registrar_presenca.html', {
         'turmas': turmas, 
@@ -448,6 +456,7 @@ def registrar_presenca(request):
         'alunos': alunos,
         'selected_turma_id': selected_turma_id
     })
+
 
 
 @login_required
