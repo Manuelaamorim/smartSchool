@@ -103,19 +103,32 @@ def dados_saude_visualizar(request):
 
     return render(request, 'appsmartschool/dados_saude.html', {"dados": dados})
 
+from django.db.models import Count, Q
+
 @login_required
 def frequencia_alunos_visualizar(request):
     user_aluno = UserAluno.objects.get(user=request.user)
-    try:
-        # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
-        frequencias = Presenca.objects.filter(user_aluno=user_aluno)
-        if not frequencias:
-            messages.error(request, 'Frequência não cadastrada.', extra_tags='frequencia')
-    except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.', extra_tags='frequencia')
-        frequencias = []
+    disciplinas = Disciplina.objects.all()
+    frequencia_dados = []
 
-    return render(request, 'appsmartschool/frequencia.html', {"frequencias": frequencias})
+    for disciplina in disciplinas:
+        total_aulas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina).count()
+        faltas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina, presente=False).count()
+        if total_aulas > 0:
+            porcentagem_faltas = (faltas / total_aulas) * 100
+        else:
+            porcentagem_faltas = 0
+        
+        frequencia_dados.append({
+            'disciplina': disciplina.nome,
+            'total_aulas': total_aulas,
+            'faltas': faltas,
+            'porcentagem_faltas': porcentagem_faltas
+        })
+
+    return render(request, 'appsmartschool/frequencia.html', {'frequencia_dados': frequencia_dados, 'user_aluno': user_aluno})
+
+
 
 
 @login_required
