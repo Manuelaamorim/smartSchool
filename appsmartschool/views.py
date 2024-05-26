@@ -115,9 +115,9 @@ def frequencia_alunos_visualizar(request):
         total_aulas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina).count()
         faltas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina, presente=False).count()
         if total_aulas > 0:
-            porcentagem_faltas = (faltas / total_aulas) * 100
+            porcentagem_faltas = ((total_aulas - faltas) / total_aulas) * 100
         else:
-            porcentagem_faltas = 0
+            porcentagem_faltas = 100
         
         frequencia_dados.append({
             'disciplina': disciplina.nome,
@@ -147,8 +147,27 @@ def formulario_contato(request):
     return render(request, 'appsmartschool/formulario_contato.html')
 
 @login_required
+def formulario_contato_prof(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        email = request.POST.get('email')
+        telefone = request.POST.get('telefone')
+        mensagem = request.POST.get('mensagem')
+
+        MensagemContato.objects.create(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
+
+        # Após salvar os dados, redirecione para uma página de sucesso
+        return redirect('appsmartschool:contato_sucesso_prof')
+
+    return render(request, 'appsmartschool/formulario_contato_prof.html')
+
+@login_required
 def contato_sucesso(request):
     return render(request, 'appsmartschool/contato_sucesso.html')
+
+@login_required
+def contato_sucesso_prof(request):
+    return render(request, 'appsmartschool/contato_sucesso_prof.html')
 
 @login_required
 def home_aluno(request):
