@@ -352,21 +352,6 @@ def cadastro_turma(request):
             messages.error(request, 'A turma já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if Turma.objects.filter(materia_1=materia_1).exists():
-            messages.error(request, 'Materia 1 já existe.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if Turma.objects.filter(materia_2=materia_2).exists():
-            messages.error(request, 'Materia 2 já existe.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if Turma.objects.filter(materia_3=materia_3).exists():
-            messages.error(request, 'Materia 3 já existe.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if Turma.objects.filter(materia_4=materia_4).exists():
-            messages.error(request, 'Materia 4 já existe.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
         
         if Turma.objects.filter(codigo_materia_1=codigo_materia_1).exists():
             messages.error(request, 'Código da materia 1 já existe.')
