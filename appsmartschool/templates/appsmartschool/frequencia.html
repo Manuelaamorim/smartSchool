@@ -11,6 +11,16 @@
         <p>Matrícula: {{ user_aluno.matricula }}</p>
     </div>
 
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        {% if 'notas' in message.tags %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
+
     {% if frequencia_dados %}
     <table>
         <thead>

@@ -103,7 +103,6 @@ def dados_saude_visualizar(request):
 
     return render(request, 'appsmartschool/dados_saude.html', {"dados": dados})
 
-from django.db.models import Count, Q
 
 @login_required
 def frequencia_alunos_visualizar(request):
@@ -125,6 +124,15 @@ def frequencia_alunos_visualizar(request):
             'faltas': faltas,
             'porcentagem_faltas': porcentagem_faltas
         })
+
+    try:
+        user_aluno = UserAluno.objects.get(user=request.user)
+        disciplinas = Disciplina.objects.all()
+        if not disciplinas.exists():
+            messages.error(request, 'Dados de saúde não cadastrados.')
+    except UserAluno.DoesNotExist:
+        messages.error(request, 'Aluno não cadastrado.', extra_tags='disciplinas')
+
 
     return render(request, 'appsmartschool/frequencia.html', {'frequencia_dados': frequencia_dados, 'user_aluno': user_aluno})
 
