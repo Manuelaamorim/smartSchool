@@ -5,13 +5,6 @@
 <link rel="stylesheet" href="{% static 'css/style_horario.css' %}">
 
 
-<div class="container">
-    <!-- <div class="header-section">
-        {% for horario in horarios %}
-        <h1>Horário das aulas</h1>
-        <p>Colégio {{horario.colegio}}</p>
-    </div> -->
-
 <div class="info-section">
     <div>Série: {{ horario.serie }}º
         <div class="linha"></div>
@@ -19,12 +12,7 @@
     <div>Turma: {{ horario.turma }}
         <div class="linha"></div>
     </div>
-    <!-- <div>
-        <div></div>
-    </div> -->
 </div>
-
-{% endfor %}
 
 <div class="glass-table">
     <table>
@@ -38,6 +26,7 @@
                 <th>Sexta-Feira</th>
             </tr>
         </thead>
+
         <tbody>
             {% for horario in horarios %}
             <tr>
@@ -75,6 +64,15 @@
             {% endfor %}
         </tbody>
     </table>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        {% if 'horarios' in message.tags %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
 </div>
 
 {% endblock %}

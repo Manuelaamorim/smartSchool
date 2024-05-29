@@ -189,16 +189,16 @@ def logout_view(request):
 
 @login_required
 def visualizar_horario(request):
-    aluno = UserAluno.objects.get(user=request.user)
     try:
+        aluno = UserAluno.objects.get(user=request.user)
         horarios = HorarioAula.objects.filter(serie=aluno.serie, turma=aluno.turma)
-        if not horarios:
-            messages.error(request, "Não há horários cadastrados para sua série e turma.")
-            return redirect('appsmartschool:home_aluno')
-        return render(request, 'appsmartschool/horarios.html', {'horarios': horarios})
+        if not horarios.exists():
+            messages.error(request, "Não há horários cadastrados para sua série e turma.", extra_tags='horarios')
+            return render(request, 'appsmartschool/horarios.html', {'aluno': aluno, 'horarios': horarios})
+        return render(request, 'appsmartschool/horarios.html', {'aluno': aluno, 'horarios': horarios})
     except UserAluno.DoesNotExist:
-        messages.error(request, "Perfil de aluno não encontrado.")
-        return redirect('appsmartschool:tela_inicial')
+        messages.error(request, "Aluno não encontrado.", extra_tags='horarios')
+        return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
     
 @login_required
 def visualiza_notas(request):
