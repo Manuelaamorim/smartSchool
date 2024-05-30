@@ -222,7 +222,6 @@ def visualiza_notas(request):
 
 @login_required
 def cadastro_professor(request):
-    disciplinas = Disciplina.objects.all()  # Obter todas as disciplinas
     if request.method == 'POST':
         nome = request.POST.get('nome')
         matricula = request.POST.get('matricula')
@@ -230,12 +229,11 @@ def cadastro_professor(request):
         data_de_nascimento = request.POST.get('data_de_nascimento')
         telefone = request.POST.get('telefone')
         email = request.POST.get('email')
-        disciplinas_ids = request.POST.getlist('disciplinas')  # Obter IDs das disciplinas selecionadas
 
         # Verificar se já existe um usuário com o mesmo CPF
         if User.objects.filter(username=cpf).exists():
             messages.error(request, 'Um usuário com este CPF já está cadastrado.')
-            return render(request, 'appsmartschool/cadastro_professor.html', {'disciplinas': disciplinas})
+            return render(request, 'appsmartschool/cadastro_professor.html')
 
         try:
             # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
@@ -245,8 +243,6 @@ def cadastro_professor(request):
             # Criar o UserProfessor
             professor = UserProfessor(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, telefone=telefone, email=email)
             professor.save()
-            professor.disciplinas.set(disciplinas_ids)  # Vincular disciplinas ao professor
-            professor.save()
 
             return redirect('appsmartschool:cadastro_sucesso')
         
@@ -255,7 +251,7 @@ def cadastro_professor(request):
         except Exception as e:
             messages.error(request, f'Erro ao cadastrar professor: {e}')
 
-    return render(request, 'appsmartschool/cadastro_professor.html', {'disciplinas': disciplinas})
+    return render(request, 'appsmartschool/cadastro_professor.html')
 
 @login_required
 def cadastro_sucesso(request):

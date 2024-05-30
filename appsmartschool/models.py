@@ -43,7 +43,6 @@ class UserProfessor(models.Model):
     data_de_nascimento = models.DateField("Data de Nascimento")
     telefone = models.CharField(max_length=11, null=False)
     email = models.EmailField(default=False)
-    disciplinas = models.ManyToManyField('Disciplina', related_name='professores')  # Adicionado
 
     def __str__(self):
         return "Dados do professor " + self.nome
