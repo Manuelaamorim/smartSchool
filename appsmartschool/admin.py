@@ -9,8 +9,4 @@ admin.site.register(Presenca)
 admin.site.register(HorarioAula)
 admin.site.register(Disciplina)
 admin.site.register(Turma)
-
-# Registro do modelo Notas
-@admin.register(Notas)
-class NotasAdmin(admin.ModelAdmin):
-    list_display = ('aluno', 'disciplina', 'nota1', 'nota2', 'nota3', 'media')
+admin.site.register(Notas)

@@ -165,22 +165,26 @@ class HorarioAula(models.Model):
 
 class Notas(models.Model):
     aluno = models.ForeignKey(UserAluno, on_delete=models.CASCADE)
-    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
-    nota1 = models.FloatField(max_length=4, null=False)
-    nota2 = models.FloatField(max_length=4, null=False)
-    nota3 = models.FloatField(max_length=4, null=False)
-    
-    @property
-    def media(self):
-        return (self.nota1 + self.nota2 + self.nota3) / 3
+    materia_1 = models.CharField(max_length=200, null=False, default='Matéria 1')
+    materia_2 = models.CharField(max_length=200, null=False, default='Matéria 2')
+    materia_3 = models.CharField(max_length=200, null=False, default='Matéria 3')
+    materia_4 = models.CharField(max_length=200, null=False, default='Matéria 4')
 
-    def __str__(self):
-        return f"Notas de {self.aluno.user.username} em {self.disciplina.nome}"
-    
-    class Meta:
-        app_label = 'appsmartschool'
-        verbose_name = "Notas do aluno"
-        verbose_name_plural = "Notas do aluno"
+    nota1_materia1 = models.FloatField(max_length=4, null = False)
+    nota2_materia1 = models.FloatField(max_length=4, null = False)
+    nota3_materia1 = models.FloatField(max_length=4, null = False)  
+
+    nota1_materia2 = models.FloatField(max_length=4, null = False)
+    nota2_materia2 = models.FloatField(max_length=4, null = False)
+    nota3_materia2 = models.FloatField(max_length=4, null = False)
+
+    nota1_materia3 = models.FloatField(max_length=4, null = False)
+    nota2_materia3 = models.FloatField(max_length=4, null = False)
+    nota3_materia3 = models.FloatField(max_length=4, null = False)
+
+    nota1_materia4 = models.FloatField(max_length=4, null = False)
+    nota2_materia4 = models.FloatField(max_length=4, null = False)
+    nota3_materia4 = models.FloatField(max_length=4, null = False)
     
     @property
     def media_materia1(self):
