@@ -348,15 +348,10 @@ def cadastro_turma(request):
     if request.method == 'POST':
         serie = request.POST.get('serie')
         turma = request.POST.get('turma').upper()
-        materia_1 = request.POST.get('materia_1')
         codigo_materia_1 = request.POST.get('codigo_materia_1')
-        materia_2 = request.POST.get('materia_2')
         codigo_materia_2 = request.POST.get('codigo_materia_2')
-        materia_3 = request.POST.get('materia_3')
         codigo_materia_3 = request.POST.get('codigo_materia_3')
-        materia_4 = request.POST.get('materia_4')
         codigo_materia_4 = request.POST.get('codigo_materia_4')
-        docente = request.POST.get('docente')
         matricula_docente = request.POST.get('matricula_docente')
 
         if Turma.objects.filter(serie=serie, turma=turma).exists():
@@ -380,49 +375,53 @@ def cadastro_turma(request):
             messages.error(request, 'Código da materia 4 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if Turma.objects.filter(docente=docente, matricula_docente=matricula_docente).exists():
+        if Turma.objects.filter(matricula_docente=matricula_docente).exists():
             messages.error(request, 'O docente já esta cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
 
-        if not UserProfessor.objects.filter(nome=docente, matricula=matricula_docente).exists():
+        try:
+
+            docente = UserProfessor.objects.get(matricula=matricula_docente)
+
+        except UserProfessor.DoesNotExist:
             messages.error(request, 'Docente não cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
+        
+        try:
 
-        if not Disciplina.objects.filter(nome=materia_1).exists():
+            materia_1 = Disciplina.objects.get(codigo=codigo_materia_1)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 1 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_2).exists():
+        try:
+
+            materia_2 = Disciplina.objects.get(codigo=codigo_materia_2)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 2 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_3).exists():
+        try:
+
+            materia_3 = Disciplina.objects.get(codigo=codigo_materia_3)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 3 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_4).exists():
+        try:
+
+            materia_4 = Disciplina.objects.get(codigo=codigo_materia_4)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 4 não cadastrada.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_1).exists():
-            messages.error(request, 'Código da materia 1 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_2).exists():
-            messages.error(request, 'Código da materia 2 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_3).exists():
-            messages.error(request, 'Código da materia 3 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_4).exists():
-            messages.error(request, 'Código da materia 4 não cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
 
         try:
-            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1, materia_2=materia_2, materia_3=materia_3, materia_4=materia_4, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4)
+            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1.nome, materia_2=materia_2.nome, materia_3=materia_3.nome, materia_4=materia_4.nome, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4, matricula_docente=matricula_docente, docente=docente.nome)
             serie_turma.save()
 
             messages.success(request, 'Turma cadastrada com sucesso!')
