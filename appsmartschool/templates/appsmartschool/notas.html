@@ -5,26 +5,18 @@
 <link rel="stylesheet" href="{% static 'css/style_notas.css' %}">
 <div class="container">
     <h1>Boletim</h1>
-    <div class="info-section">
-        <div>Nome: {{ aluno.nome }}
-            <div class="linha"></div>
+        <div class="info-section">
+            <div>Nome: {{ aluno.nome }}
+                <div class="linha"></div>
+            </div>
+            <div>Série: {{ aluno.serie }}º
+                <div class="linha"></div>
+            </div>
+            <div>Matrícula: {{ aluno.matricula }}
+                <div class="linha"></div>
+            </div>
         </div>
-        <div>Série: {{ aluno.serie }}º
-            <div class="linha"></div>
-        </div>
-        <div>Matrícula: {{ aluno.matricula }}
-            <div class="linha"></div>
-        </div>
-    </div>
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        {% if 'notas' in message.tags %}
-        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-        {% endif %}
-        {% endfor %}
-    </ul>
-    {% endif %}
+    
 
     <div class="glass-table">
         <table>
@@ -70,6 +62,15 @@
                 </tr>
                 {% endfor %}
             </tbody>
+            {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        {% if 'notas' in message.tags %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
         </table>
     </div>
 </div>

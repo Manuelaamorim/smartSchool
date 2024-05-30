@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{% static 'css/style_frequencia.css' %}">
 <div class="container">
     <h1>Frequência Escolar</h1>
-    <div class="container">
         <div class="info-section">
             <div>Nome: {{ user_aluno.nome }}
                 <div class="linha"></div>
@@ -17,6 +16,7 @@
                 <div class="linha"></div>
             </div>
         </div>
+    
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
