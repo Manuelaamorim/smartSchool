@@ -34,13 +34,6 @@
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" required><br>
 
-    <label>Disciplinas:</label><br>
-    {% for disciplina in disciplinas %}
-        <label>
-            <input type="checkbox" name="disciplinas" value="{{ disciplina.id }}">
-            {{ disciplina.nome }}
-        </label><br>
-    {% endfor %}
 
     <button class="btn-submit" type="submit">Cadastrar Professor</button>
 </form>
