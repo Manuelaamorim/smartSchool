@@ -4,7 +4,6 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style_registrar_presenca.css' %}">
-<h2>Registrar Presença</h2>
 {% if messages %}
     {% for message in messages %}
         <div class="alert {{ message.tags }}">
@@ -14,6 +13,8 @@
 {% endif %}
 
 <form method="post" id="formPresenca">
+    <h2 id="Registrar">Registrar Presença</h2>
+    <br>
     {% csrf_token %}
     <label for="data">Data:</label>
     <input type="date" id="data" name="data" required>

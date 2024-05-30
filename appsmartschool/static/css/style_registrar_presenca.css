@@ -1,4 +1,9 @@
 /* Estilo base para a página */
+
+#Registrar {
+    text-align: center; /* Alinha o texto ao centro */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,11 +12,11 @@ body {
     color: #333;
 }
 
+
 /* Estiliza o formulário */
 form {
     background: white;
     max-width: 600px;
-    margin: 20px auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
