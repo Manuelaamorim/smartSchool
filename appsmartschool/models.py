@@ -69,24 +69,6 @@ class UserFuncionario (models.Model):
         verbose_name = "Dados do funcionário"
         verbose_name_plural = "Dados do funcionário"
 
-class Dados_saude(models.Model):
-    user_aluno = models.OneToOneField(UserAluno, on_delete=models.CASCADE, null=True)
-    peso = models.FloatField(max_length=4, null=False, validators=[MinValueValidator(10), MaxValueValidator(120)],
-    help_text='Idade deve ser entre 10 e 120 anos.')
-    altura = models.FloatField(max_length = 4, null=False, validators=[MinValueValidator(0.50), MaxValueValidator(2)],
-    help_text='Altura deve ser entre 0.50 m e 2 m.')
-    restricao_alimentar = models.TextField(max_length = 100)
-    tdah = models.CharField(max_length = 4)
-    pcd = models.CharField(max_length = 4)
-
-    def __str__(self):
-        return "Dados de saúde de " + self.user_aluno.nome
-
-    class Meta:
-        app_label = 'appsmartschool'
-        verbose_name = "Dados de saúde"
-        verbose_name_plural = "Dados de saúde"
-
 
 class MensagemContato(models.Model):
     nome = models.CharField(max_length=200)

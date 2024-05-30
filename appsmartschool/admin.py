@@ -6,7 +6,6 @@ from .models import *
 admin.site.register(UserAluno)
 admin.site.register(UserProfessor)
 admin.site.register(UserFuncionario)
-admin.site.register(Dados_saude)
 admin.site.register(MensagemContato)
 admin.site.register(Presenca)
 admin.site.register(HorarioAula)

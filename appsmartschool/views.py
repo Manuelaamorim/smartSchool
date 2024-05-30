@@ -90,18 +90,17 @@ def login_funcionario(request):
 
 @login_required
 def dados_saude_visualizar(request):
-
-    try:
-        # Supondo que UserAluno tem um campo 'user' que é uma ForeignKey para o User
-        user_aluno = UserAluno.objects.get(user=request.user)
-        dados = Dados_saude.objects.filter(user_aluno=user_aluno)
-        if not dados:
-            messages.error(request, 'Dados de saúde não cadastrados.')
-    except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.', extra_tags='dados')
-        dados = []
-
-    return render(request, 'appsmartschool/dados_saude.html', {"dados": dados})
+    user = request.user
+    aluno = get_object_or_404(UserAluno, user=user)
+    context = {
+        'nome': aluno.nome,
+        'peso': aluno.peso,
+        'altura': aluno.altura,
+        'restricao_alimentar': aluno.restricao_alimentar,
+        'tdah': aluno.tdah,
+        'pcd': aluno.pcd
+    }
+    return render(request, 'appsmartschool/dados_saude.html', context)
 
 
 @login_required
