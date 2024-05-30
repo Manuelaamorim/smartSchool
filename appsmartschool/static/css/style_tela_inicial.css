@@ -72,3 +72,20 @@ button {
     width: 200px;
     display: block;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: inherit;
+}
