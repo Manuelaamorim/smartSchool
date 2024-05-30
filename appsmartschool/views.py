@@ -12,7 +12,7 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
-from .models import Turma, UserAluno
+from .models import Turma, UserAluno, Notas, UserProfessor
 
 def tela_inicial(request):
     return render(request, 'appsmartschool/tela_inicial.html')
@@ -220,8 +220,9 @@ def visualiza_notas(request):
         messages.error(request, "Aluno não encontrado.", extra_tags='notas')
         return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
 
-@login_required  
+@login_required
 def cadastro_professor(request):
+    disciplinas = Disciplina.objects.all()  # Obter todas as disciplinas
     if request.method == 'POST':
         nome = request.POST.get('nome')
         matricula = request.POST.get('matricula')
@@ -229,11 +230,12 @@ def cadastro_professor(request):
         data_de_nascimento = request.POST.get('data_de_nascimento')
         telefone = request.POST.get('telefone')
         email = request.POST.get('email')
+        disciplinas_ids = request.POST.getlist('disciplinas')  # Obter IDs das disciplinas selecionadas
 
         # Verificar se já existe um usuário com o mesmo CPF
         if User.objects.filter(username=cpf).exists():
             messages.error(request, 'Um usuário com este CPF já está cadastrado.')
-            return render(request, 'appsmartschool/cadastro_professor.html')
+            return render(request, 'appsmartschool/cadastro_professor.html', {'disciplinas': disciplinas})
 
         try:
             # Criar usuário Django usando CPF como nome de usuário e matrícula como senha
@@ -243,6 +245,8 @@ def cadastro_professor(request):
             # Criar o UserProfessor
             professor = UserProfessor(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, telefone=telefone, email=email)
             professor.save()
+            professor.disciplinas.set(disciplinas_ids)  # Vincular disciplinas ao professor
+            professor.save()
 
             return redirect('appsmartschool:cadastro_sucesso')
         
@@ -251,7 +255,7 @@ def cadastro_professor(request):
         except Exception as e:
             messages.error(request, f'Erro ao cadastrar professor: {e}')
 
-    return render(request, 'appsmartschool/cadastro_professor.html')
+    return render(request, 'appsmartschool/cadastro_professor.html', {'disciplinas': disciplinas})
 
 @login_required
 def cadastro_sucesso(request):
@@ -478,4 +482,46 @@ def get_alunos_by_turma(request, turma_id):
         return JsonResponse(list(alunos), safe=False)
     except Turma.DoesNotExist:
         return JsonResponse({'error': 'Turma não encontrada'}, status=404)
+    
+@login_required
+def registrar_notas(request):
+    user = request.user
+    professor = get_object_or_404(UserProfessor, user=user)
+    turmas = Turma.objects.all()
+    alunos = []
+    turma_selecionada = None
+    disciplinas = []
+
+    if request.method == 'POST':
+        turma_id = request.POST.get('turma')
+        if turma_id:
+            turma_selecionada = get_object_or_404(Turma, id=turma_id)
+            alunos = UserAluno.objects.filter(serie=turma_selecionada.serie, turma=turma_selecionada.turma)
+            disciplinas = professor.disciplinas.all()
+
+            if 'registrar_notas' in request.POST:
+                disciplina_id = request.POST.get('disciplina')
+                disciplina = get_object_or_404(Disciplina, id=disciplina_id)
+                for aluno in alunos:
+                    nota1 = request.POST.get(f'nota1_{aluno.id}', 0)
+                    nota2 = request.POST.get(f'nota2_{aluno.id}', 0)
+                    nota3 = request.POST.get(f'nota3_{aluno.id}', 0)
+                    Notas.objects.update_or_create(
+                        aluno=aluno,
+                        disciplina=disciplina,
+                        defaults={
+                            'nota1': nota1,
+                            'nota2': nota2,
+                            'nota3': nota3,
+                        }
+                    )
+                messages.success(request, "Notas registradas com sucesso!")
+                return redirect('appsmartschool:registrar_notas')
+
+    return render(request, 'appsmartschool/registrar_notas.html', {
+        'turmas': turmas,
+        'alunos': alunos,
+        'turma_selecionada': turma_selecionada,
+        'disciplinas': disciplinas,
+    })
 

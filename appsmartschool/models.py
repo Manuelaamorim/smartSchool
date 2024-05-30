@@ -35,7 +35,7 @@ class UserAluno (models.Model):
         verbose_name = "Dados aluno"
         verbose_name_plural = "Dados aluno"
 
-class UserProfessor (models.Model):
+class UserProfessor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=200, null=False)
     matricula = models.CharField(max_length=200)
@@ -43,6 +43,7 @@ class UserProfessor (models.Model):
     data_de_nascimento = models.DateField("Data de Nascimento")
     telefone = models.CharField(max_length=11, null=False)
     email = models.EmailField(default=False)
+    disciplinas = models.ManyToManyField('Disciplina', related_name='professores')  # Adicionado
 
     def __str__(self):
         return "Dados do professor " + self.nome
@@ -164,26 +165,22 @@ class HorarioAula(models.Model):
 
 class Notas(models.Model):
     aluno = models.ForeignKey(UserAluno, on_delete=models.CASCADE)
-    materia_1 = models.CharField(max_length=200, null=False, default='Matéria 1')
-    materia_2 = models.CharField(max_length=200, null=False, default='Matéria 2')
-    materia_3 = models.CharField(max_length=200, null=False, default='Matéria 3')
-    materia_4 = models.CharField(max_length=200, null=False, default='Matéria 4')
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    nota1 = models.FloatField(max_length=4, null=False)
+    nota2 = models.FloatField(max_length=4, null=False)
+    nota3 = models.FloatField(max_length=4, null=False)
+    
+    @property
+    def media(self):
+        return (self.nota1 + self.nota2 + self.nota3) / 3
 
-    nota1_materia1 = models.FloatField(max_length=4, null = False)
-    nota2_materia1 = models.FloatField(max_length=4, null = False)
-    nota3_materia1 = models.FloatField(max_length=4, null = False)  
-
-    nota1_materia2 = models.FloatField(max_length=4, null = False)
-    nota2_materia2 = models.FloatField(max_length=4, null = False)
-    nota3_materia2 = models.FloatField(max_length=4, null = False)
-
-    nota1_materia3 = models.FloatField(max_length=4, null = False)
-    nota2_materia3 = models.FloatField(max_length=4, null = False)
-    nota3_materia3 = models.FloatField(max_length=4, null = False)
-
-    nota1_materia4 = models.FloatField(max_length=4, null = False)
-    nota2_materia4 = models.FloatField(max_length=4, null = False)
-    nota3_materia4 = models.FloatField(max_length=4, null = False)
+    def __str__(self):
+        return f"Notas de {self.aluno.user.username} em {self.disciplina.nome}"
+    
+    class Meta:
+        app_label = 'appsmartschool'
+        verbose_name = "Notas do aluno"
+        verbose_name_plural = "Notas do aluno"
     
     @property
     def media_materia1(self):

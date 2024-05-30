@@ -27,7 +27,7 @@
 } */
 
 body{
-    background-image: url('/static/images/teste5.jpg');
+    background-image: url('/static/images/teste5.jpg') !important;
     background-size: cover;
     background-position: center;
 }

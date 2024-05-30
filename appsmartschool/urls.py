@@ -32,5 +32,6 @@ urlpatterns = [
     path('registrar_presenca/', views.registrar_presenca, name='registrar_presenca'),
     path('frequencia_sucesso/', registrar_presenca, name='frequencia_sucesso'),
     path('api/get-alunos/<int:turma_id>/', views.get_alunos_by_turma, name='get-alunos-by-turma'),
+    path('registrar_notas/', views.registrar_notas, name='registrar_notas'),
 
 ]
