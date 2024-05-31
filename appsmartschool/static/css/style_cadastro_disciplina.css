@@ -4,29 +4,27 @@
     --primary: rgb(104, 113, 183);
     --secondary: rgb(161, 167, 208);
     --container-bg: rgba(32, 34, 48, 0.426);
-    
     --font-color: whitesmoke;
-    
     --btn-color: #fec85a;
     --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
+    --error-bg: #f8d7da;
+    --error-border: #f5c6cb;
+    --error-text: #721c24;
 }
 
 body {
     background-image: url('/static/images/teste5.jpg');
     background-size: cover;
     background-position: center;
-
 }
 
 .formulario-cadastro {
-    /* width: 62.5vw; */
-    height: 50vw;
-    padding: 3rem 2.5rem; 
-    background-color:  rgba(250, 250, 250, 0.5);
+    padding: 3rem 2.5rem;
+    background-color: rgba(250, 250, 250, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
@@ -36,14 +34,14 @@ body {
     margin-bottom: 30px;
     width: 50%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     height: auto !important;
 }
 
 .formulario-cadastro h1 {
     color: #000000;
     text-align: center;
-    margin-top: 0;  
+    margin-top: 0;
     margin-bottom: 20px;
     padding-top: 20px;
 }
@@ -83,4 +81,20 @@ body {
 
 .formulario-cadastro button:hover {
     background-color: var(--btn-pressed);
+}
+
+.messages {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.messages p {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
 }
