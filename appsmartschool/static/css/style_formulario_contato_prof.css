@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    
+    --font-color: whitesmoke;
+    
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
+    --cor-principal:#171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
+}
+
+#id_nome {
+    color: rgb(6, 6, 6);
+}
+
+#id_email {
+    color: rgb(6, 6, 6);
+}
+
+#id_telefone {
+    color: rgb(6, 6, 6);
+}
+
+#id_mensagem {
+    color: rgb(6, 6, 6);
+    color: rgb(0, 0, 0);
+}
+
+#id_email {
+    color: rgb(0, 0, 0);
+}
+
+#id_telefone {
+    color: rgb(0, 0, 0);
+}
+
+#id_mensagem {
+    color: rgb(0, 0, 0);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-weight: bolder;
+    color: var(--cor-preta);
+}
+
+h2 {
+    color: var(--cor-preta);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+.contact-info {
+    backdrop-filter: blur(10px);
+    height: auto !important;
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.8;
+    text-align: center;
+    min-height: 500px; /* Ajuste conforme necessário para alinhar com o formulário */
+}
+
+.form-area {
+    backdrop-filter: blur(10px);
+    height: auto !important;
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px; /* Assegura que a altura mínima seja a mesma da contact-info */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    margin-top: 4px; 
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px var(--cor-preta);
+}
+
+input.text, textarea {
+    border: 2px solid var(--secondary) !important;
+    width: 100%;
+    margin-top: 4px; 
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px var(--cor-preta);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 12px 24px;
+    border: none !important;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--btn-pressed);
+}
+
+.phone-icon {
+    width: 265px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}

@@ -1,3 +1,4 @@
+<!-- registrar_notas.html -->
 {% extends "global/base_professor.html" %}
 {% load static %}
 {% block content %}
@@ -27,37 +28,37 @@
     </select>
 </form>
 
-{% if alunos %}
+{% if alunos and disciplinas %}
 <form class="formulario-notas" method="post" action="{% url 'appsmartschool:registrar_notas' %}">
     {% csrf_token %}
     <input type="hidden" name="turma" value="{{ turma_selecionada.id }}">
-
-    <label for="disciplina">Selecionar Disciplina:</label>
-    <select name="disciplina" id="disciplina" required>
-        <option value="">Selecione</option>
-        {% for disciplina in turma_selecionada.disciplinas.all %}
-        <option value="{{ disciplina.id }}">
-            {{ disciplina.nome }}
-        </option>
-        {% endfor %}
-    </select>
 
     <table>
         <thead>
             <tr>
                 <th>Nome</th>
+                {% for disciplina in disciplinas %}
+                <th colspan="3">{{ disciplina.nome }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                <th></th>
+                {% for disciplina in disciplinas %}
                 <th>Nota 1</th>
                 <th>Nota 2</th>
                 <th>Nota 3</th>
+                {% endfor %}
             </tr>
         </thead>
         <tbody>
             {% for aluno in alunos %}
             <tr>
                 <td>{{ aluno.nome }}</td>
-                <td><input type="number" name="nota1_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
-                <td><input type="number" name="nota2_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
-                <td><input type="number" name="nota3_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
+                {% for disciplina in disciplinas %}
+                <td><input type="number" name="nota1_{{ aluno.id }}_{{ disciplina.id }}" min="0" max="10" step="0.1" required></td>
+                <td><input type="number" name="nota2_{{ aluno.id }}_{{ disciplina.id }}" min="0" max="10" step="0.1" required></td>
+                <td><input type="number" name="nota3_{{ aluno.id }}_{{ disciplina.id }}" min="0" max="10" step="0.1" required></td>
+                {% endfor %}
             </tr>
             {% endfor %}
         </tbody>

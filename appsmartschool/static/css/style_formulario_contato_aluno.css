@@ -15,32 +15,32 @@
     --cor-azul-clara: #99a6f2;
 }
 
-#id_nome{
+#id_nome {
     color: rgb(6, 6, 6);
 }
 
-#id_email{
+#id_email {
     color: rgb(6, 6, 6);
 }
 
-#id_telefone{
+#id_telefone {
     color: rgb(6, 6, 6);
 }
 
-#id_mensagem{
+#id_mensagem {
     color: rgb(6, 6, 6);
     color: rgb(0, 0, 0);
 }
 
-#id_email{
+#id_email {
     color: rgb(0, 0, 0);
 }
 
-#id_telefone{
+#id_telefone {
     color: rgb(0, 0, 0);
 }
 
-#id_mensagem{
+#id_mensagem {
     color: rgb(0, 0, 0);
 }
 
@@ -87,7 +87,7 @@ h2 {
 }
 
 .contact-info {
-    backdrop-filter: blur(10px);
+    background-color: #fcfcfc;
     height: auto !important;
     flex: 1;
     border: 1px solid rgba(255, 255, 255, 0.3); 
@@ -104,7 +104,7 @@ h2 {
 }
 
 .form-area {
-    backdrop-filter: blur(10px);
+    background-color: #fcfcfc;
     height: auto !important;
     flex: 1;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -130,12 +130,21 @@ form {
     width: 100%;
 }
 
-label, input, textarea {
+label {
     width: 100%;
     margin-top: 4px; 
     font-size: 16px;
     padding: 4px;
-    color: var(--cor-preta);
+    border-radius: 10px;
+    border: 2px var(--cor-preta);
+}
+
+input.text, textarea {
+    border: 2px solid var(--secondary) !important;
+    width: 100%;
+    margin-top: 4px; 
+    font-size: 16px;
+    padding: 4px;
     border-radius: 10px;
     border: 2px var(--cor-preta);
 }

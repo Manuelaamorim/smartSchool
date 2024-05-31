@@ -102,10 +102,14 @@ def dados_saude_visualizar(request):
     }
     return render(request, 'appsmartschool/dados_saude.html', context)
 
-
 @login_required
 def frequencia_alunos_visualizar(request):
-    user_aluno = UserAluno.objects.get(user=request.user)
+    try:
+        user_aluno = UserAluno.objects.get(user=request.user)
+    except UserAluno.DoesNotExist:
+        messages.error(request, 'Aluno não cadastrado.')
+        return redirect('appsmartschool:home_aluno')  # Redireciona para uma página adequada
+
     disciplinas = Disciplina.objects.all()
     frequencia_dados = []
 
@@ -124,22 +128,10 @@ def frequencia_alunos_visualizar(request):
             'porcentagem_faltas': porcentagem_faltas
         })
 
-    try:
-        user_aluno = UserAluno.objects.get(user=request.user)
-        disciplinas = Disciplina.objects.all()
-        if not disciplinas.exists():
-            messages.error(request, 'Dados de saúde não cadastrados.')
-    except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.', extra_tags='disciplinas')
-
-
     return render(request, 'appsmartschool/frequencia.html', {'frequencia_dados': frequencia_dados, 'user_aluno': user_aluno})
 
-
-
-
 @login_required
-def formulario_contato(request):
+def formulario_contato_aluno(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')
         email = request.POST.get('email')
@@ -149,9 +141,9 @@ def formulario_contato(request):
         MensagemContato.objects.create(nome=nome, email=email, telefone=telefone, mensagem=mensagem)
 
         # Após salvar os dados, redirecione para uma página de sucesso
-        return redirect('appsmartschool:contato_sucesso')
+        return redirect('appsmartschool:contato_sucesso_aluno')
 
-    return render(request, 'appsmartschool/formulario_contato.html')
+    return render(request, 'appsmartschool/formulario_contato_aluno.html')
 
 @login_required
 def formulario_contato_prof(request):
@@ -169,8 +161,8 @@ def formulario_contato_prof(request):
     return render(request, 'appsmartschool/formulario_contato_prof.html')
 
 @login_required
-def contato_sucesso(request):
-    return render(request, 'appsmartschool/contato_sucesso.html')
+def contato_sucesso_aluno(request):
+    return render(request, 'appsmartschool/contato_sucesso_aluno.html')
 
 @login_required
 def contato_sucesso_prof(request):
@@ -349,7 +341,6 @@ def cadastro_turma(request):
         codigo_materia_2 = request.POST.get('codigo_materia_2')
         codigo_materia_3 = request.POST.get('codigo_materia_3')
         codigo_materia_4 = request.POST.get('codigo_materia_4')
-        matricula_docente = request.POST.get('matricula_docente')
 
         if Turma.objects.filter(serie=serie, turma=turma).exists():
             messages.error(request, 'A turma já existe.')
@@ -371,20 +362,7 @@ def cadastro_turma(request):
         if Turma.objects.filter(codigo_materia_4=codigo_materia_4).exists():
             messages.error(request, 'Código da materia 4 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if Turma.objects.filter(matricula_docente=matricula_docente).exists():
-            messages.error(request, 'O docente já esta cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-
-        try:
-
-            docente = UserProfessor.objects.get(matricula=matricula_docente)
-
-        except UserProfessor.DoesNotExist:
-            messages.error(request, 'Docente não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
+                      
         try:
 
             materia_1 = Disciplina.objects.get(codigo=codigo_materia_1)
@@ -418,7 +396,7 @@ def cadastro_turma(request):
             return render(request, 'appsmartschool/cadastro_turma.html')
 
         try:
-            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1.nome, materia_2=materia_2.nome, materia_3=materia_3.nome, materia_4=materia_4.nome, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4, matricula_docente=matricula_docente, docente=docente.nome)
+            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1.nome, materia_2=materia_2.nome, materia_3=materia_3.nome, materia_4=materia_4.nome, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4)
             serie_turma.save()
 
             messages.success(request, 'Turma cadastrada com sucesso!')
@@ -493,24 +471,31 @@ def registrar_notas(request):
         if turma_id:
             turma_selecionada = get_object_or_404(Turma, id=turma_id)
             alunos = UserAluno.objects.filter(serie=turma_selecionada.serie, turma=turma_selecionada.turma)
-            disciplinas = professor.disciplinas.all()
+            
+            # Obter disciplinas a partir dos códigos de matéria
+            disciplina_codigos = [
+                turma_selecionada.codigo_materia_1,
+                turma_selecionada.codigo_materia_2,
+                turma_selecionada.codigo_materia_3,
+                turma_selecionada.codigo_materia_4
+            ]
+            disciplinas = Disciplina.objects.filter(codigo__in=disciplina_codigos)
 
             if 'registrar_notas' in request.POST:
-                disciplina_id = request.POST.get('disciplina')
-                disciplina = get_object_or_404(Disciplina, id=disciplina_id)
-                for aluno in alunos:
-                    nota1 = request.POST.get(f'nota1_{aluno.id}', 0)
-                    nota2 = request.POST.get(f'nota2_{aluno.id}', 0)
-                    nota3 = request.POST.get(f'nota3_{aluno.id}', 0)
-                    Notas.objects.update_or_create(
-                        aluno=aluno,
-                        disciplina=disciplina,
-                        defaults={
-                            'nota1': nota1,
-                            'nota2': nota2,
-                            'nota3': nota3,
-                        }
-                    )
+                for disciplina in disciplinas:
+                    for aluno in alunos:
+                        nota1 = request.POST.get(f'nota1_{aluno.id}_{disciplina.id}', 0)
+                        nota2 = request.POST.get(f'nota2_{aluno.id}_{disciplina.id}', 0)
+                        nota3 = request.POST.get(f'nota3_{aluno.id}_{disciplina.id}', 0)
+                        Notas.objects.update_or_create(
+                            aluno=aluno,
+                            disciplina=disciplina,
+                            defaults={
+                                'nota1': nota1,
+                                'nota2': nota2,
+                                'nota3': nota3,
+                            }
+                        )
                 messages.success(request, "Notas registradas com sucesso!")
                 return redirect('appsmartschool:registrar_notas')
 
@@ -520,4 +505,3 @@ def registrar_notas(request):
         'turma_selecionada': turma_selecionada,
         'disciplinas': disciplinas,
     })
-
