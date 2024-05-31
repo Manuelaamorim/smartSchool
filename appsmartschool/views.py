@@ -13,6 +13,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import Turma, UserAluno, Notas, UserProfessor
+from django.contrib import messages
 
 def tela_inicial(request):
     return render(request, 'appsmartschool/tela_inicial.html')
@@ -413,7 +414,7 @@ from django.contrib import messages
 
 @login_required
 def registrar_presenca(request):
-    disciplinas = Disciplina.objects.all()
+    disciplinas = []
     turmas = Turma.objects.all()
     alunos = []
     selected_turma_id = None
@@ -426,6 +427,15 @@ def registrar_presenca(request):
         if selected_turma_id:
             turma = Turma.objects.get(id=selected_turma_id)
             alunos = UserAluno.objects.filter(serie=turma.serie, turma=turma.turma)
+
+            # Filtrando disciplinas baseadas nos códigos de matéria da turma
+            disciplina_codigos = [
+                turma.codigo_materia_1,
+                turma.codigo_materia_2,
+                turma.codigo_materia_3,
+                turma.codigo_materia_4
+            ]
+            disciplinas = Disciplina.objects.filter(codigo__in=disciplina_codigos)
             
             for aluno in alunos:
                 # A chave para cada aluno determina se ele estava presente
@@ -446,14 +456,27 @@ def registrar_presenca(request):
         'selected_turma_id': selected_turma_id
     })
 
-
-
 @login_required
 def get_alunos_by_turma(request, turma_id):
     try:
         turma = Turma.objects.get(id=turma_id)
         alunos = UserAluno.objects.filter(serie=turma.serie, turma=turma.turma).values('id', 'nome')
         return JsonResponse(list(alunos), safe=False)
+    except Turma.DoesNotExist:
+        return JsonResponse({'error': 'Turma não encontrada'}, status=404)
+    
+@login_required
+def get_disciplinas_by_turma(request, turma_id):
+    try:
+        turma = Turma.objects.get(id=turma_id)
+        disciplina_codigos = [
+            turma.codigo_materia_1,
+            turma.codigo_materia_2,
+            turma.codigo_materia_3,
+            turma.codigo_materia_4
+        ]
+        disciplinas = Disciplina.objects.filter(codigo__in=disciplina_codigos).values('id', 'nome')
+        return JsonResponse(list(disciplinas), safe=False)
     except Turma.DoesNotExist:
         return JsonResponse({'error': 'Turma não encontrada'}, status=404)
     

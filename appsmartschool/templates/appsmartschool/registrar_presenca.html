@@ -12,7 +12,7 @@
     {% endfor %}
 {% endif %}
 
-<form method="post" id="formPresenca" class="formulario-presenca"> <!-- Adicionada a classe formulario-presenca -->
+<form method="post" id="formPresenca" class="formulario-presenca">
     <h2 id="Registrar">Registrar Presença</h2>
     <br>
     {% csrf_token %}
@@ -29,51 +29,61 @@
 
     <label for="materia">Matéria:</label>
     <select id="materia" name="materia">
-        {% for materia in disciplinas %}
-        <option value="{{ materia.id }}">{{ materia.nome }}</option>
-        {% endfor %}
+        <!-- Inicialmente vazio, será preenchido pelo JavaScript -->
     </select>
 
     <h3>Alunos:</h3>
-    <div id="alunos"></div> <!-- Adicionada a div com id alunos -->
+    <div id="alunos"></div>
     
     <button type="submit">Registrar Presenças</button>
 </form>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const selectTurma = document.getElementById('turma_id');
-        selectTurma.addEventListener('change', function() {
-            const turmaId = this.value;
-            if (turmaId) {
-                fetch(`/api/get-alunos/${turmaId}/`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const alunosDiv = document.getElementById('alunos');
-                        alunosDiv.innerHTML = ''; // Limpa alunos anteriores
-                        if (data.length > 0) {
-                            data.forEach(aluno => {
-                                const label = document.createElement('label');
-                                const checkbox = document.createElement('input');
-                                checkbox.type = 'checkbox';
-                                checkbox.name = 'presenca_' + aluno.id; // Garantindo que cada checkbox tenha um identificador único
-                                checkbox.value = 'true'; // Envia 'true' quando marcado
-    
-                                label.appendChild(checkbox);
-                                label.append(` ${aluno.nome}`);
-                                alunosDiv.appendChild(label);
-                                alunosDiv.appendChild(document.createElement('br'));
-                            });
-                        } else {
-                            alunosDiv.innerHTML = 'Nenhum aluno encontrado para a turma selecionada.';
-                        }
-                    })
-                    .catch(error => console.error('Error:', error));
-            } else {
-                document.getElementById('alunos').innerHTML = '';
-            }
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    const selectTurma = document.getElementById('turma_id');
+    const materiaSelect = document.getElementById('materia');
+
+    selectTurma.addEventListener('change', function() {
+        const turmaId = this.value;
+
+        fetch(`/api/get-disciplinas/${turmaId}/`)  // Adicione este fetch para as disciplinas
+            .then(response => response.json())
+            .then(data => {
+                materiaSelect.innerHTML = '';  // Limpa opções anteriores
+                data.forEach(materia => {
+                    const option = document.createElement('option');
+                    option.value = materia.id;
+                    option.textContent = materia.nome;
+                    materiaSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching subjects:', error));
+
+        fetch(`/api/get-alunos/${turmaId}/`)
+            .then(response => response.json())
+            .then(data => {
+                const alunosDiv = document.getElementById('alunos');
+                alunosDiv.innerHTML = ''; // Limpa alunos anteriores
+                if (data.length > 0) {
+                    data.forEach(aluno => {
+                        const label = document.createElement('label');
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.name = 'presenca_' + aluno.id;
+                        checkbox.value = 'true';
+
+                        label.appendChild(checkbox);
+                        label.append(` ${aluno.nome}`);
+                        alunosDiv.appendChild(label);
+                        alunosDiv.appendChild(document.createElement('br'));
+                    });
+                } else {
+                    alunosDiv.innerHTML = 'Nenhum aluno encontrado para a turma selecionada.';
+                }
+            })
+            .catch(error => console.error('Error fetching students:', error));
     });
+});
 </script>
 
 {% endblock %}
