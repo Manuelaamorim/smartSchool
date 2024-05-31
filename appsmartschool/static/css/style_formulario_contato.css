@@ -87,9 +87,9 @@ h2 {
 }
 
 .contact-info {
-    flex: 1;
-    background-color: var(--font-color);
     backdrop-filter: blur(10px);
+    height: auto !important;
+    flex: 1;
     border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 20px;
     border-radius: 8px;
@@ -104,9 +104,9 @@ h2 {
 }
 
 .form-area {
-    flex: 1;
-    background-color: var(--font-color);
     backdrop-filter: blur(10px);
+    height: auto !important;
+    flex: 1;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 8px;

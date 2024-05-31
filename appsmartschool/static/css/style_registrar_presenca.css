@@ -1,85 +1,107 @@
-/* Estilo base para a página */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
 
-#Registrar {
-    text-align: center; /* Alinha o texto ao centro */
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    --font-color: whitesmoke;
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
+    --cor-principal: #171a4a;
+    --cor-preta: #000000;
+    --cor-branca: #eae2e6;
+    --cor-azul-clara: #99a6f2;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario-presenca {
+    height: auto;
+    padding: 3rem 2.5rem;
+    background-color: rgba(250, 250, 250, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto !important;
+}
+
+.formulario-presenca h2 {
+    color: #000000;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.formulario-presenca label {
+    display: block;
+    margin-bottom: 10px;
     color: #333;
+    padding-top: 10px;
 }
 
-
-/* Estiliza o formulário */
-form {
-    background: white;
-    max-width: 600px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2, h3 {
-    color: #333;
-}
-
-/* Estiliza os inputs e selects */
-input[type="date"], select {
+.formulario-presenca select,
+.formulario-presenca input[type="date"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    outline: none;
 }
 
-/* Estilo para checkboxes e labels */
-.check-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-label {
-    margin: 0;
-}
-
-button {
-    background-color: #5c67f2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    cursor: pointer;
+.formulario-presenca #alunos {
     margin-top: 20px;
 }
 
-button:hover {
-    background-color: #4a54e1;
+.formulario-presenca #alunos label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-/* Estilo para mensagens de erro ou informação */
-p {
-    color: #b00;
-    font-size: 16px;
+.formulario-presenca button {
+    background-color: #fec85a;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #e6c476;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formulario-presenca button:hover {
+    background-color: var(--btn-pressed);
 }
 
 .alert {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .alert.success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
 }
 
+.alert.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}

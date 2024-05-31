@@ -12,7 +12,7 @@
     {% endfor %}
 {% endif %}
 
-<form method="post" id="formPresenca">
+<form method="post" id="formPresenca" class="formulario-presenca"> <!-- Adicionada a classe formulario-presenca -->
     <h2 id="Registrar">Registrar Presença</h2>
     <br>
     {% csrf_token %}
@@ -35,7 +35,7 @@
     </select>
 
     <h3>Alunos:</h3>
-    <div id="alunos"></div>
+    <div id="alunos"></div> <!-- Adicionada a div com id alunos -->
     
     <button type="submit">Registrar Presenças</button>
 </form>
@@ -74,7 +74,6 @@
             }
         });
     });
-    </script>
-    
+</script>
 
 {% endblock %}

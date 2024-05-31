@@ -34,6 +34,7 @@ body {
     flex-direction: column;
     border-radius: 10px;
     margin: 25px;
+    height: auto !important;
 }
 
 /* .form-outter{
