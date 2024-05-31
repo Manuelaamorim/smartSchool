@@ -35,7 +35,7 @@ class UserAluno (models.Model):
         verbose_name = "Dados aluno"
         verbose_name_plural = "Dados aluno"
 
-class UserProfessor (models.Model):
+class UserProfessor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=200, null=False)
     matricula = models.CharField(max_length=200)

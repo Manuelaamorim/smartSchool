@@ -35,7 +35,8 @@ body {
     margin-bottom: 30px;
     width: 50%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+    height: auto !important;
     /* background-color: var(--font-color);
     color: #000000;
     padding: 20px;

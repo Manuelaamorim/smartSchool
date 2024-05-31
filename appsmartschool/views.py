@@ -12,7 +12,7 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
-from .models import Turma, UserAluno
+from .models import Turma, UserAluno, Notas, UserProfessor
 
 def tela_inicial(request):
     return render(request, 'appsmartschool/tela_inicial.html')
@@ -220,7 +220,7 @@ def visualiza_notas(request):
         messages.error(request, "Aluno não encontrado.", extra_tags='notas')
         return render(request, 'erro.html', {'mensagem': 'Aluno não encontrado.'})
 
-@login_required  
+@login_required
 def cadastro_professor(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')
@@ -344,15 +344,10 @@ def cadastro_turma(request):
     if request.method == 'POST':
         serie = request.POST.get('serie')
         turma = request.POST.get('turma').upper()
-        materia_1 = request.POST.get('materia_1')
         codigo_materia_1 = request.POST.get('codigo_materia_1')
-        materia_2 = request.POST.get('materia_2')
         codigo_materia_2 = request.POST.get('codigo_materia_2')
-        materia_3 = request.POST.get('materia_3')
         codigo_materia_3 = request.POST.get('codigo_materia_3')
-        materia_4 = request.POST.get('materia_4')
         codigo_materia_4 = request.POST.get('codigo_materia_4')
-        docente = request.POST.get('docente')
         matricula_docente = request.POST.get('matricula_docente')
 
         if Turma.objects.filter(serie=serie, turma=turma).exists():
@@ -376,49 +371,53 @@ def cadastro_turma(request):
             messages.error(request, 'Código da materia 4 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if Turma.objects.filter(docente=docente, matricula_docente=matricula_docente).exists():
+        if Turma.objects.filter(matricula_docente=matricula_docente).exists():
             messages.error(request, 'O docente já esta cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
 
-        if not UserProfessor.objects.filter(nome=docente, matricula=matricula_docente).exists():
+        try:
+
+            docente = UserProfessor.objects.get(matricula=matricula_docente)
+
+        except UserProfessor.DoesNotExist:
             messages.error(request, 'Docente não cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
+        
+        try:
 
-        if not Disciplina.objects.filter(nome=materia_1).exists():
+            materia_1 = Disciplina.objects.get(codigo=codigo_materia_1)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 1 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_2).exists():
+        try:
+
+            materia_2 = Disciplina.objects.get(codigo=codigo_materia_2)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 2 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_3).exists():
+        try:
+
+            materia_3 = Disciplina.objects.get(codigo=codigo_materia_3)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 3 não cadastrada.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
-        if not Disciplina.objects.filter(nome=materia_4).exists():
+        try:
+
+            materia_4 = Disciplina.objects.get(codigo=codigo_materia_4)
+
+        except Disciplina.DoesNotExist:
             messages.error(request, 'Matéria 4 não cadastrada.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_1).exists():
-            messages.error(request, 'Código da materia 1 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_2).exists():
-            messages.error(request, 'Código da materia 2 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_3).exists():
-            messages.error(request, 'Código da materia 3 não cadastrado.')
-            return render(request, 'appsmartschool/cadastro_turma.html')
-        
-        if not Disciplina.objects.filter(codigo=codigo_materia_4).exists():
-            messages.error(request, 'Código da materia 4 não cadastrado.')
             return render(request, 'appsmartschool/cadastro_turma.html')
 
         try:
-            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1, materia_2=materia_2, materia_3=materia_3, materia_4=materia_4, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4)
+            serie_turma = Turma(serie=serie, turma=turma, materia_1=materia_1.nome, materia_2=materia_2.nome, materia_3=materia_3.nome, materia_4=materia_4.nome, codigo_materia_1=codigo_materia_1, codigo_materia_2=codigo_materia_2, codigo_materia_3=codigo_materia_3, codigo_materia_4=codigo_materia_4, matricula_docente=matricula_docente, docente=docente.nome)
             serie_turma.save()
 
             messages.success(request, 'Turma cadastrada com sucesso!')
@@ -478,4 +477,46 @@ def get_alunos_by_turma(request, turma_id):
         return JsonResponse(list(alunos), safe=False)
     except Turma.DoesNotExist:
         return JsonResponse({'error': 'Turma não encontrada'}, status=404)
+    
+@login_required
+def registrar_notas(request):
+    user = request.user
+    professor = get_object_or_404(UserProfessor, user=user)
+    turmas = Turma.objects.all()
+    alunos = []
+    turma_selecionada = None
+    disciplinas = []
+
+    if request.method == 'POST':
+        turma_id = request.POST.get('turma')
+        if turma_id:
+            turma_selecionada = get_object_or_404(Turma, id=turma_id)
+            alunos = UserAluno.objects.filter(serie=turma_selecionada.serie, turma=turma_selecionada.turma)
+            disciplinas = professor.disciplinas.all()
+
+            if 'registrar_notas' in request.POST:
+                disciplina_id = request.POST.get('disciplina')
+                disciplina = get_object_or_404(Disciplina, id=disciplina_id)
+                for aluno in alunos:
+                    nota1 = request.POST.get(f'nota1_{aluno.id}', 0)
+                    nota2 = request.POST.get(f'nota2_{aluno.id}', 0)
+                    nota3 = request.POST.get(f'nota3_{aluno.id}', 0)
+                    Notas.objects.update_or_create(
+                        aluno=aluno,
+                        disciplina=disciplina,
+                        defaults={
+                            'nota1': nota1,
+                            'nota2': nota2,
+                            'nota3': nota3,
+                        }
+                    )
+                messages.success(request, "Notas registradas com sucesso!")
+                return redirect('appsmartschool:registrar_notas')
+
+    return render(request, 'appsmartschool/registrar_notas.html', {
+        'turmas': turmas,
+        'alunos': alunos,
+        'turma_selecionada': turma_selecionada,
+        'disciplinas': disciplinas,
+    })
 

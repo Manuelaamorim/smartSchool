@@ -1,0 +1,68 @@
+{% extends "global/base_professor.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style_registrar_notas.css' %}">
+<h1>Registrar Notas</h1>
+
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="message {{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<form class="formulario-notas" method="post">
+    {% csrf_token %}
+    <label for="turma">Selecionar Turma:</label>
+    <select name="turma" id="turma" required onchange="this.form.submit()">
+        <option value="">Selecione</option>
+        {% for turma in turmas %}
+        <option value="{{ turma.id }}" {% if turma_selecionada and turma.id == turma_selecionada.id %}selected{% endif %}>
+            {{ turma.serie }} {{ turma.turma }}
+        </option>
+        {% endfor %}
+    </select>
+</form>
+
+{% if alunos %}
+<form class="formulario-notas" method="post" action="{% url 'appsmartschool:registrar_notas' %}">
+    {% csrf_token %}
+    <input type="hidden" name="turma" value="{{ turma_selecionada.id }}">
+
+    <label for="disciplina">Selecionar Disciplina:</label>
+    <select name="disciplina" id="disciplina" required>
+        <option value="">Selecione</option>
+        {% for disciplina in turma_selecionada.disciplinas.all %}
+        <option value="{{ disciplina.id }}">
+            {{ disciplina.nome }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome }}</td>
+                <td><input type="number" name="nota1_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
+                <td><input type="number" name="nota2_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
+                <td><input type="number" name="nota3_{{ aluno.id }}" min="0" max="10" step="0.1" required></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" name="registrar_notas">Registrar Notas</button>
+</form>
+{% endif %}
+{% endblock %}
