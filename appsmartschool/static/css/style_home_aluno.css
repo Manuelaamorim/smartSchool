@@ -64,5 +64,5 @@ body {
     font-size: 60px;
     color: white;
     padding: 20px;
-    border-bottom: 3px solid white;
+    border-bottom: 3px dashed white;
 }
