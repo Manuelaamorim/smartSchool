@@ -8,7 +8,7 @@
     --font-color: whitesmoke;
     
     --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
@@ -98,7 +98,7 @@ body {
 }
 
 .formulario-cadastro button:hover {
-    background-color:  #89dadb;
+    --btn-pressed: #f6b74d;
 }
 
 section{
