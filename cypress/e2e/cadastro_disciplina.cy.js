@@ -1,6 +1,8 @@
 describe('test cadastrar disciplina', () => {
     it('cenario1', () => { // A funcionária Mirtes Baptista, cadastrada no sistema, acessa a aplicação e informa login (57302471410) e senha (mirtes123) e acessa o menu para cadastrar uma disciplina. Informa os dados da disciplina a ser cadastrada (código - 12, nome - Português I A, carga horária - 200, ementa - Assuntos), clica no botão "Cadastrar Disciplina" e o cadastro é finalizado com sucesso.
-        
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
         cy.visit('/admin'); // http://127.0.0.1:8000/
@@ -48,6 +50,8 @@ describe('test cadastrar disciplina', () => {
     })
 
     it('cenario2', () => { //O funcionário Rodolfo Melo, cadastrado no sistema, acessa a aplicação e informa login (44536334408) e senha (rodolfo123) e acessa o menu para cadastrar uma disciplina. Informa os dados da disciplina a ser cadastrada (código - 13, nome - Matemática II B, carga horária - 200, ementa - Assuntos), clica no botão "Cadastrar Disciplina" e o cadastro é finalizado com sucesso. Em seguida, tenta cadastrar uma nova disciplina, informa seus dados (código - 13, nome - Geografia II C, carga horária - 180, ementa - Assuntos) e o cadastro não é realizado, pois já há uma disciplna cadastrada no sistema com o código.
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
@@ -117,6 +121,8 @@ describe('test cadastrar disciplina', () => {
     })
 
     it('cenario3', () => { //A funcionária Lúcia Alves, cadastrada no sistema, acessa a aplicação e informa login (54645149458) e senha (lucia123) e acessa o menu para cadastrar uma disciplina. Deixa um ou mais campos em branco e clica no botão "Cadastrar Disciplina", mas o formulário não é submetido, pois todos os campos devem ser preenchidos. Ao informar todos os campos da disciplina a ser cadastrada (código - 15, nome - Ciências I C, carga horária - 120, ementa - Assuntos), clica novamente no botão "Cadastrar Disciplina" e o cadastro é finalizado com sucesso.
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
@@ -209,6 +215,8 @@ describe('test cadastrar disciplina', () => {
     })
 
     it('cenario4', () => { //A funcionária Bernadete Souto, cadastrada no sistema, acessa a aplicação e informa login (47490595444) e senha (bernadete123) e acessa o menu para cadastrar uma disciplina. Informa os dados da disciplina a ser cadastrada (código - 16, nome - Português III C, carga horária - 220, ementa - Assuntos), clica no botão "Cadastrar Disciplina" e o cadastro não é realizado, pois a carga horária é maior que 200 horas.
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
@@ -271,7 +279,9 @@ describe('test cadastrar disciplina', () => {
     })
     
     it('cenario5', () => { //O funcionário Henrique Campos, cadastrado no sistema, acessa a aplicação e informa login (31620517469) e senha (henrique123) e acessa o menu para cadastrar uma disciplina. Informa os dados da disciplina a ser cadastrada (código - 17, nome - “História II A, carga horária - 150, ementa - Assuntos), clica no botão "Cadastrar Disciplina" e o cadastro é finalizado com sucesso. Em seguida, tenta cadastrar uma nova disciplina, informa seus dados (código - 18, nome - História II A, carga horária - 160, ementa - Assuntos) e o cadastro não é realizado, pois já há uma disciplna cadastrada no sistema com esse nome.
-
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
         cy.visit('/admin'); // http://127.0.0.1:8000/

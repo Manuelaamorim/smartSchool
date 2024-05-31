@@ -1,5 +1,7 @@
 describe('test visualizar Horario', () => {
     it('cenario1', () => {  //Rafaela Lima de Albuquerque com o CPF 70250518231 e a matrícula raf12345, estuda no colégio Dom Domingos II e está cadastrada no sistema da SmartSchool , e está cadastrada na 1º série na turma A do fundamental I, onde nas segundas-feiras incluem as matérias de: Matemática das 8h às 9h, Português das 9h às 10h, Português das 10:30 às 11:30 e Matemática de 11:30 às 12:30. Nas terças-feiras incluem as matérias de: História das 8h às 9h, Geografia das 9h às 10h, Geografia das 10:30 às 11:30 e História de 11:30 às 12:30. Nas quartas-feiras incluem as matérias de: Português das 8h às 9h, Matemática das 9h às 10h, Matemática das 10:30 às 11:30 e Português de 11:30 às 12:30. Nas quintas-feiras incluem as matérias de Geografia das 8h às 9h, História das 9h às 10h, História das 10:30 às 11:30 e Geografia de 11:30 às 12:30. Nas sextas-feiras incluem as matérias de Matemática 8h às 9h, Português das 9h às 10h, História das 10:30 às 11:30 e Geografia de 11:30 às 12:30. Então será retornado em sua grade horária essas matérias e seus respectivos horários com base na 3º série na turma A, e não de Ricardo Couto, que está na 3º série na turma B;
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
         cy.visit('/admin'); //pagina http://127.0.0.1:8000/
         cy.get('#id_username').type('admin')
@@ -89,6 +91,9 @@ describe('test visualizar Horario', () => {
    })
 
    it('cenario2', () => {
+    cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+    cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+
     cy.visit('/admin');
     cy.get('#id_username').type('admin')
     cy.get('#id_password').type('123456')
