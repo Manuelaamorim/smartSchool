@@ -298,6 +298,7 @@ def cadastro_aluno(request):
         cpf = request.POST.get('cpf')
         data_de_nascimento = request.POST.get('data_de_nascimento')
         endereco = request.POST.get('endereco')
+        colegio = request.POST.get('colegio')
         serie = request.POST.get('serie')
         turma = request.POST.get('turma').upper()
         nome_responsavel = request.POST.get('nome_responsavel')
@@ -326,7 +327,7 @@ def cadastro_aluno(request):
             user.save()
 
             # Criar o UserAluno
-            aluno = UserAluno(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, endereco=endereco, serie=serie, nome_responsavel=nome_responsavel, cpf_responsavel=cpf_responsavel, telefone=telefone, email_responsavel = email_responsavel, peso=peso, altura=altura, restricao_alimentar=restricao_alimentar, tdah=tdah, pcd=pcd)
+            aluno = UserAluno(user=user, nome=nome, matricula=matricula, cpf=cpf, data_de_nascimento=data_de_nascimento, endereco=endereco, colegio=colegio, serie=serie, turma=turma, nome_responsavel=nome_responsavel, cpf_responsavel=cpf_responsavel, telefone=telefone, email_responsavel = email_responsavel, peso=peso, altura=altura, restricao_alimentar=restricao_alimentar, tdah=tdah, pcd=pcd)
             aluno.save()
 
             return redirect('appsmartschool:cadastro_sucesso')
