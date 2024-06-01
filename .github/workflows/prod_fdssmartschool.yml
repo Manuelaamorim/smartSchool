@@ -14,11 +14,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: test_db
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgres://user:password@localhost:5432/test_db
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
       - name: Set up Python version
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: '3.12'
 
@@ -27,44 +45,6 @@ jobs:
           python -m venv venv
           source venv/bin/activate
 
-      - name: Django CI
-
-        on:
-          push:
-            branches: [ main ]
-          pull_request:
-            branches: [ main ]
-
-        jobs:
-          build:
-
-            runs-on: ubuntu-latest
-
-            services:
-              postgres:
-                image: postgres:latest
-                env:
-                  POSTGRES_DB: test_db
-                  POSTGRES_USER: admin
-                  POSTGRES_PASSWORD: 123
-                ports:
-                  - 5432:5432
-                options: >-
-                  --health-cmd pg_isready
-                  --health-interval 10s
-                  --health-timeout 5s
-                  --health-retries 5
-              env:
-                DATABASE_URL: postgres://user:password@localhost:5432/test_db
-
-              steps:
-              - uses: actions/checkout@v4
-            
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-          
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
@@ -81,14 +61,18 @@ jobs:
           DJANGO_SUPERUSER_EMAIL: admin@example.com
         run: |
           echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('${{ env.DJANGO_SUPERUSER_USERNAME }}', '${{ env.DJANGO_SUPERUSER_EMAIL }}', '${{ env.DJANGO_SUPERUSER_PASSWORD }}')" | python manage.py shell
-      
-      - name: Run local server
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Run local server and Cypress tests
         run: |
-          python manage.py migrate
           python manage.py runserver &
-          sleep 5
+          sleep 10
           npx cypress run
-          
+
       - name: Cleaning testing files
         run: |
           rm .env
@@ -98,19 +82,15 @@ jobs:
           rm package.json
           rm -rf cypress
           rm -rf node_modules
-          
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
-          
+        run: zip -r release.zip .
+
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
         with:
           name: python-app
-          path: |
-            release.zip
-            !venv/
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -119,7 +99,7 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write # This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
@@ -130,7 +110,6 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -138,10 +117,9 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C16CC7BFA87842ADBF38DD533E964E18 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A4E54A7414EA408B949E9707ABA4D4E1 }}
 
-      - name: 'Deploy to Azure Web App'
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'fdssmartschool'
           slot-name: 'Production'
-          
