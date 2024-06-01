@@ -8,7 +8,7 @@
     --font-color: whitesmoke;
     
     --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
@@ -23,16 +23,32 @@
 }
 
 body{
-    height: 100vh;
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh;
     background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .container{
-    background: linear-gradient(
+    width: 30vw;
+    height: 25vw;
+    padding: 3rem 2.5rem; 
+    background-color:  bisque;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 25px;
+    margin-top: 150px;
+    /* height: auto !important; */
+    /* background: linear-gradient(
         to right bottom,
         rgba(255, 255, 255, 0.4),
         rgba(255, 255, 255, 0.2)
@@ -40,8 +56,16 @@ body{
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 5rem;
-    border-radius: 10px;
+    border-radius: 10px; */
 }
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 .container form{
     display: flex;
@@ -53,28 +77,38 @@ body{
 }
 
 .container h1{
-    color: var(--font-color);
-    padding: 1rem;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    width: 100%;
 }
 
 .container form label{
-    color: var(--font-color);
+    color: #000000;
 }
 .container form input{
     width: 100%;
     padding: 0.5rem;
     border-radius: 10px;
     outline: none;
-    border: 2px white;
+    border: 2px wheat;
 }
 
 .container form .btn-submit{
+    background-color: #fec85a;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #e6c476;
+    border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    /* cursor: pointer;
     padding: 0.5rem;
     background-color: var(--btn-color);
     border-radius: 10px;
     outline: none;
-    color: var(--font-color);
+    color: var(--font-color); */
 }
 
 .container form .btn-submit:hover{

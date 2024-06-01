@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary: rgb(104, 113, 183);
+    --secondary: rgb(161, 167, 208);
+    --container-bg: rgba(32, 34, 48, 0.426);
+    --font-color: whitesmoke;
+    --btn-color: #fec85a;
+    --btn-pressed: #f6b74d;
+    --cor-principal: #171a4a;
+    --cor-branca: #eae2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/static/images/teste5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.cadastro-sucesso, .contato-sucesso {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 150px;
+}
+
+.mensagem-sucesso {
+    padding: 20px;
+    background-color: var(--cor-branca);
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.botao-voltar {
+    background-color: var(--btn-color);
+    color: var(--cor-branca);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+} 
+
+.botao-voltar:hover {
+    color: var(--cor-branca);
+    background-color: var(--btn-pressed);
+}

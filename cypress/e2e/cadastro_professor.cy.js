@@ -1,6 +1,8 @@
 describe('test cadastrar professor', () => {
     it('cenario1', () => { // A funcionária Stella Natalia Bernardes, cadastrada no sistema, acessa a aplicação e informa login (34479066420) e senha (stella123) e acessa o menu para cadastrar um professor. Informa os dados do professor a ser cadastrado (nome - José Manuel Barros, matrícula - jmaba123, CPF - 94671686422, data de nascimento - 1992-04-22, telefone - 81987654321 e email - josemanuelb@gmail.com), clica no botão "Cadastrar Professor" e o cadastro é finalizado com sucesso.
-        
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
         cy.visit('/admin'); // http://127.0.0.1:8000/
@@ -50,6 +52,8 @@ describe('test cadastrar professor', () => {
     })
 
     it('cenario2', () => { //A funcionária Maria da Conceição Xavier, cadastrada no sistema, acessa a aplicação e informa login (84258399477) e senha (mariacx123) e acessa o menu para cadastrar um professor. Informa os dados do professor a ser cadastrado (nome - Maria Alice Gusmão, matrícula - malgu123, CPF - 84936329452, data de nascimento - 1997-11-07, telefone - 81961876432 e email - malicegusmao@outlook.com), clica no botão "Cadastrar Professor" e o cadastro é finalizado com sucesso. Em seguida, tenta cadastrar um novo professor, informa seus dados (nome - Manuel Fernandes da Silva, CPF - 84936329452, matrícula - mfds1234, data de nascimento - 1996-07-11, telefone 8196880909 e email - mfds@example.com) e o cadastro não é realizado, pois já há um professor cadastrado no sistema com o mesmo CPF.
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
@@ -123,7 +127,9 @@ describe('test cadastrar professor', () => {
     })
 
     it('cenario3', () => { //A funcionária Clarice Maria da Silva, cadastrada no sistema, acessa a aplicação e informa login (27307763460) e senha (clams123) e acessa o menu para cadastrar um professor. Deixa um ou mais campos em branco e clica no botão "Cadastrar Professor", mas o formulário não é submetido, pois todos os campos devem ser preenchidos. Ao informar todos os campos do professor a ser cadastrado (nome - Maria das Dores Pascoal, matrícula - mdopa123, CPF - 98765432100, data de nascimento - 1975-02-03, telefone - 81984653875 e email - mdasdorespascoal@hotmail.com), clica novamente no botão "Cadastrar Professor" e o cadastro é finalizado com sucesso.
-
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
+        cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        
         //Acessa o admin com o superuser cadastrado e cadastra um funcionário
 
         cy.visit('/admin'); // http://127.0.0.1:8000/

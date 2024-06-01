@@ -11,15 +11,15 @@
       >Protótipo de Lo-Fi no Figma</a>
   </li>
   <li>
-    <a  href=""
-      >Screencast do Portótipo Lo-fi - Entrega 03</a>
+    <a  href="https://www.youtube.com/watch?v=aKq5v7QJX0w"
+      >Screencast do Protótipo Lo-fi - Entrega 03</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=fw72oc_WmSU"
       >Screencast CI/CD com Build e Deployment Automatizado - Entrega 03</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=7rWFUA_x34w"
       >Screencast da Execução dos Testes - Entrega 03</a>
   </li>
 </ul>
@@ -32,13 +32,29 @@
       >Projeto na Azure</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=9ORi6V3U_1Y"
       >Screencast da Azure - Entrega 03</a>
   </li>
 </ul>
 <br/>
 
 ## Instruções de acesso ao projeto:
+
+###
+
+Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seu respectivo login.  Atualmente, o acesso para Professores ainda está em desenvolvimento e as funcionalidades correspondentes serão implementadas futuramente, conforme indicado nas issues abertas do Github.
+
+###
+
+Para acessar como Aluno, utilize o CPF "60356365433" e a matrícula "ale12345". Com esse login, os usuários podem visualizar informações como dados de saúde, boletim escolar, horários de aula e frequência da estudante Ana Luiza Eugênio. Além disso, há uma opção para que Ana Luiza envie um formulário de contato para a instituição de ensino.
+
+###
+
+Após realizar o logout e retornar à página principal, escolha o perfil de "Funcionário" para fazer login. Utilizando o CPF "92873712491" e a matrícula "func9916", o acesso é feito como Marcos Luiz Bonifácio Cordeiro, que possui autorização para cadastrar novos professores. Se o cadastro for concluído com sucesso, o usuário será redirecionado para uma página de confirmação.
+
+###
+
+Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as informações detalhadas abaixo.
 
 &nbsp;
 ### Banco de dados da AZURE

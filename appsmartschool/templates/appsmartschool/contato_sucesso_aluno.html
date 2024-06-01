@@ -1,0 +1,13 @@
+{% extends 'global/base_aluno.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style_cadastro_sucesso_aluno.css' %}">
+
+<div class="contato-sucesso">
+    <p>Sua mensagem foi enviada com sucesso! Responderemos em 48h úteis.</p>
+</div>
+<div class="botao-container">
+    <a href="{% url 'appsmartschool:home_aluno' %}" class="botao-voltar">Voltar para a página inicial</a>
+</div>
+{% endblock %}

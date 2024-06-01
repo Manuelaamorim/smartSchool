@@ -15,6 +15,7 @@
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +26,9 @@
 header {
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: var(--cor-branca);
+    background-color: white;
 }
+
 ul {
     list-style-type: none;
     display: flex;
@@ -42,7 +44,7 @@ a {
 
 a:hover {
 
-    color: var(--primary);
+    color:  #f6b74d;
 }
 
 .nav-menu-texto {
@@ -55,6 +57,7 @@ a:hover {
 
     padding: 0.5em;
 }
+
 .div-logo {
     font-size: 16px;
 
@@ -78,6 +81,7 @@ div-logout {
     justify-content: center;
 
 }
+
 .cabecalho {
     height: 7vh;
     width: 100vw;

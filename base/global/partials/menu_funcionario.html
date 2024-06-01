@@ -1,28 +1,28 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
 <header>
-    <div class="cabecalho">
-      <div class="div-logo">
-            <a href="{% url 'appsmartschool:home_funcionario' %}">SmartSchool</a>
-      </div>
-      <div class="div-menu">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Cadastrar Aluno</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_professor' %}">Cadastrar Professor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="#">Cadastrar Dados de Saúde</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_disciplina' %}">Cadastrar Disciplinas</a>
-          </li>
-        </ul>
-      </div>
-      <div class="div-logout">
-          <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
-      </div>
+  <div class="cabecalho">
+    <div class="div-logo">
+      <a href="{% url 'appsmartschool:home_funcionario' %}">SmartSchool</a>
     </div>
+    <div class="div-menu">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_aluno' %}">Cadastrar Aluno</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_professor' %}">Cadastrar Professor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_disciplina' %}">Cadastrar Disciplinas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-menu-texto" href="{% url 'appsmartschool:cadastro_turma' %}">Cadastrar Turma</a>
+        </li>
+      </ul>
+    </div>
+    <div class="div-logout">
+      <a class="nav-menu-perfil" href="{% url 'appsmartschool:logout' %}">Log out</a>
+    </div>
+  </div>
 </header>

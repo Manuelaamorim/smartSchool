@@ -1,5 +1,17 @@
 {% extends 'global/base_funcionario.html' %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style_home_funcionario.css' %}"> 
+
+<link rel="stylesheet" href="{% static 'css/style_home_funcionario.css' %}">
+
+<section>
+  <div class="container">
+    <div class="img-wrapper">
+        <img class="img-background" src="{% static 'images/circulo.png' %}">
+        <img class="img-home" src="{% static 'images/pen.png' %}">
+    </div>
+    <h1 class="h1">PORTAL DO FUNCIONÁRIO</h1>
+  </div>
+</section>
+
 {% endblock %}

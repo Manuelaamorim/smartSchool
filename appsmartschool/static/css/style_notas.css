@@ -1,42 +1,64 @@
+/* style_notas.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --primary: rgb(104, 113, 183);
     --secondary: rgb(161, 167, 208);
     --container-bg: rgba(32, 34, 48, 0.426);
-    
     --font-color: whitesmoke;
-    
     --btn-color: rgb(49, 53, 90);
     --btn-pressed: rgb(31, 34, 57);
-    --cor-principal:#171a4a;
+    --cor-principal: #171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
     --cor-azul-clara: #99a6f2;
 }
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-image: url('/static/images/teste5.jpg');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 .container {
     width: 80%;
     margin: auto;
 }
+
+.glass-table {
+    max-width: 1500px;
+    max-height: 400px;
+    margin: 20px;
+    padding: 15px;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
+    margin-top: 15px;
 }
+
 th, td {
-    border: 1px solid black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
+
 th {
-    background-color: #f2f2f2;
+    background-color: #fcead6;
 }
+
 .header-section {
     margin: 40px 0;
     text-align: center;
@@ -45,21 +67,17 @@ th {
     flex-direction: column;
 }
 
-.header-section h1{
-    font-weight: 500;
-    font-size: 3rem;
-}
-
-.linha{
+.linha {
     border-bottom: 1px solid grey;
     width: 20vw;
-}   
+}
 
 .info-section {
-    margin-top: 20px;
+    margin-top: 150px;
     margin-bottom: 15vh;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 ul.messages {

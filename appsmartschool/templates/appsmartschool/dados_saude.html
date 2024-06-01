@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static '../static/css/style_dados_saude.css' %}">
+<link rel="stylesheet" href="{% static 'css/style_dados_saude.css' %}">
 
 <section>
   <div class="container">
@@ -10,23 +10,20 @@
       {% if messages %}
       <ul class="messages">
           {% for message in messages %}
-          {% if 'dados' in message.tags %}
           <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-          {% endif %}
           {% endfor %}
       </ul>
       {% endif %}
-      {% for dado in dados %}
-      <h1 class="dados-titulo">Dados de saúde</h1>
+      <h1 class="dados-titulo">{{ nome }}</h1>
       <ul class="dados-ul">
-        <li class="dados">Seu peso: {{dado.peso}} kg</li>
-        <li class="dados">Sua altura: {{dado.altura}} cm</li>
-        <li class="dados">Possui restrição alimentar: {{dado.restricao_alimentar}}</li>
-        <li class="dados">Possui TDAH/TEA: {{dado.tdah}}</li>
-        <li class="dados-margin">É PCD: {{dado.pcd}}</li>
-        {% endfor %}
+        <li class="dados">Seu peso: {{ peso }} kg</li>
+        <li class="dados">Sua altura: {{ altura|floatformat:2 }} m</li>
+        <li class="dados">Possui restrição alimentar: {{ restricao_alimentar }}</li>
+        <li class="dados">Possui TDAH/TEA: {{ tdah }}</li>
+        <li class="dados-margin">É PCD: {{ pcd }}</li>
       </ul>
     </div>
   </div>
 </section>
+
 {% endblock %}
