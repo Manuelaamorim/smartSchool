@@ -233,7 +233,7 @@ describe('test cadastrar Turma', () => {
 
     })
 
-    it('cenario2', () => {
+    it('cenario3', () => {
         cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false });
         cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
 
