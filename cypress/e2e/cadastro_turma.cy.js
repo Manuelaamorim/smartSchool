@@ -87,7 +87,9 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('p').invoke('text').should('have.string', "Cadastro realizado com sucesso.")
+        cy.get('p').invoke('text').then((text) => {
+            expect(text.trim()).to.include('Cadastro realizado com sucesso.');
+          });
         cy.wait(3000)
     })
 
@@ -321,7 +323,7 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.messages').within(() => {
             cy.contains('div', 'Matéria 1 não cadastrada.').should('exist');
         });
         cy.wait(3000);
@@ -454,7 +456,7 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.messages').within(() => {
             cy.contains('div', 'Código da materia 1 já existe.').should('exist');
         });
 
