@@ -75,13 +75,13 @@ jobs:
 
       - name: Cleaning testing files
         run: |
-          rm .env
-          rm db.sqlite3
-          rm cypress.config.js
-          rm package-lock.json
-          rm package.json
-          rm -rf cypress
-          rm -rf node_modules
+          [ -f .env ] && rm .env
+          [ -f db.sqlite3 ] && rm db.sqlite3
+          [ -f cypress.config.js ] && rm cypress.config.js
+          [ -f package-lock.json ] && rm package-lock.json
+          [ -f package.json ] && rm package.json
+          [ -d cypress ] && rm -rf cypress
+          [ -d node_modules ] && rm -rf node_modules
 
       - name: Zip artifact for deployment
         run: zip -r release.zip .
