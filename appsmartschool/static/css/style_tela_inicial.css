@@ -8,7 +8,7 @@
     --font-color: whitesmoke;
     
     --btn-color: rgb(49, 53, 90);
-    --btn-pressed: rgb(31, 34, 57);
+    --btn-pressed: #f6b74d;
     --cor-principal:#171a4a;
     --cor-preta: #000000;
     --cor-branca: #eae2e6;
@@ -32,12 +32,12 @@ body {
 
 .left {
     left: 0;
-    background: linear-gradient(127deg, var(--cor-principal), var(--secondary));
+    background: bisque;
 }
 
 .right {
     right: 0;
-    background: #ffffff;
+    background: whitesmoke;
 }
 
 .centered {
@@ -54,22 +54,43 @@ body {
     width: 100%;
 }
 
-.centered img {
+.img-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.img-home {
+    position: relative;
+    width: 75%;
+    height: 80%;
+    z-index: 1;
+}
+
+/* .centered img {
     width: 80%;
     border-radius: 5%;
-}
+} */
 
 .centered h1 {
     font-size: 3rem;
     margin-bottom: 7rem;
+    color:  #fec85a;
 }
 
 button {
+    background-color: #fec85a;
+    color: white;
+    border: 2px solid #e6c476;
+    border-radius: 15px;
     font-size: 16px;
     padding: 20px 20px;
     margin-bottom: 1rem;
     cursor: pointer;
-    width: 200px;
+    width: 300px;
     display: block;
 }
 
