@@ -26,12 +26,63 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-      
+
+      - name: Django CI
+
+        on:
+          push:
+            branches: [ main ]
+          pull_request:
+            branches: [ main ]
+
+        jobs:
+          build:
+
+            runs-on: ubuntu-latest
+
+            services:
+              postgres:
+                image: postgres:latest
+                env:
+                  POSTGRES_DB: test_db
+                  POSTGRES_USER: user
+                  POSTGRES_PASSWORD: password
+                ports:
+                  - 5432:5432
+                options: >-
+                  --health-cmd pg_isready
+                  --health-interval 10s
+                  --health-timeout 5s
+                  --health-retries 5
+
+              env:
+                DATABASE_URL: postgres://user:password@localhost:5432/test_db
+
+              steps:
+              - uses: actions/checkout@v2
+            
+              - name: Set up Python
+                uses: actions/setup-python@v2
+                with:
+                  python-version: 3.9
+          
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           npm ci
 
+      - name: Run migrations
+        run: |
+          python manage.py migrate
+
+      - name: Create superuser
+        env:
+          DJANGO_SUPERUSER_USERNAME: admin
+          DJANGO_SUPERUSER_PASSWORD: 123
+          DJANGO_SUPERUSER_EMAIL: admin@example.com
+        run: |
+          echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('${{ env.DJANGO_SUPERUSER_USERNAME }}', '${{ env.DJANGO_SUPERUSER_EMAIL }}', '${{ env.DJANGO_SUPERUSER_PASSWORD }}')" | python manage.py shell
+      
       - name: Run local server
         run: |
           python manage.py migrate
