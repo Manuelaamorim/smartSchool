@@ -348,19 +348,19 @@ def cadastro_turma(request):
             return render(request, 'appsmartschool/cadastro_turma.html')
 
         if Turma.objects.filter(codigo_materia_1=codigo_materia_1).exists():
-            messages.error(request, 'Código da matéria 1 já existe.')
+            messages.error(request, 'Código da materia 1 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
         if Turma.objects.filter(codigo_materia_2=codigo_materia_2).exists():
-            messages.error(request, 'Código da matéria 2 já existe.')
+            messages.error(request, 'Código da materia 2 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
         if Turma.objects.filter(codigo_materia_3=codigo_materia_3).exists():
-            messages.error(request, 'Código da matéria 3 já existe.')
+            messages.error(request, 'Código da materia 3 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
         
         if Turma.objects.filter(codigo_materia_4=codigo_materia_4).exists():
-            messages.error(request, 'Código da matéria 4 já existe.')
+            messages.error(request, 'Código da materia 4 já existe.')
             return render(request, 'appsmartschool/cadastro_turma.html')
 
         try:
@@ -402,7 +402,7 @@ def cadastro_turma(request):
             )
             serie_turma.save()
 
-            messages.success(request, 'Turma cadastrada com sucesso!')
+            messages.success(request, 'Cadastro realizado com sucesso.')
             return redirect('appsmartschool:cadastro_sucesso')
         
         except Exception as e:

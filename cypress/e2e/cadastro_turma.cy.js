@@ -69,7 +69,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.contains('p', 'Cadastro realizado com sucesso.', { timeout: 10000 }).should('be.visible');
+        cy.get('p').invoke('text').should('contain', 'Cadastro realizado com sucesso.')
     });
 
     it('cenario2', () => {
@@ -179,9 +179,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
-            cy.contains('div', 'A turma já existe.').should('be.visible');
-        });
+        cy.get('.error').invoke('text').should('contain', 'A turma já existe.')
     });
 
     it('cenario3', () => {
@@ -254,9 +252,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
-            cy.contains('div', 'Matéria 1 não cadastrada.').should('be.visible');
-        });
+        cy.get('.error').invoke('text').should('contain', 'Matéria 1 não cadastrada.')
     });
 
     it('cenario4', () => {
@@ -359,8 +355,6 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
-            cy.contains('div', 'Código da matéria 1 já existe.').should('be.visible');
-        });
+        cy.get('.error').invoke('text').should('contain', 'Código da materia 1 já existe.')
     });
 });
