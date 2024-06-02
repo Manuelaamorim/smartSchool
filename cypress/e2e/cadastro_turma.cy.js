@@ -87,9 +87,7 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('p').invoke('text').then((text) => {
-            expect(text.trim()).to.include('Cadastro realizado com sucesso.');
-          });
+        cy.get('p').invoke('text').should('have.string', "Cadastro realizado com sucesso.")
         cy.wait(3000)
     })
 
@@ -228,9 +226,7 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('.messages').within(() => {
-            cy.contains('div', 'A turma já existe.').should('exist');
-        });
+        cy.get('.error').invoke('text').should('have.string', "A turma já existe.")
         cy.wait(3000)
 
     })
@@ -456,10 +452,8 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click()
         cy.wait(300)
 
-        cy.get('.messages').within(() => {
-            cy.contains('div', 'Código da materia 1 já existe.').should('exist');
-        });
-
+        cy.get('.error').invoke('text').should('have.string', "Código da materia 1 já existe.")
+        
         cy.wait(3000)
 
     })
