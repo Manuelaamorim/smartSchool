@@ -1,11 +1,9 @@
 describe('test cadastrar Turma', () => {
-    beforeEach(() => {
+    it('cenario1', () => {
         cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
             cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
         });
-    });
 
-    it('cenario1', () => {
         cy.visit('/admin'); 
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -71,10 +69,14 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('p').invoke('text').should('contain', 'Cadastro realizado com sucesso.');
+        cy.get('p').invoke('text').should('contain', 'Cadastro realizado com sucesso.')
     });
 
     it('cenario2', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -177,10 +179,14 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.error').invoke('text').should('have.string', 'A turma já existe.');
+        cy.get('.error').invoke('text').should('contain', 'A turma já existe.')
     });
 
     it('cenario3', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -246,10 +252,14 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.error').invoke('text').should('contain', 'Matéria 1 não cadastrada.');
+        cy.get('.error').invoke('text').should('contain', 'Matéria 1 não cadastrada.')
     });
 
     it('cenario4', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -345,6 +355,6 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.error').invoke('text').should('have.string', 'Código da materia 1 já existe.');
+        cy.get('.error').invoke('text').should('contain', 'Código da materia 1 já existe.')
     });
 });
