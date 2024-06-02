@@ -1,16 +1,14 @@
 describe('test cadastrar Turma', () => {
-    beforeEach(() => {
+    it('cenario1', () => {
         cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
             cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
         });
-    });
 
-    it('cenario1', () => {
-        cy.visit('/admin');
+        cy.visit('/admin'); 
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
         cy.get('.submit-row > input').click();
-
+        
         cy.get('.model-user > :nth-child(2) > .addlink').click();
         cy.get('#id_username').type('16285736299');
         cy.get('#id_password1').type('julioam123');
@@ -71,10 +69,16 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('p', { timeout: 10000 }).should('have.text', 'Cadastro realizado com sucesso.');
+        cy.get('p', { timeout: 10000 }).within(() => {
+            cy.contains('div', 'Cadastro realizado com sucesso.').should('be.visible');
+        });
     });
 
     it('cenario2', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -177,12 +181,16 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.error', { timeout: 10000 }).within(() => {
             cy.contains('div', 'A turma já existe.').should('be.visible');
         });
     });
 
     it('cenario3', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -254,6 +262,10 @@ describe('test cadastrar Turma', () => {
     });
 
     it('cenario4', () => {
+        cy.exec('py manage.py flush --noinput', { failOnNonZeroExit: false }).then(() => {
+            cy.exec('py manage.py create_superuser', { failOnNonZeroExit: false });
+        });
+
         cy.visit('/admin');
         cy.get('#id_username').type('admin');
         cy.get('#id_password').type('123456');
@@ -349,7 +361,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.error', { timeout: 10000 }).within(() => {
             cy.contains('div', 'Código da materia 1 já existe.').should('be.visible');
         });
     });
