@@ -69,7 +69,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.contains('p', 'Cadastro realizado com sucesso.', { timeout: 10000 }).should('be.visible');
+        cy.get('p').invoke('text').should('have.string', "Cadastro realizado com sucesso.");
     });
 
     it('cenario2', () => {
