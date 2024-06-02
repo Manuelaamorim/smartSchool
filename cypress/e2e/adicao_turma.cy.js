@@ -345,6 +345,6 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.error').invoke('text').should('contain', 'Código da materia 1 já existe.')
+        cy.get('.error').invoke('text').should('contain', 'Código da matéria 1 já existe.')
     });
 });
