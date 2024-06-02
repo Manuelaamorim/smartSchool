@@ -360,7 +360,7 @@ describe('test cadastrar Turma', () => {
         cy.get('.btn-submit').click();
 
         cy.get('.messages', { timeout: 10000 }).within(() => {
-            cy.contains('div', 'Código da materia 1 já existe.').should('be.visible');
+            cy.contains('div', 'Código da matéria 1 já existe.').should('be.visible');
         });
     });
 });
