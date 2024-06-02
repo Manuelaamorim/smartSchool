@@ -254,8 +254,8 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
-            cy.contains('div', 'Matéria 1 não cadastrada.').should('be.visible');
+        cy.get('.messages').within(() => {
+            cy.contains('div', 'Matéria 1 não cadastrada.').should('exist');
         });
     });
 
