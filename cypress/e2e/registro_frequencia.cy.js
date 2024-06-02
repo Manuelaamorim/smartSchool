@@ -86,10 +86,6 @@ describe('test registrar notas', () => {
         cy.get('#id_cpf_responsavel').type('73681609210')
         cy.get('#id_telefone').type('81997725630')
         cy.get('#id_email_responsavel').type('mantonieta@gmail.com')
-        cy.get('#id_peso').clear()
-        cy.get('#id_peso').type('25.5')
-        cy.get('#id_altura').clear()
-        cy.get('#id_altura').type('1.30')
         cy.wait(3000)
         cy.get('.default').click()
 
@@ -114,10 +110,6 @@ describe('test registrar notas', () => {
         cy.get('#id_cpf_responsavel').type('73681509210')
         cy.get('#id_telefone').type('81897725630')
         cy.get('#id_email_responsavel').type('matonieta@gmail.com')
-        cy.get('#id_peso').clear()
-        cy.get('#id_peso').type('20.5')
-        cy.get('#id_altura').clear()
-        cy.get('#id_altura').type('1.28')
         cy.wait(3000)
         cy.get('.default').click()
 
