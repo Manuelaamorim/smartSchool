@@ -16,11 +16,11 @@
   </li>
   <li>
     <a  href=""
-      >Screencast CI/CD com Build e Deployment Automatizado - Entrega 03</a>
+      >Screencast CI/CD com Build e Deployment Automatizado - Entrega 04</a>
   </li>
   <li>
     <a  href=""
-      >Screencast da Execução dos Testes - Entrega 03</a>
+      >Screencast da Execução dos Testes - Entrega 04</a>
   </li>
 </ul>
 <br/>
