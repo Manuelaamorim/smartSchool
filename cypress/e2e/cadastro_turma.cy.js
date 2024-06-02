@@ -69,7 +69,9 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2024ART4');
         cy.get('.btn-submit').click();
 
-        cy.contains('p', 'Cadastro realizado com sucesso.', { timeout: 10000 }).should('be.visible');
+        cy.get('p', { timeout: 10000 }).within(() => {
+            cy.contains('div', 'Cadastro realizado com sucesso.').should('be.visible');
+        });
     });
 
     it('cenario2', () => {
@@ -179,7 +181,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.error', { timeout: 10000 }).within(() => {
             cy.contains('div', 'A turma já existe.').should('be.visible');
         });
     });
@@ -359,7 +361,7 @@ describe('test cadastrar Turma', () => {
         cy.get('#codigo_materia_4').type('2025ART4');
         cy.get('.btn-submit').click();
 
-        cy.get('.messages', { timeout: 10000 }).within(() => {
+        cy.get('.error', { timeout: 10000 }).within(() => {
             cy.contains('div', 'Código da materia 1 já existe.').should('be.visible');
         });
     });
