@@ -3,7 +3,7 @@
 ## Links relevantes:
 <ul>
   <li>
-    <a  href="https://cesar-mvp2.atlassian.net/jira/software/projects/VNC/boards/2"
+    <a  href="https://smartschl.atlassian.net/jira/software/projects/SSC/boards/1"
       >Projeto no Jira</a>
   </li>
     <li>
