@@ -59,7 +59,7 @@ git commit -m “seu comentário”
 git push
 
 - Recebendo atualizações do código:
-Git pull
+git pull
 
 - Requisitando Permissão para Commitar:
 Se você não foi adicionado como colaborador, siga estes passos para requisitar permissão para commit:
