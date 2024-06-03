@@ -68,13 +68,15 @@
 
  ## Print do backlog do projeto:
   
-![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/55178ba1-d196-431d-89fb-8f4c22fd661c)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/9d171e39-ffb4-4b07-a906-00a8ee9eb24d)
+
 
 <br/>  
  
 ## Print do quadro da Sprint:
 
-![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/69038a71-cae6-4749-b280-f08a7f0dcb47)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/e54eb93f-380d-450d-a74a-64fb182d9226)
+
 
 <br/>
 
