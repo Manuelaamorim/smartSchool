@@ -22,6 +22,10 @@
     <a  href=""
       >Screencast da Execução dos Testes - Entrega 04</a>
   </li>
+  <li>
+    <a  href="https://www.canva.com/design/DAGGk8p_AkY/19pwTeSljG1Q3IXN_71K1Q/edit"
+      >Apresentação da Entrega 04 no Canva</a>
+  </li>
 </ul>
 <br/>
 
