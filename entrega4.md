@@ -69,18 +69,12 @@ Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as info
   
   - Issues em abertas:
 
-  ![image](https://github.com/Manuelaamorim/SmartSchool/assets/144596701/3c44a3b5-0da6-4d7d-9ae1-f62b584a4c66)
- 
+  ![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/94eac44d-62f5-41d4-954e-84f6960532f3)
        
   - Issues fechadas:
 
-   ![image](https://github.com/Manuelaamorim/SmartSchool/assets/144596701/2c889ace-d0e7-4782-9db6-3437af011545)
-
-   ![image](https://github.com/Manuelaamorim/SmartSchool/assets/144596701/a9cc47e1-e72a-4e5b-9721-aeeab869566e)
-
-   ![image](https://github.com/Manuelaamorim/SmartSchool/assets/144596701/3f9d7962-0d5f-484c-aa49-2136f26b89d7)
-
-   ![image](https://github.com/Manuelaamorim/SmartSchool/assets/144596701/7e9c1e31-d503-49cc-930a-0ffcb8fecd00)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/607af412-bd11-442a-a1ea-8106c2cb9a03)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/78ac8918-ef9f-49ae-a5bb-d5e183dad963)
 
 <br/>
 
