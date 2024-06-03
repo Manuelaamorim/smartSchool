@@ -201,7 +201,7 @@ Seguindo esses passos, você garantirá que todas as mudanças sejam revisadas e
 
 
 ## Acessando Nosso Site na Azure
-	Acesse o endereço https://fdssmartschool.azurewebsites.net/  para visitar o site da Smartschool, siga as diretrizes de contribuição descritas no nosso repositório para manter a consistência e qualidade do projeto.
+- Acesse o endereço https://fdssmartschool.azurewebsites.net/  para visitar o site da Smartschool, siga as diretrizes de contribuição descritas no nosso repositório para manter a consistência e qualidade do projeto.
  <ul>
   <li>
     <a  href="https://fdssmartschool.azurewebsites.net/"
