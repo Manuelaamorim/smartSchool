@@ -1,0 +1,84 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+
+name: Build and deploy Python app to Azure Web App - fdssmartschool
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: test_db
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgres://user:password@localhost:5432/test_db
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python version
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          npm ci
+
+      - name: Run migrations
+        run: |
+          python manage.py migrate
+
+      - name: Create superuser
+        env:
+          DJANGO_SUPERUSER_USERNAME: admin
+          DJANGO_SUPERUSER_PASSWORD: 123456
+          DJANGO_SUPERUSER_EMAIL: admin@example.com
+        run: |
+          echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('${{ env.DJANGO_SUPERUSER_USERNAME }}', '${{ env.DJANGO_SUPERUSER_EMAIL }}', '${{ env.DJANGO_SUPERUSER_PASSWORD }}')" | python manage.py shell
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Run local server and Cypress tests
+        run: |
+          python manage.py runserver &
+          sleep 10
+          npx cypress run
+
+      - name: Cleaning testing files
+        run: |
+          [ -f .env ] && rm .env
+          [ -f db.sqlite3 ] && rm db.sqlite3
+          [ -f cypress.config.js ] && rm cypress.config.js
+          [ -f package-lock.json ] && rm package-lock.json
+          [ -f package.json ] && rm package.json
+          [ -d cypress ] && rm -rf cypress
+          [ -d node_modules ] && rm -rf node_modules
