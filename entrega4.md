@@ -55,7 +55,7 @@ Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as info
     <a  href="https://docs.google.com/document/d/1zgVShyUxGV-HEYkiDcIPZz-uAUELK1W01pC6oIA0J6Q/edit"
       >Link do Documento com as Informações do Banco de Dados da Azure</a>
   </li>
-</ul>ul>
+</ul>
 <br/>
 
 ## Diagrama de atividades do sistema:
