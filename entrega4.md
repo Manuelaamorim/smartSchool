@@ -40,7 +40,7 @@
 
 ## Instruções de acesso ao projeto:
 
-Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seu respectivo login.
+Na página inicial do nossa aplicação, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seu respectivo login.
 
 Para acessar como Aluno, utilize o CPF "60356365433" e a matrícula "ale12345". Com esse login, os usuários podem visualizar informações como dados de saúde, boletim escolar, horários de aula e frequência da estudante Ana Luiza Eugênio. Além disso, há uma opção para que Ana Luiza envie um formulário de contato para a instituição de ensino.
 
