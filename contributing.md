@@ -22,15 +22,11 @@ cd /c/Users/SeuUsuario/SeuDiretorio
 - Clone o repositório para o diretório navegado, utilizando o comando:
 git clone https://github.com/Manuelaamorim/SmartSchool.git
 
-<html lang="en">
+
 <body>
-    <p id="text-to-copy">Texto a ser copiado</p> <!-- Altere este texto -->
-    <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
-
       git clone https://github.com/Manuelaamorim/SmartSchool.git
-
 </body>
-</html>
+
 
 ## Após acessar no código
 - Habilitando execução de scripts no PowerShell do Windows:
