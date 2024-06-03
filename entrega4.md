@@ -86,7 +86,7 @@ Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as info
 
  ## Print do backlog do projeto:
   
-![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/9d171e39-ffb4-4b07-a906-00a8ee9eb24d)
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142773064/32adf2b2-9a9c-4bb2-a071-220d6c496999)
 
 
 <br/>  
