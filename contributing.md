@@ -200,8 +200,8 @@ Após a aprovação, um mantenedor do repositório fará o merge das mudanças n
 Seguindo esses passos, você garantirá que todas as mudanças sejam revisadas e integradas corretamente ao projeto.
 
 
-## Acessando nosso site na Azure
-- Acesse o endereço https://fdssmartschool.azurewebsites.net/  para visitar o site da Smartschool, siga as diretrizes de contribuição descritas no nosso repositório para manter a consistência e qualidade do projeto.
+## Acessando nossa aplicação na Azure
+- Acesse o endereço https://fdssmartschool.azurewebsites.net/  para visitar a aplicação da Smartschool, siga as diretrizes de contribuição descritas no nosso repositório para manter a consistência e qualidade do projeto.
  <ul>
   <li>
     <a  href="https://fdssmartschool.azurewebsites.net/"
