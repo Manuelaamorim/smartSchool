@@ -139,8 +139,8 @@ def frequencia_alunos_visualizar(request):
             return redirect('appsmartschool:home_aluno')
 
     except UserAluno.DoesNotExist:
-        return redirect('appsmartschool:home_aluno')
         messages.error(request, 'Aluno não cadastrado.', extra_tags='frequencia')
+        return redirect('appsmartschool:home_aluno')
 
     return render(request, 'appsmartschool/frequencia.html', {'frequencia_dados': frequencia_dados, 'user_aluno': user_aluno})
 
