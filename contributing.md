@@ -89,7 +89,7 @@ Abra o terminal do Git Bash
 
 Por fim, quando necessário, realize os comandos a seguir:
 
-- Para executar o site, use o comando na URL http://127.0.0.1:8000/:
+- Para executar o site na URL http://127.0.0.1:8000/, use o comando:
 
 
 <html lang="pt">
@@ -143,11 +143,11 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Requisitando permissão para commitar:
+## Requisitando permissão para commitar
 Se você não foi adicionado como colaborador, siga estes passos para requisitar permissão para commit:
 
-## Solicitando acesso
-- Abra uma issue no repositório solicitando permissão para ser adicionado como colaborador. Descreva brevemente seu interesse em contribuir e as áreas específicas em que você gostaria de ajudar.
+- Solicitando acesso:
+Abra uma issue no repositório solicitando permissão para ser adicionado como colaborador. Descreva brevemente seu interesse em contribuir e as áreas específicas em que você gostaria de ajudar.
 
 - Aguardando aprovação:
 Um mantenedor do repositório revisará sua solicitação e, se aprovado, adicionará você como colaborador.
