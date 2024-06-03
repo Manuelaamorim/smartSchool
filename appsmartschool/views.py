@@ -107,29 +107,43 @@ def dados_saude_visualizar(request):
 def frequencia_alunos_visualizar(request):
     try:
         user_aluno = UserAluno.objects.get(user=request.user)
+        try:
+            turma_aluno = Turma.objects.get(serie=user_aluno.serie, turma=user_aluno.turma)
+            disciplina_codigos = [
+                turma_aluno.codigo_materia_1,
+                turma_aluno.codigo_materia_2,
+                turma_aluno.codigo_materia_3,
+                turma_aluno.codigo_materia_4
+            ]
+            disciplinas = Disciplina.objects.filter(codigo__in=disciplina_codigos)
+
+            frequencia_dados = []
+
+            for disciplina in disciplinas:
+                total_aulas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina).count()
+                faltas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina, presente=False).count()
+                if total_aulas > 0:
+                    porcentagem_faltas = ((total_aulas - faltas) / total_aulas) * 100
+                else:
+                    porcentagem_faltas = 100
+                
+                frequencia_dados.append({
+                    'disciplina': disciplina.nome,
+                    'total_aulas': total_aulas,
+                    'faltas': faltas,
+                    'porcentagem_faltas': porcentagem_faltas
+                })
+
+        except Turma.DoesNotExist:
+            messages.error(request, "Não há turma cadastrada para sua série e turma.", extra_tags='frequencia')
+            return redirect('appsmartschool:home_aluno')
+
     except UserAluno.DoesNotExist:
-        messages.error(request, 'Aluno não cadastrado.')
-        return redirect('appsmartschool:home_aluno')  # Redireciona para uma página adequada
-
-    disciplinas = Disciplina.objects.all()
-    frequencia_dados = []
-
-    for disciplina in disciplinas:
-        total_aulas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina).count()
-        faltas = Presenca.objects.filter(aluno=user_aluno, materia=disciplina, presente=False).count()
-        if total_aulas > 0:
-            porcentagem_faltas = ((total_aulas - faltas) / total_aulas) * 100
-        else:
-            porcentagem_faltas = 100
-        
-        frequencia_dados.append({
-            'disciplina': disciplina.nome,
-            'total_aulas': total_aulas,
-            'faltas': faltas,
-            'porcentagem_faltas': porcentagem_faltas
-        })
+        return redirect('appsmartschool:home_aluno')
+        messages.error(request, 'Aluno não cadastrado.', extra_tags='frequencia')
 
     return render(request, 'appsmartschool/frequencia.html', {'frequencia_dados': frequencia_dados, 'user_aluno': user_aluno})
+
 
 @login_required
 def formulario_contato_aluno(request):
