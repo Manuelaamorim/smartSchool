@@ -40,8 +40,22 @@
 
 ## Instruções de acesso ao projeto:
 
+Na página inicial do nosso site, os usuários podem escolher entre três perfis distintos: Aluno, Funcionário e Professor. Cada um deles redireciona o usuário a página de seu respectivo login.
 
+Para acessar como Aluno, utilize o CPF "60356365433" e a matrícula "ale12345". Com esse login, os usuários podem visualizar informações como dados de saúde, boletim escolar, horários de aula e frequência da estudante Ana Luiza Eugênio. Além disso, há uma opção para que Ana Luiza envie um formulário de contato para a instituição de ensino.
 
+Realizando o logout, o login dos professores deve ser feito utilizando o CPF "03662551004" e a senha "jllm3328". Ao fazer isso, o usuário entrará no menu principal do professor João Lucas Lucena Maranhão. Nesse menu, ele poderá registrar a frequência e as notas dos alunos, além de enviar um formulário de contato para a instituição de ensino.
+
+Após realizar o logout e retornar à página principal, escolha o perfil de "Funcionário" para fazer login. Utilizando o CPF "92873712491" e a matrícula "mlbc9916", o acesso é feito como Marcos Luiz Bonifácio Cordeiro, que possui autorização para cadastrar novos alunos, professores, disciplinas e turmas. Se o cadastro for concluído com sucesso, o usuário será redirecionado para uma página de confirmação.
+
+Para utilizar outros dados cadastrados no Banco de Dados Azure, consulte as informações detalhadas abaixo.
+
+<ul>
+  <li>
+    <a  href="https://docs.google.com/document/d/1zgVShyUxGV-HEYkiDcIPZz-uAUELK1W01pC6oIA0J6Q/edit"
+      >Link do Documento com as Informações do Banco de Dados da Azure</a>
+  </li>
+</ul>ul>
 <br/>
 
 ## Diagrama de atividades do sistema:
