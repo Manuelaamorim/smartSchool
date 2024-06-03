@@ -17,10 +17,14 @@ O primeiro passo é criar uma conta no GitHub seguindo as instruções abaixo:
 Abra o terminal do Git Bash
 
 - Navegue até o diretório onde você deseja clonar o repositório, utilizando o comando:
-cd /c/Users/SeuUsuario/SeuDiretorio
+
+<html lang="pt">
+
+      cd /c/Users/SeuUsuario/SeuDiretorio
+
+</html>
 
 - Clone o repositório para o diretório navegado, utilizando o comando:
-git clone https://github.com/Manuelaamorim/SmartSchool.git
 
 <html lang="pt">
 
@@ -30,42 +34,114 @@ git clone https://github.com/Manuelaamorim/SmartSchool.git
 
 ## Após acessar no código
 - Habilitando execução de scripts no PowerShell do Windows:
-Set-ExecutionPolicy -Scope CurrentUser Unrestricted
+
+
+<html lang="pt">
+
+      Set-ExecutionPolicy -Scope CurrentUser Unrestricted
+
+</html>
 
 - Criando um ambiente virtual:
-py -m venv venv
+
+
+<html lang="pt">
+
+      py -m venv venv
+
+</html>
 
 - Ativando o ambiente virtual:
-venv\Scripts\activate.bat
+
+
+<html lang="pt">
+
+      venv\Scripts\activate.bat
+
+</html>
 
 - Instalar o conteúdo do requirements.txt:
-pip install -r requirements.txt
+
+
+<html lang="pt">
+
+      pip install -r requirements.txt
+
+</html>
 
 - Criação de arquivos de migração baseados nas mudanças já existentes:
-python manage.py makemigrations appsmartschool
+
+
+<html lang="pt">
+
+      python manage.py makemigrations appsmartschool
+
+</html>
 
 - Aplicação das migrações ao seu banco de dados:
-python manage.py migrate
+
+
+<html lang="pt">
+
+      python manage.py migrate
+
+</html>
 
 Por fim, quando necessário, realize os comandos a seguir:
 
 - Para executar o site, use o comando na URL http://127.0.0.1:8000/:
-python manage.py runserver
+
+
+<html lang="pt">
+
+      python manage.py runserver
+
+</html>
 
 - Verificando o Status do Repositório:
-git status
+
+
+<html lang="pt">
+
+      git status
+
+</html>
 
 - Adicionando Arquivos Modificados:
-git add .
+
+
+<html lang="pt">
+
+      git add .
+
+</html>
 
 - Fazendo o Commit das Mudanças:
-git commit -m “seu comentário”
+
+
+<html lang="pt">
+
+      git commit -m “seu comentário”
+
+</html>
 
 - Enviando as Mudanças para o Repositório Remoto:
-git push
+
+
+<html lang="pt">
+
+      git push
+
+</html>
 
 - Recebendo atualizações do código:
-git pull
+
+
+<html lang="pt">
+
+      git pull
+
+</html>
 
 - Requisitando Permissão para Commitar:
 Se você não foi adicionado como colaborador, siga estes passos para requisitar permissão para commit:
@@ -95,10 +171,22 @@ Após ser adicionado como colaborador, você receberá uma notificação por e-m
 Para solicitar um merge da branch prod (que está na Azure) para a branch main, siga os passos abaixo:
 
 - Certifique-se de que está na branch prod:
-git checkout prod
+
+
+<html lang="pt">
+
+      git checkout prod
+
+</html>
 
 - Atualize a Branch prod:
-git pull origin prod
+
+
+<html lang="pt">
+
+      git pull origin prod
+
+</html>
 
 - Crie um Pull Request:
 Crie um novo pull request no GitHub solicitando o merge da prod para a main. Inclua uma descrição detalhada das mudanças e qualquer contexto necessário para a revisão.
