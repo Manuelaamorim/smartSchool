@@ -22,6 +22,36 @@ cd /c/Users/SeuUsuario/SeuDiretorio
 - Clone o repositório para o diretório navegado, utilizando o comando:
 git clone https://github.com/Manuelaamorim/SmartSchool.git
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Copiar</title>
+    <style>
+        .copy-button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text-to-copy">git clone https://github.com/Manuelaamorim/SmartSchool.git</p>
+    <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById('text-to-copy').textContent;
+            navigator.clipboard.writeText(textToCopy);
+        }
+    </script>
+</body>
+</html>
+
 ## Após acessar no código
 - Habilitando execução de scripts no PowerShell do Windows:
 Set-ExecutionPolicy -Scope CurrentUser Unrestricted
