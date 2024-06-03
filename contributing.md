@@ -98,7 +98,7 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Verificando o Status do Repositório:
+- Verificando o status do repositório:
 
 
 <html lang="pt">
@@ -107,7 +107,7 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Adicionando Arquivos Modificados:
+- Adicionando arquivos modificados:
 
 
 <html lang="pt">
@@ -116,7 +116,7 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Fazendo o Commit das Mudanças:
+- Fazendo o commit das mudanças:
 
 
 <html lang="pt">
@@ -125,7 +125,7 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Enviando as Mudanças para o Repositório Remoto:
+- Enviando as mudanças para o repositório remoto:
 
 
 <html lang="pt">
@@ -143,19 +143,19 @@ Por fim, quando necessário, realize os comandos a seguir:
 
 </html>
 
-- Requisitando Permissão para Commitar:
+- Requisitando permissão para commitar:
 Se você não foi adicionado como colaborador, siga estes passos para requisitar permissão para commit:
 
-## Solicitando Acesso
+## Solicitando acesso
 - Abra uma issue no repositório solicitando permissão para ser adicionado como colaborador. Descreva brevemente seu interesse em contribuir e as áreas específicas em que você gostaria de ajudar.
 
-- Aguardando Aprovação:
+- Aguardando aprovação:
 Um mantenedor do repositório revisará sua solicitação e, se aprovado, adicionará você como colaborador.
 
-- Confirmando Colaboração:
+- Confirmando colaboração:
 Após ser adicionado como colaborador, você receberá uma notificação por e-mail. Confirme a colaboração e siga os passos de envio de atualizações listados acima.
 
-## Criando Contas nas Ferramentas Necessárias e acessando-as
+## Criando contas nas ferramentas necessárias e acessando-as
 <ul>
   <li>
     <a  href="https://smartschl.atlassian.net/jira/software/projects/SSC/boards/1"
@@ -167,7 +167,7 @@ Após ser adicionado como colaborador, você receberá uma notificação por e-m
   </li>
 </ul>
 
-## Solicitação de Merge da Prod para a Main
+## Solicitação de merge da prod para a main
 Para solicitar um merge da branch prod (que está na Azure) para a branch main, siga os passos abaixo:
 
 - Certifique-se de que está na branch prod:
@@ -188,19 +188,19 @@ Para solicitar um merge da branch prod (que está na Azure) para a branch main, 
 
 </html>
 
-- Crie um Pull Request:
+- Crie um pull request:
 Crie um novo pull request no GitHub solicitando o merge da prod para a main. Inclua uma descrição detalhada das mudanças e qualquer contexto necessário para a revisão.
 
-- Aguarde Revisão e Aprovação:
+- Aguarde revisão e aprovação:
 Notifique os mantenedores do repositório sobre o pull request para que possam revisar e aprovar as mudanças.
 
-- Merge Aprovado:
+- Merge aprovado:
 Após a aprovação, um mantenedor do repositório fará o merge das mudanças na branch main.
 
 Seguindo esses passos, você garantirá que todas as mudanças sejam revisadas e integradas corretamente ao projeto.
 
 
-## Acessando Nosso Site na Azure
+## Acessando nosso site na Azure
 - Acesse o endereço https://fdssmartschool.azurewebsites.net/  para visitar o site da Smartschool, siga as diretrizes de contribuição descritas no nosso repositório para manter a consistência e qualidade do projeto.
  <ul>
   <li>
