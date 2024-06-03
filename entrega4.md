@@ -68,14 +68,13 @@
 
  ## Print do backlog do projeto:
   
-
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/55178ba1-d196-431d-89fb-8f4c22fd661c)
 
 <br/>  
  
 ## Print do quadro da Sprint:
 
-
-
+![image](https://github.com/Manuelaamorim/SmartSchool/assets/142419881/69038a71-cae6-4749-b280-f08a7f0dcb47)
 
 <br/>
 
