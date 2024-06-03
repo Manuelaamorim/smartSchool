@@ -23,7 +23,7 @@ cd /c/Users/SeuUsuario/SeuDiretorio
 git clone https://github.com/Manuelaamorim/SmartSchool.git
 
 ## Após acessar no código
-- Habilitando execução de scripts no PowerShell do Windows
+- Habilitando execução de scripts no PowerShell do Windows:
 Set-ExecutionPolicy -Scope CurrentUser Unrestricted
 
 - Criando um ambiente virtual:
@@ -46,31 +46,31 @@ Por fim, quando necessário, realize os comandos a seguir:
 - Para executar o site, use o comando na URL http://127.0.0.1:8000/:
 python manage.py runserver
 
-- Verificando o Status do Repositório
+- Verificando o Status do Repositório:
 git status
 
-- Adicionando Arquivos Modificados
+- Adicionando Arquivos Modificados:
 git add .
 
-- Fazendo o Commit das Mudanças
+- Fazendo o Commit das Mudanças:
 git commit -m “seu comentário”
 
-- Enviando as Mudanças para o Repositório Remoto
+- Enviando as Mudanças para o Repositório Remoto:
 git push
 
 - Recebendo atualizações do código:
 Git pull
 
-- Requisitando Permissão para Commitar
+- Requisitando Permissão para Commitar:
 Se você não foi adicionado como colaborador, siga estes passos para requisitar permissão para commit:
 
 ## Solicitando Acesso
 - Abra uma issue no repositório solicitando permissão para ser adicionado como colaborador. Descreva brevemente seu interesse em contribuir e as áreas específicas em que você gostaria de ajudar.
 
-- Aguardando Aprovação
+- Aguardando Aprovação:
 Um mantenedor do repositório revisará sua solicitação e, se aprovado, adicionará você como colaborador.
 
-- Confirmando Colaboração
+- Confirmando Colaboração:
 Após ser adicionado como colaborador, você receberá uma notificação por e-mail. Confirme a colaboração e siga os passos de envio de atualizações listados acima.
 
 ## Criando Contas nas Ferramentas Necessárias e acessando-as
@@ -88,19 +88,19 @@ Após ser adicionado como colaborador, você receberá uma notificação por e-m
 ## Solicitação de Merge da Prod para a Main
 Para solicitar um merge da branch prod (que está na Azure) para a branch main, siga os passos abaixo:
 
-- Certifique-se de que está na branch prod
+- Certifique-se de que está na branch prod:
 git checkout prod
 
-- Atualize a Branch prod
+- Atualize a Branch prod:
 git pull origin prod
 
-- Crie um Pull Request
+- Crie um Pull Request:
 Crie um novo pull request no GitHub solicitando o merge da prod para a main. Inclua uma descrição detalhada das mudanças e qualquer contexto necessário para a revisão.
 
-- Aguarde Revisão e Aprovação
+- Aguarde Revisão e Aprovação:
 Notifique os mantenedores do repositório sobre o pull request para que possam revisar e aprovar as mudanças.
 
-- Merge Aprovado
+- Merge Aprovado:
 Após a aprovação, um mantenedor do repositório fará o merge das mudanças na branch main.
 
 Seguindo esses passos, você garantirá que todas as mudanças sejam revisadas e integradas corretamente ao projeto.
