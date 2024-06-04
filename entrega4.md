@@ -27,7 +27,7 @@
       >Apresentação da Entrega 04 no Canva</a>
   </li>
     <li>
-    <a  href="https://github.com/Manuelaamorim/SmartSchool/blob/main/contributing.md)"
+    <a  href="https://github.com/Manuelaamorim/SmartSchool/blob/main/contributing.md"
       >Instruções para contribuição no projeto</a>
   </li>
 </ul>
