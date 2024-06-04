@@ -15,11 +15,11 @@
       >Screencast do Protótipo Lo-fi - Entrega 04</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=mSL1M9w5k4k"
       >Screencast CI/CD com Build e Deployment Automatizado - Entrega 04</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=6hpqK0LBPxM"
       >Screencast da Execução dos Testes - Entrega 04</a>
   </li>
    <li>
@@ -36,7 +36,7 @@
       >Projeto na Azure</a>
   </li>
   <li>
-    <a  href=""
+    <a  href="https://www.youtube.com/watch?v=EbdvpUNE0RE"
       >Screencast da Azure - Entrega 04</a>
   </li>
 </ul>
